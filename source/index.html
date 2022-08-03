@@ -4,15 +4,15 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="/source/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
 
   <!-- Хэдер -->
   <header class="header">
-    <a class="header__logo" href="/source/index.html">
-      <img class="header__logo-image" src="/source/img/header__logo.svg" width="185" height="96"
+    <a class="header__logo" href="index.html">
+      <img class="header__logo-image" src="img/header__logo.svg" width="185" height="96"
         alt="Логотип гостиниц Sedona.">
     </a>
 
@@ -21,13 +21,13 @@
       <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="nav__list">
         <li class="nav__item nav__item--current">
-          <a class="site-list__link" href="/source/index.html">Главная</a>
+          <a class="nav__link" href="index.html">Главная</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="/source/catalog.html">Фото и видео</a>
+          <a class="nav__link" href="catalog.html">Фото и видео</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="/source/form.html">Форма отзыва</a>
+          <a class="nav__link" href="form.html">Форма отзыва</a>
         </li>
         <li class="nav__item">
           <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
@@ -44,14 +44,14 @@
     <section class="hero">
       <h2 class="visually-hidden">Добро пожаловать в Sedona.</h2>
       <div class="hero__image wrapper">
-        <img class="hero__logo" src="/source/img/hero__logo.svg" width="282" height="214"
+        <img class="hero__logo" src="img/hero__logo.svg" width="282" height="214"
           alt="Добро пожаловать в прекрасную Седону. Ведь Большой Каньон отстой.">
-        <p class="hero__slogan">
+      </div>
+      <p class="hero__slogan">
           Седона — небольшой<br>
           городок в Аризоне,<br>
           заслуживающий большего!
-        </p>
-      </div>
+      </p>
     </section>
 
     <!-- Блок преимуществ -->
@@ -69,10 +69,14 @@
             там течёт своя жизнь
           </p>
         </li>
-        <li class="features__photo features__photo--town"></li>
+        <li class="features__card">
+          <img class="features__photo" src="img/features__photo--town.jpg" width="320" height="260" alt="Вид города.">
+        </li>
         <li class="features__card features__card--house">
-          <img class="features__icon" src="/source/img/card__icon--house.svg" width="39" height="37"
-            alt="Иконка жилья в виде дома.">
+          <div class="features__icon-wrapper">
+            <img class="features__icon" src="img/card__icon--house.svg" width="39" height="37"
+              alt="Иконка жилья в виде дома.">
+          </div>
           <h3 class="features__title">Жильё</h3>
           <p class="features__description">
             Рекомендуем пожить<br>
@@ -81,8 +85,10 @@
           </p>
         </li>
         <li class="features__card features__card--food">
-          <img class="features__icon" src="/source/img/card__icon--food.svg" width="40" height="40"
-            alt="Иконка еды в виде бургера.">
+          <div class="features__icon-wrapper">
+            <img class="features__icon" src="img/card__icon--food.svg" width="40" height="40"
+              alt="Иконка еды в виде бургера.">
+          </div>
           <h3 class="features__title">Еда</h3>
           <p class="features__description">
             Всегда заказывайте<br>
@@ -91,8 +97,10 @@
           </p>
         </li>
         <li class="features__card features__card--souvenir">
-          <img class="features__icon" src="/source/img/card__icon--souvenir.svg" width="32" height="38"
-            alt="Иконка сувенира в виде подарка.">
+          <div class="features__icon-wrapper">
+            <img class="features__icon" src="img/card__icon--souvenir.svg" width="32" height="38"
+              alt="Иконка сувенира в виде подарка.">
+          </div>
           <h3 class="features__title">Сувениры</h3>
           <p class="features__description">
             Не только китайского,<br>
@@ -106,8 +114,10 @@
             Да, по нему можно пройти! Если вы осмелитесь, конечно
           </p>
         </li>
-        <li class="features__photo features__photo--bridge"></li>
-        <li class="features__cardfeatures__card--bridge">
+        <li class="features__card">
+          <img class="features__photo" src="img/features__card--bridge.jpg" width="320" height="260" alt="Фото узкой горной тропы на фоне каньона.">
+        </li>
+        <li class="features__card features__card--small-area">
           <h3 class="features__title">Небольшая площадь</h3>
           <p class="features__counter">— №3 —</p>
           <p class="features__description">
@@ -147,7 +157,7 @@
     <!-- Блок с картой -->
     <section class="map-section wrapper">
       <h2 class="visually-hidden">Мы здесь, на карте.</h2>
-      <img class="map__box" src="/source/img/map--index.jpg" width="320" height="350" alt="Логотип гостиниц Sedona.">
+      <img class="map__box" src="img/map--index.jpg" width="320" height="350" alt="Логотип гостиниц Sedona.">
     </section>
   </main>
 
