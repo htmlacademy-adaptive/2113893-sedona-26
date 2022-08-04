@@ -43,7 +43,7 @@
     <!-- Блок hero -->
     <section class="hero">
       <h2 class="visually-hidden">Добро пожаловать в Sedona.</h2>
-      <div class="hero__image wrapper">
+      <div class="hero__image hero__image--short wrapper">
         <img class="hero__sedona-title" src="img/hero__sedona-title.svg" width="229" height="39"
           alt="Добро пожаловать в прекрасную Седону.">
       </div>
@@ -65,7 +65,7 @@
         <form class="form" action="https://echo.htmlacademy.ru/" method="post">
 
           <!-- ФИО -->
-          <fieldset class="form__fieldset name">
+          <fieldset class="form__fieldset form-name">
             <legend class="form__legend">Представьтесь:</legend>
             <div class="form__wrapper">
               <p class="form-label">Имя*:</p>
@@ -143,14 +143,15 @@
           <fieldset class="form__fieldset feedback-text">
             <legend class="form__legend">Опишите свои эмоции:</legend>
             <div class="form__wrapper">
-              <textarea class="form-input" name="feedback-text" cols="27" rows="5"
+              <textarea class="form-textarea" name="feedback-text" cols="27" rows="4"
                 placeholder="Опишите подробно все свои восторги"></textarea>
             </div>
           </fieldset>
 
           <!-- Отправить отзыв -->
-          <div class="catalog-filters-buttons">
+          <div class="form-button-wrapper">
             <button class="form__button button" type="submit">Отправить отзыв</button>
+            <p class="form__button-required-span" >* — обязательные поля</p>
           </div>
         </form>
       </div>
@@ -159,9 +160,9 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <section class="footer__hashtag hashtag">
+    <section class="footer__hashtag">
       <h2 class="visually-hidden">Больше информации по хэштегу.</h2>
-      <a class="hashtag__link" href="https://twitter.com/hashtag/visitsedona">#visitSEDONA</a>
+      <a class="footer__hashtag-button button" href="https://twitter.com/hashtag/visitsedona">#visitSEDONA</a>
     </section>
 
     <!-- Socials -->
@@ -216,7 +217,7 @@
 
     <!-- Copyright -->
     <section class="footer__copyright copyright">
-      <h2 class="copyright__text">Разработано</h2>
+      <h2 class="copyright__title">Разработано</h2>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         <span class="visually-hidden">HTML Academy.</span>
         <svg class="copyright__icon" aria-hidden="true" focusable="false" width="27" height="35" viewBox="0 0 27 35"
@@ -233,7 +234,7 @@
   <!-- модальное окно с ошибкой -->
   <section class="modal modal-error modal-wrapper modal-close">
     <h2 class="modal__title">Что-то пошло не так!</h2>
-    <p class="madal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
     <button class="modal__button button">
       <span class="">Ок</span>
     </button>
@@ -242,7 +243,7 @@
   <!-- модальное окно -->
   <section class="modal modal-wrapper modal-close">
     <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-    <p class="madal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на
+    <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на
       сайте.</p>
     <button class="modal__button button">
       <span class="">Закрыть окно</span>
