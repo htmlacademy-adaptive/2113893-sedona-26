@@ -1,0 +1,626 @@
+@font-face {
+  font-family: "PT sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
+  font-display: swap;
+}
+/* page-body */
+.page-body {
+  width: 320px;
+  margin: 0;
+}
+/* sticky-footer */
+.page {
+  height: 100%;
+}
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.main {
+  flex-grow: 1;
+}
+/* внутренние отступы и границы теперь часть бокса */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* картинки запираются контейнером + растяжение картинки до границ контейнера */
+img {
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+/* скрытие невидимых элементов */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* button */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "PT sans", sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  background-color: hsl(203, 47%, 66%);
+}
+/* header */
+.header {
+  width: 320px;
+  position: relative;
+}
+.header__logo-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -40px;
+}
+.header__nav {
+  position: absolute;
+  top: 0;
+}
+.nav__toggle-wrapper {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 5px;
+  left: 270px;
+  z-index: 1;
+  cursor: pointer;
+}
+.nav__toggle::before,
+.nav__toggle::after {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #ffffff;
+  content: "";
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.7s;
+}
+.nav__toggle::before {
+  transform: translate(10px, 20px) rotate(45deg);
+}
+.nav__toggle::after {
+  transform: translate(10px, 20px) rotate(-45deg);
+}
+.nav__list {
+  background-color: hsl(203, 47%, 66%);
+  position: absolute;
+  top: 0;
+  min-width: 320px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.nav__item {
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.2), 0 1px 0 0 rgba(1, 1, 1, 0.2);
+}
+.nav__item--last {
+  box-shadow: inset 0 -7px 5px 0 rgba(1, 1, 1, 0.2);
+}
+.nav__link {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "PT sans", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+/* nav */
+.nav__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* hero */
+.hero {
+  width: 320px;
+}
+.hero__image {
+  width: 320px;
+  height: 389px;
+  background-image: url("../../img/hero__image.jpg");
+  background-color: hsl(198, 29%, 27%);
+  padding-top: 90px;
+}
+.hero__logo {
+  margin: 0 auto;
+}
+.hero__slogan {
+  font-family: "PT sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  padding-top: 32px;
+}
+.hero__image--short {
+  padding-top: 52px;
+  height: 158px;
+  background-position: 0 calc(100% + 0px);
+}
+.hero__sedona-title {
+  margin: 0 auto;
+}
+/* features */
+.features {
+  width: 320px;
+  padding-top: 35px;
+}
+.features__intro {
+  font-family: "PT sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #333333;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 32px;
+}
+.features__list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 320px;
+  padding: 0;
+}
+.features__title {
+  font-family: "PT sans", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+.features__counter {
+  font-family: "PT sans", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  text-align: center;
+  margin: 0;
+  padding-top: 11px;
+}
+.features__description {
+  font-family: "PT sans", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+  margin: 0;
+  padding-top: 17px;
+}
+/* растягиваем фото в случае переполнения соседней карточки */
+.features__photo {
+  min-height: 260px;
+  object-fit: cover;
+  height: auto;
+}
+.features__icon-wrapper {
+  position: absolute;
+  top: 25px;
+  left: 18px;
+}
+.features__card {
+  outline: #808080 solid 1px;
+  min-width: 320px;
+  position: relative;
+}
+.features__card--town {
+  min-height: 211px;
+  padding: 54px 22px 40px 16px;
+  background-color: hsl(203, 47%, 66%);
+  color: #ffffff;
+}
+.features__card--town p {
+  color: #ffffff;
+}
+.features__card--house {
+  padding: 30px 18px 0 65px;
+}
+.features__card--house .features__title {
+  text-align: left;
+}
+.features__card--house .features__description {
+  text-align: left;
+}
+.features__card--food {
+  padding: 30px 18px 0 70px;
+}
+.features__card--food .features__title {
+  text-align: left;
+}
+.features__card--food .features__description {
+  text-align: left;
+}
+.features__card--souvenir {
+  padding: 30px 18px 52px 62px;
+}
+.features__card--souvenir .features__title {
+  text-align: left;
+}
+.features__card--souvenir .features__description {
+  text-align: left;
+}
+.features__card--bridge {
+  min-height: 191px;
+  padding: 40px 18px 34px 18px;
+  background-color: hsl(203, 47%, 66%);
+  color: #ffffff;
+}
+.features__card--bridge p {
+  color: #ffffff;
+}
+.features__card--small-area {
+  background-color: hsl(0, 0%, 93%);
+  padding: 26px 18px 24px 18px;
+}
+.features__card--road {
+  background-color: hsl(0, 0%, 93%);
+  padding: 24px 18px 24px 18px;
+  box-shadow: 0 1px 0 hsl(0, 0%, 84%) inset;
+}
+.features__card--few-tourists {
+  background-color: hsl(0, 0%, 93%);
+  padding: 24px 18px 24px 18px;
+  box-shadow: 0 1px 0 hsl(0, 0%, 84%) inset;
+}
+/* search-hotels */
+.search-hotels {
+  width: 320px;
+  padding: 0 18px;
+}
+.search-hotels__title {
+  font-family: "PT sans", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 38px;
+}
+.search-hotels__text {
+  font-family: "PT sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #333333;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 32px;
+}
+.search-hotels__button {
+  padding: 16px 49px;
+}
+/* map-section */
+.map-section {
+  padding-top: 49px;
+}
+/* footer */
+.footer {
+  padding-top: 38px;
+  width: 320px;
+}
+.footer__hashtag-button {
+  color: #000000;
+  background-color: #ffffff;
+  width: 166px;
+  margin: 0 auto;
+}
+.social__list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  padding: 34px 0 0 0;
+  margin: 0;
+}
+.footer__copyright {
+  padding: 47px 0 22px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.copyright__title {
+  font-family: "PT sans", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+}
+/* gallery */
+.gallery {
+  width: 320px;
+  padding-top: 33px;
+}
+.gallery__title {
+  font-family: "PT sans", sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+.gallery__text {
+  font-family: "PT sans", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #333333;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  padding-top: 32px;
+}
+.gallery__list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px 0 20px;
+}
+.gallery__item {
+  padding-top: 50px;
+  outline: #808080 solid 1px;
+}
+/* растягиваем фото в случае переполнения соседней карточки */
+.content__file {
+  min-height: 260px;
+  object-fit: cover;
+  height: auto;
+}
+.content__title {
+  font-family: "PT sans", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin: 0;
+  padding-top: 15px;
+}
+.content__author-prefix,
+.content__author {
+  font-family: "PT sans", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  margin: 0;
+  padding-top: 15px;
+}
+.content__like-wrapper {
+  padding-top: 10px;
+}
+.content__like-counter {
+  font-family: "PT sans", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  padding-left: 14px;
+}
+/* presentation */
+.presentation {
+  width: 320px;
+  padding: 45px 20px 0 20px;
+}
+.presentation__title {
+  font-family: "PT sans", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+.presentation__text {
+  font-family: "PT sans", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  padding-top: 26px;
+}
+.presentation__video-box {
+  padding-top: 38px;
+  object-fit: cover;
+  height: auto;
+}
+/* features */
+.form-intro {
+  width: 320px;
+  padding: 36px 20px 0 20px;
+}
+.form-intro__title {
+  font-family: "PT sans", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+.form-intro__text {
+  font-family: "PT sans", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  padding-top: 24px;
+}
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 320px;
+  padding: 53px 20px 0 20px;
+}
+.form__fieldset {
+  border: none;
+  padding: 0 0 38px 0;
+  margin: 0;
+  outline: #808080 solid 1px;
+}
+.form__legend {
+  font-family: "PT sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 24px 0 20px 0;
+}
+.form-label {
+  font-family: "PT sans", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 16px 0 0 16px;
+}
+.impression-list__item .form-label,
+.sight-list__item .form-label {
+  text-transform: none;
+  font-weight: 700;
+}
+.form-input[type="text"],
+.form-input[type="tel"],
+.form-input[type="email"] {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  height: 58px;
+  border: none;
+  background-color: hsl(0, 0%, 95%);
+  font-family: "PT sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+.form-input::placeholder,
+.form-textarea::placeholder {
+  font-family: "PT sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.3);
+}
+.form__list {
+  list-style-type: none;
+  padding: 0;
+}
+.impression-list,
+.sight-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 16px;
+}
+.form-textarea {
+  resize: none;
+  border: none;
+  background-color: hsl(0, 0%, 95%);
+  width: 100%;
+  padding: 16px;
+  font-family: "PT sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+.catalog-filters-buttons {
+  padding-top: 18px;
+}
+.form__button {
+  width: 100%;
+  max-width: 384px;
+  height: 58px;
+}
+.form__button-required-span {
+  font-family: "PT sans", sans-serif;
+  font-size: 12px;
+  line-height: 21px;
+  color: rgba(51, 51, 51, 0.6);
+  text-align: right;
+  text-transform: uppercase;
+  margin: 0;
+}
+/* features */
+.modal {
+  width: 320px;
+}
+.modal__wrapper {
+  padding: 38px 38px 0 38px;
+}
+.modal__title {
+  font-family: "PT sans", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+.modal__text {
+  font-family: "PT sans", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 26px 0 28px 0;
+}
+.modal__wrapper-button {
+  padding: 20px;
+  background-color: hsl(0, 0%, 95%);
+}
+.modal__button {
+  height: 58px;
+  width: 280px;
+  margin: 0 auto;
+}
+.modal-error {
+  padding: 45px 42px 35px 42px;
+}
+.modal-error .modal__button {
+  width: 180px;
+}
+/*# sourceMappingURL=style.css.map */
