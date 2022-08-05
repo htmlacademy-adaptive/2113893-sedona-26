@@ -18,18 +18,22 @@
 
     <!-- меню навигации -->
     <nav class="header__nav nav">
-      <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="nav__toggle-wrapper">
+        <span class="nav__toggle">
+          <span class="visually-hidden">Открыть меню</span>
+        </span>
+      </div>
       <ul class="nav__list">
-        <li class="nav__item nav__item--current">
-          <a class="site-list__link" href="index.html">Главная</a>
+        <li class="nav__item">
+          <a class="nav__link" href="index.html">Главная</a>
         </li>
         <li class="nav__item">
           <a class="nav__link" href="catalog.html">Фото и видео</a>
         </li>
-        <li class="nav__item">
+        <li class="nav__item nav__item--current">
           <a class="nav__link" href="form.html">Форма отзыва</a>
         </li>
-        <li class="nav__item">
+        <li class="nav__item nav__item--last">
           <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
         </li>
       </ul>
@@ -241,13 +245,18 @@
   </section>
 
   <!-- модальное окно -->
-  <section class="modal modal-wrapper modal-close">
-    <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-    <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на
-      сайте.</p>
-    <button class="modal__button button">
-      <span class="">Закрыть окно</span>
-    </button>
+  <section class="modal modal-close">
+    <div class="modal__wrapper">
+      <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+      <p class="modal__text">
+        Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
+      </p>
+    </div>
+    <div class="modal__wrapper-button">
+      <button class="modal__button button">
+        <span class="">Закрыть окно</span>
+      </button>
+    </div>
   </section>
 </body>
 
