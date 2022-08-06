@@ -1,13 +1,15 @@
 // Начните писать стили здесь
 
-/* features */
+/* FORM */
 
-.form-intro {
+/* Элемент перед формой */
+.form__intro {
   width: 320px;
   padding: 36px 20px 0 20px;
 }
 
-.form-intro__title {
+/* его заголовок */
+.form__intro-title {
   font-family: "PT sans", sans-serif;
   font-size: 18px;
   line-height: 26px;
@@ -16,7 +18,8 @@
   margin: 0;
 }
 
-.form-intro__text {
+/* и текст */
+.form__intro-text {
   font-family: "PT sans", sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -27,6 +30,7 @@
   padding-top: 24px;
 }
 
+/* форма */
 .form {
   display: grid;
   grid-template-columns: 1fr;
@@ -34,13 +38,14 @@
   padding: 53px 20px 0 20px;
 }
 
+/* часть формы */
 .form__fieldset {
   border: none;
   padding: 0 0 38px 0;
   margin: 0;
-  outline: #808080 solid 1px;
 }
 
+/* заголовок формы */
 .form__legend {
   font-family: "PT sans", sans-serif;
   font-weight: 700;
@@ -50,9 +55,12 @@
   text-transform: uppercase;
   margin: 0;
   padding: 24px 0 20px 0;
+  box-shadow: 0 -1px 0 0 rgba(1, 1, 1, 20%);
+  width: 100%;
 }
 
-.form-label {
+/* текст перед input, с двоеточием */
+.form__label {
   font-family: "PT sans", sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -62,15 +70,22 @@
   padding: 16px 0 0 16px;
 }
 
-.impression-list__item .form-label,
-.sight-list__item .form-label {
+/* обнуляем отступы input формы */
+.form__input {
+  margin: 0;
+}
+
+/* текст после радиокнопок и чекбоксов */
+input[type="radio"] + .form__label,
+input[type="checkbox"] + .form__label {
   text-transform: none;
   font-weight: 700;
 }
 
-.form-input[type="text"],
-.form-input[type="tel"],
-.form-input[type="email"] {
+/* стилизуем input */
+.form__input[type="text"],
+.form__input[type="tel"],
+.form__input[type="email"] {
   display: block;
   width: 100%;
   padding: 16px;
@@ -83,8 +98,9 @@
   line-height: 26px;
 }
 
-.form-input::placeholder,
-.form-textarea::placeholder {
+/* и placeholder */
+.form__input::placeholder,
+.form__textarea::placeholder {
   font-family: "PT sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -92,20 +108,18 @@
   color: rgba(0, 0, 0, 30%);
 }
 
+/* направляем в колонну элементы списков формы */
 .form__list {
   list-style-type: none;
   padding: 0;
-}
-
-.impression-list,
-.sight-list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   gap: 16px;
 }
 
-.form-textarea {
+/* стилизуем текстовое поле с отзывов */
+.form__textarea {
   resize: none;
   border: none;
   background-color: hsl(0, 0%, 95%);
@@ -117,17 +131,15 @@
   line-height: 26px;
 }
 
-.catalog-filters-buttons {
-  padding-top: 18px;
-}
-
+/* кнопка отправить отзыв */
 .form__button {
   width: 100%;
   max-width: 384px;
   height: 58px;
 }
 
-.form__button-required-span {
+/* подпись под кнопкой */
+.form__required-span {
   font-family: "PT sans", sans-serif;
   font-size: 12px;
   line-height: 21px;
