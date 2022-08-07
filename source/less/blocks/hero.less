@@ -1,10 +1,6 @@
 // Начните писать стили здесь
 
-/* HERO */
-
-.hero {
-  width: 320px;
-}
+// HERO
 
 .hero__image {
   width: 320px;
@@ -12,6 +8,12 @@
   background-image: url("../../img/hero__image.jpg");
   background-color: hsl(198, 29%, 27%);
   padding-top: 90px;
+
+  &--short {
+    padding-top: 52px;
+    height: 158px;
+    background-position: 0 calc(100% + 0px);
+  }
 }
 
 .hero__logo {
@@ -19,20 +21,10 @@
 }
 
 .hero__slogan {
-  font-family: "PT sans", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
+  .title();
   margin: 0;
   text-align: center;
   padding-top: 32px;
-}
-
-.hero__image--short {
-  padding-top: 52px;
-  height: 158px;
-  background-position: 0 calc(100% + 0px);
 }
 
 .hero__sedona-title {

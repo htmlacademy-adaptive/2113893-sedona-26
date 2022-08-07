@@ -1,68 +1,50 @@
 // Начните писать стили здесь
 
-/* FEATURES */
+// FEATURES
 
 .features {
-  width: 320px;
   padding-top: 35px;
 }
 
 .features__intro {
-  font-family: "PT sans", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
-  color: #333333;
-  text-transform: uppercase;
+  .text();
+  color: @text;
   margin: 0;
   text-align: center;
   padding-bottom: 32px;
 }
 
 .features__list {
-  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  width: 320px;
   padding: 0;
 }
 
 .features__title {
-  font-family: "PT sans", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
+  .title();
   text-align: center;
-  text-transform: uppercase;
   margin: 0;
 }
 
 .features__counter {
-  font-family: "PT sans", sans-serif;
+  .text();
+  color: @text;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 21px;
-  color: #333333;
   text-align: center;
   margin: 0;
   padding-top: 11px;
 }
 
 .features__description {
-  font-family: "PT sans", sans-serif;
-  font-size: 14px;
-  line-height: 21px;
+  .text();
+  color: @text;
   text-align: center;
-  text-transform: uppercase;
-  color: #333333;
   margin: 0;
   padding-top: 17px;
 }
 
-/* растягиваем фото в случае переполнения соседней карточки */
 .features__photo {
   min-height: 260px;
-  object-fit: cover;
-  height: auto;
 }
 
 .features__icon-wrapper {
@@ -74,79 +56,59 @@
 .features__card {
   min-width: 320px;
   position: relative;
+
+  &--true-town {
+    padding: 54px 22px 40px 16px;
+    background-color: @blue;
+    color: #ffffff;
+  }
+
+  &--house {
+    padding: 30px 18px 0 65px;
+  }
+
+  &--food {
+    padding: 30px 18px 0 70px;
+  }
+
+  &--souvenir {
+    padding: 30px 18px 52px 62px;
+  }
+
+  &--bridge {
+    padding: 40px 18px 34px 18px;
+    background-color: @blue;
+    color: #ffffff;
+  }
+
+  &--small-area {
+    background-color: hsl(0, 0%, 93%);
+    padding: 26px 18px 24px 18px;
+  }
+
+  &--road {
+    background-color: hsl(0, 0%, 93%);
+    padding: 24px 18px 24px 18px;
+    box-shadow: 0 1px 0 hsl(0, 0%, 84%) inset;
+  }
+
+  &--few-tourists {
+    background-color: hsl(0, 0%, 93%);
+    padding: 24px 18px 24px 18px;
+    box-shadow: 0 1px 0 hsl(0, 0%, 84%) inset;
+  }
 }
 
-.features__card--town {
-  min-height: 211px;
-  padding: 54px 22px 40px 16px;
-  background-color: hsl(203, 47%, 66%);
-  color: #ffffff;
+.features__card--true-town p,
+.features__card--bridge p {
+  color: inherit;
 }
 
-.features__card--town p {
-  color: #ffffff;
-}
-
-.features__card--house {
-  padding: 30px 18px 0 65px;
-}
-
-.features__card--house .features__title {
-  text-align: left;
-}
-
-.features__card--house .features__description {
-  text-align: left;
-}
-
-.features__card--food {
-  padding: 30px 18px 0 70px;
-}
-
-.features__card--food .features__title {
-  text-align: left;
-}
-
-.features__card--food .features__description {
-  text-align: left;
-}
-
-.features__card--souvenir {
-  padding: 30px 18px 52px 62px;
-}
-
-.features__card--souvenir .features__title {
-  text-align: left;
-}
-
+.features__card--house .features__title,
+.features__card--house .features__description,
+.features__card--food .features__title,
+.features__card--food .features__description,
+.features__card--souvenir .features__title,
 .features__card--souvenir .features__description {
   text-align: left;
-}
-
-.features__card--bridge {
-  min-height: 191px;
-  padding: 40px 18px 34px 18px;
-  background-color: hsl(203, 47%, 66%);
-  color: #ffffff;
-}
-
-.features__card--bridge p {
-  color: #ffffff;
-}
-
-.features__card--small-area {
-  background-color: hsl(0, 0%, 93%);
-  padding: 26px 18px 24px 18px;
-}
-
-.features__card--road {
-  background-color: hsl(0, 0%, 93%);
-  padding: 24px 18px 24px 18px;
-  box-shadow: 0 1px 0 hsl(0, 0%, 84%) inset;
-}
-
-.features__card--few-tourists {
-  background-color: hsl(0, 0%, 93%);
-  padding: 24px 18px 24px 18px;
-  box-shadow: 0 1px 0 hsl(0, 0%, 84%) inset;
 }

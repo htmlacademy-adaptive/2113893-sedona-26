@@ -2,30 +2,21 @@
 
 /* MODAL */
 
-.modal {
-  width: 320px;
-}
-
 .modal__wrapper {
   padding: 38px 38px 0 38px;
 }
 
 .modal__title {
-  font-family: "PT sans", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
+  .title();
   text-align: center;
-  text-transform: uppercase;
   margin: 0;
 }
 
 .modal__text {
-  font-family: "PT sans", sans-serif;
+  .text();
+  color: @text;
   font-size: 16px;
-  line-height: 21px;
-  color: #333333;
   text-align: center;
-  text-transform: uppercase;
   margin: 0;
   padding: 26px 0 28px 0;
 }
@@ -36,7 +27,6 @@
 }
 
 .modal__button {
-  height: 58px;
   width: 280px;
   margin: 0 auto;
 }

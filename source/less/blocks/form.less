@@ -1,88 +1,74 @@
 // Начните писать стили здесь
 
-/* FORM */
+// FORM
 
-/* Элемент перед формой */
+// Бокс-вступление перед формой
 .form__intro {
-  width: 320px;
   padding: 36px 20px 0 20px;
 }
 
-/* его заголовок */
+// его заголовок
 .form__intro-title {
-  font-family: "PT sans", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
+  .title();
   text-align: center;
-  text-transform: uppercase;
   margin: 0;
 }
 
-/* и текст */
+// и текст
 .form__intro-text {
-  font-family: "PT sans", sans-serif;
-  font-size: 14px;
-  line-height: 21px;
-  color: #333333;
-  text-transform: uppercase;
+  .text();
+  color: @text;
   margin: 0;
   text-align: center;
   padding-top: 24px;
 }
 
-/* форма */
+// Форма отзыва
 .form {
   display: grid;
   grid-template-columns: 1fr;
-  width: 320px;
   padding: 53px 20px 0 20px;
 }
 
-/* часть формы */
+// часть формы
 .form__fieldset {
   border: none;
   padding: 0 0 38px 0;
   margin: 0;
 }
 
-/* заголовок формы */
+// заголовок формы
 .form__legend {
-  font-family: "PT sans", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
+  .title();
   text-align: center;
-  text-transform: uppercase;
   margin: 0;
   padding: 24px 0 20px 0;
   box-shadow: 0 -1px 0 0 rgba(1, 1, 1, 20%);
   width: 100%;
 }
 
-/* текст перед input, с двоеточием */
+// текст перед input, с двоеточием
 .form__label {
-  font-family: "PT sans", sans-serif;
-  font-size: 14px;
-  line-height: 21px;
+  .text();
   color: #333333;
-  text-transform: uppercase;
   margin: 0;
   padding: 16px 0 0 16px;
 }
 
-/* обнуляем отступы input формы */
+// обнуляем отступы input формы
 .form__input {
   margin: 0;
+  font-family: inherit;
 }
 
-/* текст после радиокнопок и чекбоксов */
+// текст после радиокнопок и чекбоксов
 input[type="radio"] + .form__label,
 input[type="checkbox"] + .form__label {
   text-transform: none;
   font-weight: 700;
 }
 
-/* стилизуем input */
+// стилизуем inputs
 .form__input[type="text"],
 .form__input[type="tel"],
 .form__input[type="email"] {
@@ -92,25 +78,21 @@ input[type="checkbox"] + .form__label {
   height: 58px;
   border: none;
   background-color: hsl(0, 0%, 95%);
-  font-family: "PT sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
 }
 
-/* и placeholder */
+// и их placeholders
 .form__input::placeholder,
 .form__textarea::placeholder {
-  font-family: "PT sans", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
+  .title();
+  text-transform: none;
   color: rgba(0, 0, 0, 30%);
 }
 
-/* направляем в колонну элементы списков формы */
+// направляем в колонну элементы списков формы
 .form__list {
-  list-style-type: none;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -118,29 +100,25 @@ input[type="checkbox"] + .form__label {
   gap: 16px;
 }
 
-/* стилизуем текстовое поле с отзывов */
+// стилизуем текстовое поле с отзывом
 .form__textarea {
+  font-family: inherit;
   resize: none;
   border: none;
   background-color: hsl(0, 0%, 95%);
   width: 100%;
   padding: 16px;
-  font-family: "PT sans", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
+  .title();
 }
 
-/* кнопка отправить отзыв */
+// кнопка отправить отзыв
 .form__button {
   width: 100%;
   max-width: 384px;
-  height: 58px;
 }
 
-/* подпись под кнопкой */
+// подпись под кнопкой отправить отзыв
 .form__required-span {
-  font-family: "PT sans", sans-serif;
   font-size: 12px;
   line-height: 21px;
   color: rgba(51, 51, 51, 0.6);

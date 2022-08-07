@@ -1,27 +1,20 @@
 // Начните писать стили здесь
 
-/* PRESENTATION */
+// PRESENTATION
 
 .presentation {
-  width: 320px;
   padding: 45px 20px 0 20px;
 }
 
 .presentation__title {
-  font-family: "PT sans", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
+  .title();
   text-align: center;
-  text-transform: uppercase;
   margin: 0;
 }
 
 .presentation__text {
-  font-family: "PT sans", sans-serif;
-  font-size: 16px;
-  line-height: 21px;
-  color: #333333;
-  text-transform: uppercase;
+  .text();
+  color: @text;
   margin: 0;
   text-align: center;
   padding-top: 26px;
@@ -29,6 +22,4 @@
 
 .presentation__video-box {
   padding-top: 38px;
-  object-fit: cover;
-  height: auto;
 }
