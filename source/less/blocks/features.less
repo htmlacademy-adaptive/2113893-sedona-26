@@ -9,21 +9,31 @@
 .features__intro {
   .text();
   color: @text;
-  margin: 0;
   text-align: center;
   padding-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 45px;
+  }
 }
 
 .features__list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .features__title {
   .title();
   text-align: center;
-  margin: 0;
 }
 
 .features__counter {
@@ -31,7 +41,6 @@
   color: @text;
   font-weight: 700;
   text-align: center;
-  margin: 0;
   padding-top: 11px;
 }
 
@@ -39,23 +48,38 @@
   .text();
   color: @text;
   text-align: center;
-  margin: 0;
   padding-top: 17px;
 }
 
 .features__photo {
   min-height: 260px;
+
+  @media (min-width: @tablet-width) {
+    width: 512px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+  }
 }
 
 .features__icon-wrapper {
   position: absolute;
   top: 25px;
   left: 18px;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+  }
 }
 
 .features__card {
   min-width: 320px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    min-width: 256px;
+  }
 
   &--true-town {
     padding: 54px 22px 40px 16px;
@@ -86,12 +110,7 @@
     padding: 26px 18px 24px 18px;
   }
 
-  &--road {
-    background-color: hsl(0, 0%, 93%);
-    padding: 24px 18px 24px 18px;
-    box-shadow: 0 1px 0 hsl(0, 0%, 84%) inset;
-  }
-
+  &--road,
   &--few-tourists {
     background-color: hsl(0, 0%, 93%);
     padding: 24px 18px 24px 18px;
@@ -111,4 +130,57 @@
 .features__card--souvenir .features__title,
 .features__card--souvenir .features__description {
   text-align: left;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .features__card--photo {
+    grid-column: 2 / span 2;
+  }
+
+  .features__card--house,
+  .features__card--food,
+  .features__card--souvenir {
+    min-height: 330px;
+    padding: 60px 35px 0 35px;
+  }
+
+  .features__card--house .features__title,
+  .features__card--food .features__title,
+  .features__card--souvenir .features__title {
+    padding-top: 26px;
+  }
+
+  .features__card--small-area,
+  .features__card--road,
+  .features__card--few-tourists {
+    min-height: 256px;
+    padding: 42px 34px 0 34px;
+  }
+
+  .features__card--house img {
+    width: 75px;
+    height: 72px;
+    margin: 0 auto;
+  }
+
+  .features__card--food img {
+    width: 76px;
+    height: 68px;
+    margin: 0 auto;
+  }
+
+  .features__card--souvenir img {
+    width: 64px;
+    height: 75px;
+    margin: 0 auto;
+  }
+
+  .features__card--reverse-position {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
 }

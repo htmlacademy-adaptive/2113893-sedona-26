@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 
-// скрытие невидимых элементов
+// скрываем невидимые элементы
 
 .visually-hidden {
   position: absolute;
@@ -34,8 +34,16 @@
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  margin: 0;
-  width: 320px;
+  margin: 0 auto;
+  width: @mobile-width;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
 
 .main-wrapper {
@@ -47,19 +55,31 @@
 img {
   max-width: 100%;
   object-fit: cover;
-  //contain
+  //contain cover
   display: block;
-  height: auto;
+  // height: auto;
 }
 
-// убираем буллеты списков
+// убираем буллеты и отступы списков
 
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 // убираем подчёркивание ссылок
 
 a {
   text-decoration: none;
+}
+
+// убираем отступы абзацев, заголовков
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
 }

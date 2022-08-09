@@ -18,24 +18,24 @@
     </a>
 
     <!-- меню навигации -->
-    <nav class="header__nav nav">
-      <div class="nav__toggle-wrapper">
-        <span class="nav__toggle">
+    <nav class="header__nav">
+      <div class="header__toggle-button-wrapper">
+        <span class="header__toggle-button">
           <span class="visually-hidden">Открыть меню</span>
         </span>
       </div>
-      <ul class="nav__list">
-        <li class="nav__item nav__item--current">
-          <a class="nav__link" href="index.html">Главная</a>
+      <ul class="header__list">
+        <li class="header__item header__item--left header__item--current">
+          <a class="header__link" href="index.html">Главная</a>
         </li>
-        <li class="nav__item">
-          <a class="nav__link" href="catalog.html">Фото и видео</a>
+        <li class="header__item header__item--left">
+          <a class="header__link" href="catalog.html">Фото и видео</a>
         </li>
-        <li class="nav__item">
-          <a class="nav__link" href="form.html">Форма отзыва</a>
+        <li class="header__item header__item--right">
+          <a class="header__link" href="form.html">Форма отзыва</a>
         </li>
-        <li class="nav__item nav__item--last">
-          <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+        <li class="header__item header__item--right header__item--last">
+          <a class="header__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
         </li>
       </ul>
     </nav>
@@ -74,7 +74,7 @@
             там течёт своя жизнь
           </p>
         </li>
-        <li class="features__card">
+        <li class="features__card features__card--photo">
           <img class="features__photo" src="img/features__photo--true-town.jpg" width="320" height="260" alt="Вид города.">
         </li>
         <li class="features__card features__card--house">
@@ -119,7 +119,7 @@
             Да, по нему можно пройти! Если вы осмелитесь, конечно
           </p>
         </li>
-        <li class="features__card">
+        <li class="features__card features__card--photo features__card--reverse-position">
           <img class="features__photo" src="img/features__card--bridge.jpg" width="320" height="260" alt="Фото узкой горной тропы на фоне каньона.">
         </li>
         <li class="features__card features__card--small-area">
@@ -160,9 +160,11 @@
     </section>
 
     <!-- Блок с картой -->
-    <section class="map-section wrapper">
-      <h2 class="visually-hidden">Мы здесь, на карте.</h2>
-      <img class="map__box" src="img/map--index.jpg" width="320" height="350" alt="Логотип гостиниц Sedona.">
+    <section class="map__section ">
+      <div class="map__wrapper">
+        <h2 class="visually-hidden">Мы здесь, на карте.</h2>
+        <img class="map__image" src="img/map--index.jpg" width="320" height="350" alt="Логотип гостиниц Sedona.">
+      </div>
     </section>
   </main>
 

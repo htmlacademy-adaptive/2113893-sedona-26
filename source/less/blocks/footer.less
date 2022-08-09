@@ -4,6 +4,15 @@
 
 .footer {
   padding-top: 38px;
+  padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 36px;
+  }
 }
 
 .footer__hashtag-button {
@@ -18,12 +27,10 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 6px;
-  padding: 34px 0 0 0;
-  margin: 0;
 }
 
 .footer__copyright {
-  padding: 47px 0 22px 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -33,5 +40,4 @@
 
 .footer__copyright-title {
   .text();
-  margin: 0;
 }
