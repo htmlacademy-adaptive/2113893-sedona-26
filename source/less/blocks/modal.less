@@ -4,6 +4,10 @@
 
 .modal__wrapper {
   padding: 38px 38px 0 38px;
+
+  @media (min-width: @tablet-width) {
+    width: 640px;
+  }
 }
 
 .modal__title {
@@ -24,17 +28,33 @@
 .modal__wrapper-button {
   padding: 20px;
   background-color: hsl(0, 0%, 95%);
+
+  @media (min-width: @tablet-width) {
+    width: 640px;
+  }
 }
 
 .modal__button {
   width: 280px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+  }
 }
 
 .modal-error {
   padding: 45px 42px 35px 42px;
+
+  @media (min-width: @tablet-width) {
+    width: 400px;
+  }
 }
 
 .modal-error .modal__button {
   width: 180px;
+
+  @media (min-width: @tablet-width) {
+    width: 270px;
+  }
 }

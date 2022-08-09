@@ -70,7 +70,7 @@
         <form class="form" action="https://echo.htmlacademy.ru/" method="post">
 
           <!-- ФИО -->
-          <fieldset class="form__fieldset form__name">
+          <fieldset class="form__fieldset form__fieldset--name">
             <legend class="form__legend">Представьтесь:</legend>
             <div class="form__wrapper">
               <p class="form__label">Имя*:</p>
@@ -90,7 +90,7 @@
           </fieldset>
 
           <!-- Контактная информация -->
-          <fieldset class="form__fieldset contacts">
+          <fieldset class="form__fieldset form__fieldset--contacts">
             <legend class="form__legend">Контактная информация:</legend>
             <div class="form__wrapper">
               <p class="form__label">Контактный телефон*:</p>
@@ -103,8 +103,8 @@
           </fieldset>
 
           <!-- Впечатление -->
-          <fieldset class="form__fieldset">
-            <legend class="form__legend">Ваше общее впечатление:</legend>
+          <fieldset class="form__fieldset form__fieldset--impression">
+              <legend class="form__legend">Ваше общее впечатление:</legend>
             <ul class="form__list">
               <li class="form__list-item">
                 <input class="form__input" type="radio" name="impression" value="rather-positive" checked>
@@ -122,7 +122,7 @@
           </fieldset>
 
           <!-- Достопримечательности -->
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--sights">
             <legend class="form__legend">Посещенные<br>достопримечательности:</legend>
             <ul class="form__list">
               <li class="form__list-item">
@@ -145,7 +145,7 @@
           </fieldset>
 
           <!-- Текст отзыва -->
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--feedback">
             <legend class="form__legend">Опишите свои эмоции:</legend>
             <div class="form__wrapper">
               <textarea class="form__textarea" name="feedback-text" cols="27" rows="4"
@@ -249,6 +249,7 @@
         <span class="">Закрыть окно</span>
       </button>
     </div>
+
   </section>
 
   <!-- модальное окно с ошибкой -->
