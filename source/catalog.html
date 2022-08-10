@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,38 +18,38 @@
     </a>
 
     <!-- меню навигации -->
-    <nav class="header__nav nav">
-      <div class="nav__toggle-wrapper">
-        <span class="nav__toggle">
+    <nav class="header__nav">
+      <div class="header__toggle-button-wrapper">
+        <span class="header__toggle-button">
           <span class="visually-hidden">Открыть меню</span>
         </span>
       </div>
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link" href="index.html">Главная</a>
+      <ul class="header__list">
+        <li class="header__item header__item--left header__item--current">
+          <a class="header__link" href="index.html">Главная</a>
         </li>
-        <li class="nav__item">
-          <a class="nav__link nav__item--current" href="catalog.html">Фото и видео</a>
+        <li class="header__item header__item--left">
+          <a class="header__link" href="catalog.html">Фото и видео</a>
         </li>
-        <li class="nav__item">
-          <a class="nav__link" href="form.html">Форма отзыва</a>
+        <li class="header__item header__item--right">
+          <a class="header__link" href="form.html">Форма отзыва</a>
         </li>
-        <li class="nav__item nav__item--last">
-          <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+        <li class="header__item header__item--right header__item--last">
+          <a class="header__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
         </li>
       </ul>
     </nav>
   </header>
 
   <!-- Main -->
-  <main class="main wrapper">
+  <main class="main main__wrapper">
     <h1 class="visually-hidden">Фото и видео Sedona.</h1>
 
     <!-- Блок hero -->
     <section class="hero">
       <h2 class="visually-hidden">Добро пожаловать в Sedona.</h2>
       <div class="hero__image hero__image--short wrapper">
-        <img class="hero__sedona-title" src="img/hero__sedona-title.svg" width="229" height="39"
+        <img class="hero__logo hero__logo--short" src="img/hero__sedona-title.svg" width="229" height="39"
           alt="Добро пожаловать в прекрасную Седону.">
       </div>
     </section>
@@ -60,76 +61,100 @@
         <p class="gallery__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике
           и экономике.</p>
         <ul class="gallery__list">
-          <li class="gallery__item">
-            <div class="gallery__content-wrapper wrapper">
-              <img class="content__file" src="img/gallery__highway.jpg" width="280" height="280"
-                alt="Шоссе Sedona на закате">
-            </div>
-            <p class="content__title">Неродные просторы</p>
-            <span class="content__author-prefix">Автор фото:</span>
-            <span class="content__author">Борис</span>
-            <div class="content__like-wrapper">
-              <svg class="content__like-icon" xmlns="http://www.w3.org/2000/svg" width="23" height="21"
+
+          <li class="gallery__item gallery__item--wide content">
+            <a class="content__item-link" href="#">
+              <div class="content__wrapper wrapper">
+                <img class="content__file content__file--wide" src="img/gallery__highway.jpg" width="280" height="280"
+                  alt="Шоссе Sedona на закате">
+              </div>
+            </a>
+            <div class="content__legend-wrapper">
+              <div class="content__author&title-wrapper">
+                <p class="content__title">Неродные просторы</p>
+                <span class="content__author-prefix">Автор фото:</span>
+                <span class="content__author">Борис</span>
+              </div>
+              <div class="content__like-wrapper">
+                <svg class="content__like-icon" xmlns="http://www.w3.org/2000/svg" width="23" height="21"
                 viewBox="0 0 23 21" fill="none">
-                <path opacity="0.3"
-                  d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
-                  fill="black" />
-              </svg>
-              <span class="content__like-counter">1350</span>
+                <path
+                  d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"/>
+                </svg>
+                <span class="content__like-counter">1350</span>
+              </div>
             </div>
           </li>
+
           <li class="gallery__item">
-            <div class="gallery__content-wrapper wrapper">
-              <img class="content__file" src="img/gallery__cactus.jpg" width="280" height="280"
-                alt="Кактусы Sedona на фоне гор">
-            </div>
-            <p class="content__title">Местная растительность</p>
-            <span class="content__author-prefix">Автор фото:</span>
-            <span class="content__author">Сергей</span>
-            <div class="content__like-wrapper">
-              <svg class="content__like-icon" xmlns="http://www.w3.org/2000/svg" width="23" height="21"
+            <a class="gallery__item-link" href="#">
+              <div class="content__wrapper wrapper">
+                <img class="content__file" src="img/gallery__cactus.jpg" width="280" height="280"
+                  alt="Кактусы Sedona на фоне гор">
+              </div>
+            </a>
+            <div class="content__legend-wrapper">
+              <div class="content__author&title-wrapper">
+                <p class="content__title">Местная растительность</p>
+                <span class="content__author-prefix">Автор фото:</span>
+                <span class="content__author">Сергей</span>
+              </div>
+              <div class="content__like-wrapper">
+                <svg class="content__like-icon" xmlns="http://www.w3.org/2000/svg" width="23" height="21"
                 viewBox="0 0 23 21" fill="none">
-                <path opacity="0.3"
-                  d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
-                  fill="black" />
-              </svg>
-              <span class="content__like-counter">143</span>
+                <path
+                  d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"/>
+                </svg>
+                <span class="content__like-counter">143</span>
+              </div>
             </div>
           </li>
+
           <li class="gallery__item">
-            <div class="gallery__content-wrapper wrapper">
-              <img class="content__file" src="img/gallery__serpentine-road.jpg" width="280" height="280"
-                alt="Горный серпантин в лесу">
-            </div>
-            <p class="content__title">Дорога на север</p>
-            <span class="content__author-prefix">Автор фото:</span>
-            <span class="content__author">Петр</span>
-            <div class="content__like-wrapper">
-              <svg class="content__like-icon" xmlns="http://www.w3.org/2000/svg" width="23" height="21"
+            <a class="gallery__item-link" href="#">
+              <div class="gallery__content-wrapper wrapper">
+                <img class="content__file" src="img/gallery__serpentine-road.jpg" width="280" height="280"
+                  alt="Горный серпантин в лесу">
+              </div>
+            </a>
+            <div class="content__legend-wrapper">
+              <div class="content__author&title-wrapper">
+                <p class="content__title">Дорога на север</p>
+                <span class="content__author-prefix">Автор фото:</span>
+                <span class="content__author">Петр</span>
+              </div>
+              <div class="content__like-wrapper">
+                <svg class="content__like-icon" xmlns="http://www.w3.org/2000/svg" width="23" height="21"
                 viewBox="0 0 23 21" fill="none">
-                <path opacity="0.3"
-                  d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
-                  fill="black" />
-              </svg>
-              <span class="content__like-counter">96</span>
+                <path
+                  d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"/>
+                </svg>
+                <span class="content__like-counter">96</span>
+              </div>
             </div>
           </li>
+
           <li class="gallery__item">
-            <div class="gallery__content-wrapper wrapper">
-              <img class="content__file" src="img/gallery__devil's-bridge.jpg" width="280" height="280"
-                alt="Небольшая тропа в горах">
-            </div>
-            <p class="content__title">Мост дьявола</p>
-            <span class="content__author-prefix">Автор фото:</span>
-            <span class="content__author">Антон</span>
-            <div class="content__like-wrapper">
-              <svg class="content__like-icon" xmlns="http://www.w3.org/2000/svg" width="23" height="21"
+            <a class="gallery__item-link" href="#">
+              <div class="gallery__content-wrapper wrapper">
+                <img class="content__file" src="img/gallery__devil's-bridge.jpg" width="280" height="280"
+                  alt="Небольшая тропа в горах">
+              </div>
+            </a>
+            <div class="content__legend-wrapper">
+              <div class="content__author&title-wrapper">
+                <p class="content__title">Мост дьявола</p>
+                <span class="content__author-prefix">Автор фото:</span>
+                <span class="content__author">Антон</span>
+              </div>
+              <div class="content__like-wrapper">
+                <svg class="content__like-icon" xmlns="http://www.w3.org/2000/svg" width="23" height="21"
                 viewBox="0 0 23 21" fill="none">
-                <path opacity="0.3"
-                  d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
-                  fill="black" />
-              </svg>
-              <span class="content__like-counter">254</span>
+                <path
+                  d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"/>
+                </svg>
+                <span class="content__like-counter">254</span>
+              </div>
             </div>
           </li>
         </ul>
@@ -156,13 +181,13 @@
     </section>
 
     <!-- Socials -->
-    <section class="footer__social social">
+    <section class="footer__social">
       <h2 class="visually-hidden">Мы в соцсетях.</h2>
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link" href="https://vk.com/htmlacademy" target="_blank">
+      <ul class="footer__social-list">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://vk.com/htmlacademy" target="_blank">
             <span class="visually-hidden">Мы в Вконтакте.</span>
-            <svg class="social__icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48"
+            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48"
               fill="none" xmlns="http://www.w3.org/2000/svg">
               <path xmlns="http://www.w3.org/2000/svg" fill="#81B3D2" d="M0 0h48v48H0z" />
               <g xmlns="http://www.w3.org/2000/svg" clip-path="url(#a)">
@@ -178,10 +203,10 @@
             </svg>
           </a>
         </li>
-        <li class="social__item">
-          <a class="social__link" href="https://t.me/htmlacademy" target="_blank">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://t.me/htmlacademy" target="_blank">
             <span class="visually-hidden">Мы в Телеграме.</span>
-            <svg class="social__icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48"
+            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48"
               fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#81B3D2" />
               <path xmlns="http://www.w3.org/2000/svg"
@@ -190,10 +215,10 @@
             </svg>
           </a>
         </li>
-        <li class="social__item">
-          <a class="social__link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
             <span class="visually-hidden">Мы в Ютубе.</span>
-            <svg class="social__icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48"
+            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48"
               fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#81B3D2" />
               <path xmlns="http://www.w3.org/2000/svg"
@@ -206,11 +231,11 @@
     </section>
 
     <!-- Copyright -->
-    <section class="footer__copyright copyright">
-      <h2 class="copyright__title">Разработано</h2>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+    <section class="footer__copyright">
+      <h2 class="footer__copyright-title">Разработано</h2>
+      <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         <span class="visually-hidden">HTML Academy.</span>
-        <svg class="copyright__icon" aria-hidden="true" focusable="false" width="27" height="35" viewBox="0 0 27 35"
+        <svg class="footer__copyright-icon" aria-hidden="true" focusable="false" width="27" height="35" viewBox="0 0 27 35"
           fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" />
           <path xmlns="http://www.w3.org/2000/svg"

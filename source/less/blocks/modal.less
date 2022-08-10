@@ -1,31 +1,32 @@
 // Начните писать стили здесь
 
-/* features */
+/* MODAL */
 
-.modal {
-  width: 320px;
+@media (min-width: @tablet-width) {
+  .modal {
+    width: 640px;
+  }
 }
 
 .modal__wrapper {
   padding: 38px 38px 0 38px;
+
+  @media (min-width: @tablet-width) {
+    width: 640px;
+  }
 }
 
 .modal__title {
-  font-family: "PT sans", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
+  .title();
   text-align: center;
-  text-transform: uppercase;
   margin: 0;
 }
 
 .modal__text {
-  font-family: "PT sans", sans-serif;
+  .text();
+  color: @text;
   font-size: 16px;
-  line-height: 21px;
-  color: #333333;
   text-align: center;
-  text-transform: uppercase;
   margin: 0;
   padding: 26px 0 28px 0;
 }
@@ -33,18 +34,33 @@
 .modal__wrapper-button {
   padding: 20px;
   background-color: hsl(0, 0%, 95%);
+
+  @media (min-width: @tablet-width) {
+    width: 640px;
+  }
 }
 
 .modal__button {
-  height: 58px;
   width: 280px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+  }
 }
 
 .modal-error {
   padding: 45px 42px 35px 42px;
+
+  @media (min-width: @tablet-width) {
+    width: 400px;
+  }
 }
 
 .modal-error .modal__button {
   width: 180px;
+
+  @media (min-width: @tablet-width) {
+    width: 270px;
+  }
 }

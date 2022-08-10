@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,31 +18,31 @@
     </a>
 
     <!-- меню навигации -->
-    <nav class="header__nav nav">
-      <div class="nav__toggle-wrapper">
-        <span class="nav__toggle">
+    <nav class="header__nav">
+      <div class="header__toggle-button-wrapper">
+        <span class="header__toggle-button">
           <span class="visually-hidden">Открыть меню</span>
         </span>
       </div>
-      <ul class="nav__list">
-        <li class="nav__item nav__item--current">
-          <a class="nav__link" href="index.html">Главная</a>
+      <ul class="header__list">
+        <li class="header__item header__item--left header__item--current">
+          <a class="header__link" href="index.html">Главная</a>
         </li>
-        <li class="nav__item">
-          <a class="nav__link" href="catalog.html">Фото и видео</a>
+        <li class="header__item header__item--left">
+          <a class="header__link" href="catalog.html">Фото и видео</a>
         </li>
-        <li class="nav__item">
-          <a class="nav__link" href="form.html">Форма отзыва</a>
+        <li class="header__item header__item--right">
+          <a class="header__link" href="form.html">Форма отзыва</a>
         </li>
-        <li class="nav__item nav__item--last">
-          <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+        <li class="header__item header__item--right header__item--last">
+          <a class="header__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
         </li>
       </ul>
     </nav>
   </header>
 
   <!-- Main -->
-  <main class="main wrapper">
+  <main class="main main__wrapper">
     <h1 class="visually-hidden">Гостиницы Sedona.</h1>
 
     <!-- Блок hero -->
@@ -65,7 +66,7 @@
         Седона круче, чем гранд каньон!
       </h2>
       <ul class="features__list">
-        <li class="features__card features__card--town">
+        <li class="features__card features__card--true-town">
           <h3 class="features__title">Настоящий городок</h3>
           <p class="features__counter">— №1 —</p>
           <p class="features__description">
@@ -73,8 +74,8 @@
             там течёт своя жизнь
           </p>
         </li>
-        <li class="features__card">
-          <img class="features__photo" src="img/features__photo--town.jpg" width="320" height="260" alt="Вид города.">
+        <li class="features__card features__card--photo">
+          <img class="features__photo" src="img/features__photo--true-town.jpg" width="320" height="260" alt="Вид города.">
         </li>
         <li class="features__card features__card--house">
           <div class="features__icon-wrapper">
@@ -118,7 +119,7 @@
             Да, по нему можно пройти! Если вы осмелитесь, конечно
           </p>
         </li>
-        <li class="features__card">
+        <li class="features__card features__card--photo features__card--reverse-position">
           <img class="features__photo" src="img/features__card--bridge.jpg" width="320" height="260" alt="Фото узкой горной тропы на фоне каньона.">
         </li>
         <li class="features__card features__card--small-area">
@@ -159,9 +160,11 @@
     </section>
 
     <!-- Блок с картой -->
-    <section class="map-section wrapper">
-      <h2 class="visually-hidden">Мы здесь, на карте.</h2>
-      <img class="map__box" src="img/map--index.jpg" width="320" height="350" alt="Логотип гостиниц Sedona.">
+    <section class="map__section ">
+      <div class="map__wrapper">
+        <h2 class="visually-hidden">Мы здесь, на карте.</h2>
+        <img class="map__image" src="img/map--index.jpg" width="320" height="350" alt="Логотип гостиниц Sedona.">
+      </div>
     </section>
   </main>
 
@@ -173,13 +176,13 @@
     </section>
 
     <!-- Socials -->
-    <section class="footer__social social">
+    <section class="footer__social">
       <h2 class="visually-hidden">Мы в соцсетях.</h2>
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link" href="https://vk.com/htmlacademy" target="_blank">
+      <ul class="footer__social-list">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://vk.com/htmlacademy" target="_blank">
             <span class="visually-hidden">Мы в Вконтакте.</span>
-            <svg class="social__icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48"
+            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48"
               fill="none" xmlns="http://www.w3.org/2000/svg">
               <path xmlns="http://www.w3.org/2000/svg" fill="#81B3D2" d="M0 0h48v48H0z" />
               <g xmlns="http://www.w3.org/2000/svg" clip-path="url(#a)">
@@ -195,10 +198,10 @@
             </svg>
           </a>
         </li>
-        <li class="social__item">
-          <a class="social__link" href="https://t.me/htmlacademy" target="_blank">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://t.me/htmlacademy" target="_blank">
             <span class="visually-hidden">Мы в Телеграме.</span>
-            <svg class="social__icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48"
+            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48"
               fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#81B3D2" />
               <path xmlns="http://www.w3.org/2000/svg"
@@ -207,10 +210,10 @@
             </svg>
           </a>
         </li>
-        <li class="social__item">
-          <a class="social__link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
             <span class="visually-hidden">Мы в Ютубе.</span>
-            <svg class="social__icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48"
+            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48"
               fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#81B3D2" />
               <path xmlns="http://www.w3.org/2000/svg"
@@ -223,11 +226,11 @@
     </section>
 
     <!-- Copyright -->
-    <section class="footer__copyright copyright">
-      <h2 class="copyright__title">Разработано</h2>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+    <section class="footer__copyright">
+      <h2 class="footer__copyright-title">Разработано</h2>
+      <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         <span class="visually-hidden">HTML Academy.</span>
-        <svg class="copyright__icon" aria-hidden="true" focusable="false" width="27" height="35" viewBox="0 0 27 35"
+        <svg class="footer__copyright-icon" aria-hidden="true" focusable="false" width="27" height="35" viewBox="0 0 27 35"
           fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" />
           <path xmlns="http://www.w3.org/2000/svg"

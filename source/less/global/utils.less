@@ -1,0 +1,89 @@
+// Начните писать стили здесь
+
+// UTILS
+
+// внутренние отступы и границы теперь часть бокса
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// скрываем невидимые элементы
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// sticky-footer +  базовый шрифт
+
+.page {
+  height: 100%;
+  font-family: @font;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0 auto;
+  width: @mobile-width;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
+.main__wrapper {
+  flex-grow: 1;
+}
+
+// картинки запираются контейнером + растяжение картинки до границ контейнера
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  //contain cover
+  display: block;
+  // height: auto;
+}
+
+// убираем буллеты и отступы списков
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+// убираем подчёркивание ссылок
+
+a {
+  text-decoration: none;
+}
+
+// убираем отступы абзацев, заголовков
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input {
+  margin: 0;
+}
+
