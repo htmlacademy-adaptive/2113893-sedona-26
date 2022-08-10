@@ -5,12 +5,24 @@
 // Бокс-вступление перед формой
 .form__intro {
   padding: 36px 20px 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 64px 60px 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 115px 120px 0 120px;
+  }
 }
 
 // его заголовок
 .form__intro-title {
   .title();
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 // и текст
@@ -19,6 +31,12 @@
   color: @text;
   text-align: center;
   padding-top: 24px;
+
+  @media (min-width: @tablet-width) {
+    width: 435px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
 }
 
 // Форма отзыва
@@ -29,11 +47,11 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
-    padding: 36px 60px 0 60px;
+    padding: 102px 60px 0 60px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 36px 120px 0 120px;
+    padding: 67px 120px 0 120px;
   }
 }
 
@@ -41,6 +59,7 @@
 .form__fieldset {
   border: none;
   padding: 0 0 38px 0;
+  position: relative;
 }
 
 // заголовок формы
@@ -53,11 +72,12 @@
 
   @media (min-width: @tablet-width) {
     box-shadow: none;
+    font-size: 21px;
   }
 }
 
 // текст перед input, с двоеточием
-.form__label {
+.form__label-text {
   .text();
   color: #333333;
   padding: 16px 0 0 16px;
@@ -99,7 +119,22 @@ input[type="checkbox"] + .form__label {
   }
 }
 
-// и их placeholders
+//кнопки телефона и емейла
+.form__button--tel,
+.form__button--email {
+  position: absolute;
+  top: 37px;
+  right: 0;
+  width: 58px;
+  height: 58px;
+  background-color: hsl(0, 0%, 90%);
+}
+
+.form__button--email {
+  top: 132px;
+}
+
+// placeholders
 .form__input::placeholder,
 .form__textarea::placeholder {
   .title();
@@ -161,6 +196,7 @@ input[type="checkbox"] + .form__label {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 12px 0 64px 0;
   }
 
   .form__fieldset--name,
@@ -204,6 +240,14 @@ input[type="checkbox"] + .form__label {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+  .form__fieldset--impression {
+    padding-bottom: 24px;
+  }
+
+  .form__fieldset--sights {
+    padding-bottom: 18px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -217,5 +261,13 @@ input[type="checkbox"] + .form__label {
 
   .form__fieldset--sights .form__list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .form__fieldset--impression {
+    padding-bottom: 49px;
+  }
+
+  .form__fieldset--sights {
+    padding-bottom: 63px;
   }
 }
