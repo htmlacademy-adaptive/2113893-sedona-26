@@ -3,7 +3,6 @@
 // UTILS
 
 // внутренние отступы и границы теперь часть бокса
-
 *,
 *::before,
 *::after {
@@ -11,7 +10,6 @@
 }
 
 // скрываем невидимые элементы
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -24,7 +22,6 @@
 }
 
 // sticky-footer +  базовый шрифт
-
 .page {
   height: 100%;
   font-family: @font;
@@ -35,15 +32,19 @@
   flex-direction: column;
   min-height: 100%;
   margin: 0 auto;
-  width: @mobile-width;
+  width: 100%;
+  max-width: 1200px;
 
-  @media (min-width: @tablet-width) {
-    width: @tablet-width;
-  }
+  // удалить
+  // width: @mobile-width;
 
-  @media (min-width: @desktop-width) {
-    width: @desktop-width;
-  }
+  // @media (min-width: @tablet-width) {
+  //   width: @tablet-width;
+  // }
+
+  // @media (min-width: @desktop-width) {
+  //   width: @desktop-width;
+  // }
 }
 
 .main__wrapper {
@@ -51,7 +52,6 @@
 }
 
 // картинки запираются контейнером + растяжение картинки до границ контейнера
-
 img {
   max-width: 100%;
   object-fit: cover;
@@ -60,22 +60,19 @@ img {
   // height: auto;
 }
 
-// убираем буллеты и отступы списков
-
+// Обнуляем буллеты и отступы списков
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-// убираем подчёркивание ссылок
-
+// Обнуляем подчёркивание ссылок
 a {
   text-decoration: none;
 }
 
-// убираем отступы абзацев, заголовков
-
+// Обнуляем дефолтные отступы
 p,
 h1,
 h2,
@@ -87,3 +84,30 @@ input {
   margin: 0;
 }
 
+//убираем для мобильных переносы строк планшетов/ПК
+.br-tablet,
+.br-desktop {
+  display: none;
+}
+
+//включаем перенос строк для планшетов
+@media (min-width: @tablet-width) {
+  .br-mobile {
+    display: none;
+  }
+
+  .br-tablet {
+    display: inline;
+  }
+}
+
+//включаем перенос строк для ПК
+@media (min-width: @desktop-width) {
+  .br-tablet {
+    display: none;
+  }
+
+  .br-desktop {
+    display: inline;
+  }
+}

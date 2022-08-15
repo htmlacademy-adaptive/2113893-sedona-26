@@ -20,11 +20,11 @@
     <!-- меню навигации -->
     <nav class="header__nav">
       <div class="header__toggle-button-wrapper">
-        <span class="header__toggle-button">
+        <span class="header__toggle-button header__toggle-button--closed">
           <span class="visually-hidden">Открыть меню</span>
         </span>
       </div>
-      <ul class="header__list">
+      <ul class="header__list header__list--closed">
         <li class="header__item header__item--left header__item--current">
           <a class="header__link" href="index.html">Главная</a>
         </li>
@@ -53,8 +53,8 @@
           alt="Добро пожаловать в прекрасную Седону. Ведь Большой Каньон отстой.">
       </div>
       <p class="hero__slogan">
-          Седона — небольшой<br>
-          городок в Аризоне,<br>
+          Седона — небольшой<br class="br-mobile">
+          городок в Аризоне,<br class="br-mobile"><br class="br-tablet"><br class="br-desktop">
           заслуживающий большего!
       </p>
     </section>
@@ -62,16 +62,18 @@
     <!-- Блок преимуществ -->
     <section class="features wrapper">
       <h2 class="features__intro">
-        Рассмотрим 5 причин, по которым<br>
+        Рассмотрим 5 причин, по которым<br class="br-mobile">
         Седона круче, чем гранд каньон!
       </h2>
       <ul class="features__list">
         <li class="features__card features__card--true-town">
-          <h3 class="features__title">Настоящий городок</h3>
+          <h3 class="features__title">Настоящий <br class="br-tablet"><br class="br-desktop">городок</h3>
           <p class="features__counter">— №1 —</p>
           <p class="features__description">
-            Седона — не аттракцион для туристов,<br>
-            там течёт своя жизнь
+            Седона — не аттракцион для<br class="br-tablet">
+            туристов,<br class="br-mobile"><br class="br-desktop">
+            там течёт своя<br class="br-tablet">
+            жизнь
           </p>
         </li>
         <li class="features__card features__card--photo">
@@ -84,9 +86,11 @@
           </div>
           <h3 class="features__title">Жильё</h3>
           <p class="features__description">
-            Рекомендуем пожить<br>
-            в настоящем мотеле,<br>
-            всё как в кино!
+            Рекомендуем пожить в<br class="br-mobile"><br class="br-tablet">
+            настоящем<br class="br-desktop">
+            мотеле, всё<br class="br-tablet">
+            как в<br class="br-mobile">
+            кино!
           </p>
         </li>
         <li class="features__card features__card--food">
@@ -96,8 +100,9 @@
           </div>
           <h3 class="features__title">Еда</h3>
           <p class="features__description">
-            Всегда заказывайте<br>
-            фирменный бургер,<br>
+            Всегда заказывайте<br class="br-tablet">
+            фирменный<br class="br-mobile">
+            бургер,<br class="br-tablet"><br class="br-desktop">
             вы не разочаруетесь!
           </p>
         </li>
@@ -108,41 +113,51 @@
           </div>
           <h3 class="features__title">Сувениры</h3>
           <p class="features__description">
-            Не только китайского,<br>
-            но и настоящего местного производства!
+            Не только китайского,<br class="br-desktop"> но<br class="br-tablet"> и<br class="br-mobile">
+            местного производства!
           </p>
         </li>
         <li class="features__card features__card--bridge">
-          <h3 class="features__title">Там есть Мост дьявола</h3>
+          <h3 class="features__title">Там есть<br class="br-tablet"><br class="br-desktop"> Мост дьявола</h3>
           <p class="features__counter">— №2 —</p>
           <p class="features__description">
-            Да, по нему можно пройти! Если вы осмелитесь, конечно
+            Да, по нему можно<br class="br-tablet">
+            пройти!<br class="br-desktop">
+            Если вы<br class="br-mobile"><br class="br-tablet">
+            осмелитесь, конечно
           </p>
         </li>
         <li class="features__card features__card--photo features__card--reverse-position">
           <img class="features__photo" src="img/features__card--bridge.jpg" width="320" height="260" alt="Фото узкой горной тропы на фоне каньона.">
         </li>
         <li class="features__card features__card--small-area">
-          <h3 class="features__title">Небольшая площадь</h3>
+          <h3 class="features__title">Небольшая<br class="br-tablet"><br class="br-desktop"> площадь</h3>
           <p class="features__counter">— №3 —</p>
           <p class="features__description">
-            Все интересные места находятся очень близко
+            Все интересные места<br class="br-tablet">
+            находятся<br class="br-mobile">
+            очень<br class="br-desktop">
+            близко
           </p>
         </li>
         <li class="features__card features__card--road">
-          <h3 class="features__title">Красивая дорога</h3>
+          <h3 class="features__title">Красивая<br class="br-tablet"><br class="br-desktop"> дорога</h3>
           <p class="features__counter">— №4 —</p>
           <p class="features__description">
-            Ехать в седону из лас-вегаса<br>
-            cовсем не скучно!
+            Ехать в седону из<br class="br-tablet">
+            лас-вегаса<br class="br-mobile">
+            cовсем<br class="br-tablet"><br class="br-desktop">
+            не скучно!
           </p>
         </li>
         <li class="features__card features__card--few-tourists">
-          <h3 class="features__title">Мало туристов</h3>
+          <h3 class="features__title">Мало<br class="br-tablet"><br class="br-desktop"> туристов</h3>
           <p class="features__counter">— №5 —</p>
           <p class="features__description">
-            Большинство едет в гранд каньон<br>
-            и толпится там
+            Большинство едет в<br class="br-tablet">
+            гранд каньон<br class="br-mobile">
+            и<br class="br-tablet"><br class="br-desktop">
+            толпится там
           </p>
         </li>
       </ul>
@@ -152,8 +167,8 @@
     <section class="search-hotels wrapper">
       <h2 class="search-hotels__title">Заинтересовались?</h2>
       <p class="search-hotels__text">
-        Укажите предполагаемые даты<br>
-        поездки, и мы покажем вам лучшие<br>
+        Укажите предполагаемые даты<br class="br-mobile">
+        поездки,<br class="br-tablet"><br class="br-desktop"> и мы покажем вам лучшие<br class="br-mobile">
         предложения гостиниц в седоне
       </p>
       <a class="search-hotels__button button" href="#">Найти Гостиницу</a>
@@ -240,6 +255,7 @@
       </a>
     </section>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

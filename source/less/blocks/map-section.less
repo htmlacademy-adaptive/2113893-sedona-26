@@ -2,6 +2,7 @@
 
 // MAP__SECTION
 
+// центрируем блок + отступы по макету
 .map__section {
   padding-top: 50px;
   margin: 0 auto;
@@ -15,10 +16,9 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .map__image {
-    max-height: 350px;
-    width: 100%;
-    max-width: 1200px;
-  }
+//карта занимает всю ширину окна, но не более 1200; высота 350
+.map__image {
+  max-height: 350px;
+  width: 100%;
+  max-width: 1200px;
 }

@@ -73,19 +73,25 @@
   @media (min-width: @tablet-width) {
     box-shadow: none;
     font-size: 21px;
+    background-color: #ffffff;
+    display: block;
+    width: 100%;
+    max-width: 400px;
   }
 }
 
 // текст перед input, с двоеточием
 .form__label-text {
+  // display: block;
   .text();
-  color: #333333;
+  display: inline-block;
+  color: @text;
   padding: 16px 0 0 16px;
 }
 
 // текст после радиокнопок и чекбоксов
-input[type="radio"] + .form__label,
-input[type="checkbox"] + .form__label {
+input[type="radio"] + .form__label-text,
+input[type="checkbox"] + .form__label-text {
   text-transform: none;
   font-weight: 700;
 }
