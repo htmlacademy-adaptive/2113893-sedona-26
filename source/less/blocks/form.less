@@ -19,6 +19,9 @@
 .form__intro-title {
   .title();
   text-align: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
@@ -31,6 +34,9 @@
   color: @text;
   text-align: center;
   padding-top: 24px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     width: 435px;
@@ -82,7 +88,6 @@
 
 // текст перед input, с двоеточием
 .form__label-text {
-  // display: block;
   .text();
   display: inline-block;
   color: @text;
@@ -105,24 +110,13 @@ input[type="checkbox"] + .form__label-text {
   border: none;
   background-color: hsl(0, 0%, 95%);
   .title();
+  min-width: 280px;
+  width: 100%;
+  max-width: 430px;
 }
 
-.form__input[type="text"] {
-  width: 280px;
-
-  @media (min-width: @desktop-width) {
-    width: 430px;
-  }
-}
-
-.form__input[type="tel"],
-.form__input[type="email"] {
-  width: 280px;
-  padding-right: 60px;
-
-  @media (min-width: @desktop-width) {
-    width: 400px;
-  }
+.form__input-wrapper {
+  position: relative;
 }
 
 //кнопки телефона и емейла
@@ -134,6 +128,11 @@ input[type="checkbox"] + .form__label-text {
   width: 58px;
   height: 58px;
   background-color: hsl(0, 0%, 90%);
+
+  @media (min-width: @tablet-width) {
+    top: 37px;
+    right: 0;
+  }
 }
 
 .form__button--email {
@@ -146,14 +145,7 @@ input[type="checkbox"] + .form__label-text {
   .title();
   text-transform: none;
   color: rgba(0, 0, 0, 30%);
-}
-
-// направляем в колонну элементы списков формы
-.form__list {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 16px;
+  text-align: left;
 }
 
 // стилизуем текстовое поле с отзывом
@@ -190,7 +182,57 @@ input[type="checkbox"] + .form__label-text {
   text-transform: uppercase;
 }
 
+
+//стили для мобильных
+@media (max-width: @mobile-width-only) {
+
+  //центрируем и тянем в заданных границах подпись перед input
+  .form__label-text {
+    display: block;
+    min-width: 280px;
+    width: 100%;
+    max-width: 430px;
+    padding-left: 16px;
+    margin: 0 auto;
+  }
+
+  //центрируем поля ввода
+  .form__input[type="text"],
+  .form__input[type="tel"],
+  .form__input[type="email"] {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .form__input[type="email"] {
+    background: no-repeat right url("/img/form__icon--mail.svg");
+  }
+
+  //выравниваем радикнопки и чекбоксы с подписями, прижимаем к левому краю
+  .form__fieldset--impression .form__label,
+  .form__fieldset--sights .form__label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+  }
+
+  .form__fieldset--impression .form__label-text,
+  .form__fieldset--sights .form__label-text {
+    margin: 0;
+  }
+}
+
+//стили для планшетов
 @media (min-width: @tablet-width) {
+  .form__fieldset--name {
+    padding-right: 63px;
+  }
+
+  .form__fieldset--contacts {
+    padding-left: 63px;
+  }
+
   .form__fieldset--impression,
   .form__fieldset--sights,
   .form__fieldset--feedback,
@@ -237,10 +279,6 @@ input[type="checkbox"] + .form__label-text {
     top: -45px;
   }
 
-  .form__fieldset--contacts {
-    justify-self: end;
-  }
-
   .form__fieldset--impression .form__list,
   .form__fieldset--sights .form__list {
     display: grid;
@@ -256,6 +294,7 @@ input[type="checkbox"] + .form__label-text {
   }
 }
 
+//стили для ПК
 @media (min-width: @desktop-width) {
   .form__fieldset--name::after {
     right: -15px;

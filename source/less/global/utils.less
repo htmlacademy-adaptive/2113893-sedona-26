@@ -7,6 +7,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
 }
 
 // скрываем невидимые элементы
@@ -33,18 +35,7 @@
   min-height: 100%;
   margin: 0 auto;
   width: 100%;
-  max-width: 1200px;
-
-  // удалить
-  // width: @mobile-width;
-
-  // @media (min-width: @tablet-width) {
-  //   width: @tablet-width;
-  // }
-
-  // @media (min-width: @desktop-width) {
-  //   width: @desktop-width;
-  // }
+  max-width: @desktop-width;
 }
 
 .main__wrapper {

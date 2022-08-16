@@ -3,6 +3,7 @@ let headerToggle = document.querySelector('.header__toggle-button-wrapper');
 let headerToggleButton = document.querySelector('.header__toggle-button');
 
 headerList.classList.remove('header__list--nojs');
+headerToggleButton.classList.remove('header__toggle-button--nojs');
 
 headerToggle.addEventListener('click', function () {
   if (headerList.classList.contains('header__list--closed')) {

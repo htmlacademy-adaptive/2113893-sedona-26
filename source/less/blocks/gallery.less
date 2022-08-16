@@ -2,29 +2,35 @@
 
 // GALLERY
 
+// растягиваем блок до ширины окна, но не более @desktop-width, и центрируем
 .gallery {
+  width: 100%;
+  max-width: @desktop-width;
+  margin: 0 auto;
   padding: 33px 20px 0 20px;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
     padding: 60px 60px 0 60px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1200px;
     padding: 60px 0 0 0;
   }
 }
 
+//стилизуем и центрируем заголовок, ограничиваем по ширине
 .gallery__title {
   .title();
   text-align: center;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
+    max-width: 458px;
   }
 }
 
+//стилизуем и центрируем заголовок, ограничиваем по ширине
 .gallery__text {
   .text();
   line-height: 26px;
@@ -32,9 +38,11 @@
   text-align: center;
   padding-top: 32px;
   padding-bottom: 32px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 70px;
+    max-width: 458px;
   }
 }
 
@@ -59,6 +67,15 @@
   @media (min-width: @tablet-width) {
     box-shadow: none;
     padding: 0;
+  }
+}
+
+.gallery__item--last {
+  box-shadow: 0 1px 0 hsl(0, 0%, 84%) inset,
+    0 -1px 0 hsl(0, 0%, 84%) inset;
+
+  @media (min-width: @tablet-width) {
+    box-shadow: none;
   }
 }
 
