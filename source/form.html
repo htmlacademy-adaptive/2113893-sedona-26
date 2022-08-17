@@ -25,16 +25,16 @@
         </span>
       </div>
       <ul class="header__list header__list--closed header__list--nojs">
-        <li class="header__item header__item--left header__item--current">
+        <li class="header__item header__item--left">
           <a class="header__link" href="index.html">Главная</a>
         </li>
         <li class="header__item header__item--left">
           <a class="header__link" href="catalog.html">Фото и видео</a>
         </li>
-        <li class="header__item header__item--right">
+        <li class="header__item header__item--right header__item--current">
           <a class="header__link" href="form.html">Форма отзыва</a>
         </li>
-        <li class="header__item header__item--right header__item--last">
+        <li class="header__item header__item--right header__item--last header__item--disabled">
           <a class="header__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
         </li>
       </ul>
@@ -100,22 +100,10 @@
             <label class="form__label">
               <span class="form__label-text">Контактный телефон*:</span>
               <input class="form__input" type="tel" name="telephone" placeholder="Введите телефон" required>
-              <span class="form__button--tel button">
-                <span class="visually-hidden">Иконка телефона.</span>
-                <svg class="form__icon" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                  <path xmlns="http://www.w3.org/2000/svg" d="M3.6 7.8C5 10.6 7.4 12.9 10.2 14.4L12.4 12.2C12.7 11.9 13.1 11.8 13.4 12C14.5 12.4 15.7 12.6 17 12.6C17.6 12.6 18 13 18 13.6V17C18 17.6 17.6 18 17 18C7.6 18 0 10.4 0 1C0 0.4 0.4 0 1 0H4.5C5.1 0 5.5 0.4 5.5 1C5.5 2.2 5.7 3.4 6.1 4.6C6.2 4.9 6.1 5.3 5.9 5.6L3.6 7.8Z" fill="#010101"/>
-                </svg>
-              </span>
             </label>
             <label class="form__label">
               <span class="form__label-text">Электронная почта*:</span>
               <input class="form__input" type="email" name="e-mail" placeholder="Введите e-mail" required>
-              <span class="form__button--email button">
-                <span class="visually-hidden">Иконка почты.</span>
-                <svg class="form__icon" aria-hidden="true" focusable="false" width="16" height="12" viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg">
-                  <path xmlns="http://www.w3.org/2000/svg" d="M8 8C7.7 8 7.5 7.9 7 7.7L0 4V11C0 11.5 0.5 12 1 12H15C15.5 12 16 11.5 16 11V4L9 7.7C8.5 7.9 8.3 8 8 8ZM15 0H1C0.5 0 0 0.5 0 1V1.8L8 6L16 1.8V1C16 0.5 15.5 0 15 0Z" fill="black"/>
-                </svg>
-              </span>
             </label>
           </fieldset>
 
@@ -125,20 +113,23 @@
             <ul class="form__list">
               <li class="form__list-item">
                 <label class="form__label">
-                  <input class="form__input" type="radio" name="impression" value="rather-positive" checked>
-                  <span class="form__label-text">Скорее положительное</span>
+                  <input class="form__input visually-hidden" type="radio" name="impression" value="rather-positive" checked>
+                  <span class="form__input-radio"></span>
+                  <span class="form__label-text form__label-text--impression">Скорее положительное</span>
                 </label>
               </li>
               <li class="form__list-item">
                 <label class="form__label">
-                  <input class="form__input" type="radio" name="impression" value="rather-negative">
-                  <span class="form__label-text">Скорее отрицательное</span>
+                  <input class="form__input visually-hidden" type="radio" name="impression" value="rather-positive" checked>
+                  <span class="form__input-radio"></span>
+                  <span class="form__label-text form__label-text--impression">Скорее отрицательное</span>
                 </label>
               </li>
               <li class="form__list-item">
                 <label class="form__label">
-                  <input class="form__input" type="radio" name="impression" value="hard-to-answer">
-                  <span class="form__label-text">Затрудняюсь ответить</span>
+                  <input class="form__input visually-hidden" type="radio" name="impression" value="rather-positive" checked>
+                  <span class="form__input-radio"></span>
+                  <span class="form__label-text form__label-text--impression">Затрудняюсь ответить</span>
                 </label>
               </li>
             </ul>
@@ -150,26 +141,30 @@
             <ul class="form__list">
               <li class="form__list-item">
                 <label class="form__label">
-                  <input class="form__input" type="checkbox" name="sight-devils-bridge" checked>
-                  <span class="form__label-text">Мост дьявола</span>
+                  <input class="form__input visually-hidden" type="checkbox" name="sights" value="rather-positive" checked>
+                  <span class="form__input-checkbox"></span>
+                  <span class="form__label-text form__label-text--sights">Мост дьявола</span>
                 </label>
               </li>
               <li class="form__list-item">
                 <label class="form__label">
-                  <input class="form__input" type="checkbox" name="sight-rock-bell" checked>
-                  <span class="form__label-text">Гора-Колокол</span>
+                  <input class="form__input visually-hidden" type="checkbox" name="sights" value="rather-positive" checked>
+                  <span class="form__input-checkbox"></span>
+                  <span class="form__label-text form__label-text--sights">Гора-Колокол</span>
                 </label>
               </li>
               <li class="form__list-item">
                 <label class="form__label">
-                  <input class="form__input" type="checkbox" name="sight-slide-park" checked>
-                  <span class="form__label-text">Слайд-парк</span>
+                  <input class="form__input visually-hidden" type="checkbox" name="sights" value="rather-positive" checked>
+                  <span class="form__input-checkbox"></span>
+                  <span class="form__label-text form__label-text--sights">Слайд-парк</span>
                 </label>
               </li>
               <li class="form__list-item">
                 <label class="form__label">
-                  <input class="form__input" type="checkbox" name="sight-red-rocks">
-                  <span class="form__label-text">Красные скалы</span>
+                  <input class="form__input visually-hidden" type="checkbox" name="sights" value="rather-positive">
+                  <span class="form__input-checkbox"></span>
+                  <span class="form__label-text form__label-text--sights">Красные скалы</span>
                 </label>
               </li>
             </ul>
@@ -255,17 +250,20 @@
 
     <!-- Copyright -->
     <section class="footer__copyright">
-      <h2 class="footer__copyright-title">Разработано</h2>
-      <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-        <span class="visually-hidden">HTML Academy.</span>
-        <svg class="footer__copyright-icon" aria-hidden="true" focusable="false" width="27" height="35" viewBox="0 0 27 35"
+      <div class="footer__copyright-wrapper">
+        <h2 class="visually-hidden">Разработчики сайта.</h2>
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <span class="footer__copyright-title">Разработано</span>
+          <span class="visually-hidden">HTML Academy.</span>
+          <svg class="footer__copyright-icon" aria-hidden="true" focusable="false" width="27" height="35" viewBox="0 0 27 35"
           fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" />
+          <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none"/>
           <path xmlns="http://www.w3.org/2000/svg"
             d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"
-            fill="black" />
-        </svg>
-      </a>
+            />
+          </svg>
+        </a>
+      </div>
     </section>
   </footer>
 

@@ -1,7 +1,6 @@
 // Начните писать стили здесь
 
 // FORM
-
 // Бокс-вступление перед формой
 .form__intro {
   padding: 36px 20px 0 20px;
@@ -39,13 +38,13 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    width: 435px;
+    max-width: 435px;
     margin: 0 auto;
     padding-top: 20px;
   }
 }
 
-// Форма отзыва
+// Форма отзыва, сетка блоков
 .form {
   display: grid;
   grid-template-columns: 1fr;
@@ -61,14 +60,14 @@
   }
 }
 
-// часть формы
+// Блок формы
 .form__fieldset {
   border: none;
   padding: 0 0 38px 0;
   position: relative;
 }
 
-// заголовок формы
+// Заголовок блока
 .form__legend {
   .title();
   text-align: center;
@@ -86,7 +85,7 @@
   }
 }
 
-// текст перед input, с двоеточием
+// Текст перед input, с двоеточием
 .form__label-text {
   .text();
   display: inline-block;
@@ -94,14 +93,23 @@
   padding: 16px 0 0 16px;
 }
 
-// текст после радиокнопок и чекбоксов
-input[type="radio"] + .form__label-text,
-input[type="checkbox"] + .form__label-text {
-  text-transform: none;
-  font-weight: 700;
+//
+.form__label {
+  max-width: 300px;
+  position: relative;
 }
 
-// стилизуем inputs
+// Текст после радиокнопок и чекбоксов
+.form__label-text--impression,
+.form__label-text--sights {
+  text-transform: none;
+  font-weight: 700;
+  padding-left: 62px;
+  padding-bottom: 16px;
+  font-size: 18px;
+}
+
+// Стилизуем  текстовые inputs
 .form__input[type="text"],
 .form__input[type="tel"],
 .form__input[type="email"] {
@@ -115,40 +123,7 @@ input[type="checkbox"] + .form__label-text {
   max-width: 430px;
 }
 
-.form__input-wrapper {
-  position: relative;
-}
-
-//кнопки телефона и емейла
-.form__button--tel,
-.form__button--email {
-  position: absolute;
-  top: 37px;
-  right: 0;
-  width: 58px;
-  height: 58px;
-  background-color: hsl(0, 0%, 90%);
-
-  @media (min-width: @tablet-width) {
-    top: 37px;
-    right: 0;
-  }
-}
-
-.form__button--email {
-  top: 132px;
-}
-
-// placeholders
-.form__input::placeholder,
-.form__textarea::placeholder {
-  .title();
-  text-transform: none;
-  color: rgba(0, 0, 0, 30%);
-  text-align: left;
-}
-
-// стилизуем текстовое поле с отзывом
+// Стилизуем текстовое поле с отзывом
 .form__textarea {
   font-family: inherit;
   resize: none;
@@ -159,7 +134,150 @@ input[type="checkbox"] + .form__label-text {
   .title();
 }
 
-// кнопка отправить отзыв
+// Состояния текстовых полей:
+// Наведение курсора и фокусирование
+.form__input[type="text"]:hover,
+.form__input[type="tel"]:hover,
+.form__input[type="email"]:hover,
+.form__textarea:hover,
+.form__input[type="text"]:focus,
+.form__input[type="tel"]:focus,
+.form__input[type="email"]:focus,
+.form__textarea:focus {
+  background-color: hsl(0, 0%, 90%);
+}
+
+// Стилизация после ввода данных и снятия фокуса
+.form__input[type="text"]:not(:placeholder-shown),
+.form__input[type="tel"]:not(:placeholder-shown),
+.form__input[type="email"]:not(:placeholder-shown),
+.form__textarea:not(:placeholder-shown) {
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 4px hsl(0, 0%, 90%);
+}
+
+// Наведение курсора после ввода данных
+.form__input[type="text"]:hover:not(:placeholder-shown),
+.form__input[type="tel"]:hover:not(:placeholder-shown),
+.form__input[type="email"]:hover:not(:placeholder-shown),
+.form__textarea:hover:not(:placeholder-shown) {
+  background-color: hsl(0, 0%, 90%);
+  box-shadow: inset 0 0 0 4px hsl(0, 0%, 90%);
+}
+
+// Картинка телефона
+.form__input[type="email"] {
+  background: no-repeat right url("/img/form__icon--mail.svg"),
+    hsl(0, 0%, 95%);
+}
+
+// Картинка почты
+.form__input[type="tel"] {
+  background: no-repeat right url("/img/form__icon--telephone.svg"),
+    hsl(0, 0%, 95%);
+}
+
+// Стилизуем placeholders
+.form__input::placeholder,
+.form__textarea::placeholder {
+  .title();
+  text-transform: none;
+  color: rgba(0, 0, 0, 30%);
+  text-align: left;
+}
+
+// Якорь для кастомных чекбоксов
+.form__input[type="radio"] {
+  position: relative;
+}
+
+// Круг под радиокнопку
+.form__input-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: hsl(0, 0%, 95%);
+}
+
+// Кружок в радиокнопке
+.form__input[type="radio"]:checked + .form__input-radio::before {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 16px;
+  height: 16px;
+  background-color: #333333;
+  border-radius: 50%;
+  content: "";
+}
+
+// Квадрат для чекбокса
+.form__input-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 4px;
+  background-color: hsl(0, 0%, 95%);
+}
+
+/* добавляем галочки отмеченным чекбоксам */
+.form__input[type="checkbox"]:checked + .form__input-checkbox::before {
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  width: 22px;
+  height: 16px;
+  background: no-repeat url("/img/form__input-checkbox-checked.svg");
+  content: "";
+}
+
+// наведение
+.form__label:hover .form__input-radio,
+.form__label:hover .form__input-checkbox {
+  background-color: hsl(0, 0%, 90%);
+  transition: 0.5s;
+}
+
+// фокус
+.form__input:focus + .form__input-radio,
+.form__input:focus + .form__input-checkbox {
+  background-color: hsl(0, 0%, 90%);
+  transition: 0.5s;
+}
+
+// нажатие
+.form__label:active .form__input-radio,
+.form__label:active .form__input-checkbox {
+  background-color: hsl(0, 0%, 84%);
+}
+
+.form__label:active .form__input-radio::before,
+.form__label:active .form__input-checkbox::before {
+  background-color: #ff0000;
+}
+
+// выключенный
+.form__label--disabled {
+  pointer-events: none;
+  opacity: 30%;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+// Выравниваем радикнопки и чекбоксы с подписями
+.form__fieldset--impression .form__label,
+.form__fieldset--sights .form__label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+// Кнопка отправить отзыв
 .form__button {
   width: 100%;
   max-width: 280px;
@@ -173,7 +291,7 @@ input[type="checkbox"] + .form__label-text {
   }
 }
 
-// подпись под кнопкой отправить отзыв
+// Подпись под кнопкой отправить отзыв
 .form__required-span {
   font-size: 12px;
   line-height: 21px;
@@ -183,10 +301,10 @@ input[type="checkbox"] + .form__label-text {
 }
 
 
-//стили для мобильных
+// Стили для мобильных
 @media (max-width: @mobile-width-only) {
 
-  //центрируем и тянем в заданных границах подпись перед input
+  // Центрируем и тянем в заданных границах подпись перед input
   .form__label-text {
     display: block;
     min-width: 280px;
@@ -196,7 +314,7 @@ input[type="checkbox"] + .form__label-text {
     margin: 0 auto;
   }
 
-  //центрируем поля ввода
+  // Центрируем поля ввода
   .form__input[type="text"],
   .form__input[type="tel"],
   .form__input[type="email"] {
@@ -204,35 +322,35 @@ input[type="checkbox"] + .form__label-text {
     margin: 0 auto;
   }
 
-  .form__input[type="email"] {
-    background: no-repeat right url("/img/form__icon--mail.svg");
+  .form__fieldset--impression .form__list,
+  .form__fieldset--sights .form__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
 
-  //выравниваем радикнопки и чекбоксы с подписями, прижимаем к левому краю
-  .form__fieldset--impression .form__label,
-  .form__fieldset--sights .form__label {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: center;
-  }
-
-  .form__fieldset--impression .form__label-text,
-  .form__fieldset--sights .form__label-text {
+  .form__label-text--impression,
+  .form__label-text--sights {
     margin: 0;
+    padding-left: 62px;
+    padding-bottom: 16px;
   }
 }
 
-//стили для планшетов
+// Стили для планшетов
 @media (min-width: @tablet-width) {
+
+  //отступ блока перед полосой-разделителем
   .form__fieldset--name {
     padding-right: 63px;
   }
 
+  //отступ блока после полосы-разделителя
   .form__fieldset--contacts {
     padding-left: 63px;
   }
 
+  // Расширяем блоки на вторую колонну
   .form__fieldset--impression,
   .form__fieldset--sights,
   .form__fieldset--feedback,
@@ -240,6 +358,7 @@ input[type="checkbox"] + .form__label-text {
     grid-column: 1 / span 2;
   }
 
+  // флекс для кнопки отправить отзыв и текстового блока с *
   .form__button-wrapper {
     display: flex;
     justify-content: space-between;
@@ -247,6 +366,7 @@ input[type="checkbox"] + .form__label-text {
     padding: 12px 0 64px 0;
   }
 
+  // проверить необходимость
   .form__fieldset--name,
   .form__fieldset--impression,
   .form__fieldset--sights,
@@ -254,6 +374,7 @@ input[type="checkbox"] + .form__label-text {
     position: relative;
   }
 
+  // Полоса-разделитель между ФИО и контактами
   .form__fieldset--name::after {
     content: "";
     position: absolute;
@@ -263,6 +384,7 @@ input[type="checkbox"] + .form__label-text {
     border-right: 1px solid hsl(0, 0%, 86%);
   }
 
+  // Полосы-разделители блоков формы
   .form__fieldset--impression::before,
   .form__fieldset--sights::before,
   .form__fieldset--feedback::before {
@@ -273,16 +395,18 @@ input[type="checkbox"] + .form__label-text {
     border-top: 1px solid hsl(0, 0%, 86%);
     z-index: -1;
   }
-
+  // Смещение для достопримечательностей (из-за 2х строчного лейбла)
   .form__fieldset--sights::before {
     content: "";
     top: -45px;
   }
 
+  // Блоки с радиокнопки размещаем в 2 колонки
   .form__fieldset--impression .form__list,
   .form__fieldset--sights .form__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 16px;
   }
 
   .form__fieldset--impression {
@@ -294,7 +418,7 @@ input[type="checkbox"] + .form__label-text {
   }
 }
 
-//стили для ПК
+// Стили для ПК
 @media (min-width: @desktop-width) {
   .form__fieldset--name::after {
     right: -15px;
