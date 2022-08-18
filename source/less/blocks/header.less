@@ -59,14 +59,6 @@
     background-color: @blue--hover;
   }
 
-  &:hover .header__toggle-button::before,
-  &:focus .header__toggle-button::before,
-  &:hover .header__toggle-button::after,
-  &:focus .header__toggle-button::after {
-    opacity: 60%;
-    background-color: #000000;
-  }
-
   &:active .header__toggle-button--closed,
   &:active .header__toggle-button--closed::before,
   &:active .header__toggle-button--closed::after {
@@ -133,12 +125,11 @@
   max-width: 1200px;
 
   @media (min-width: @tablet-width) {
+    position: static;
     background-color: transparent;
     color: #000000;
     padding-left: 25px;
-    grid-template-columns: 2fr 3fr 3fr 2fr;
-    z-index: 0;
-    top: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 
   @media (min-width: @desktop-width) {
@@ -179,7 +170,6 @@
   }
 }
 
-
 .header__link {
   color: #ffffff;
   .title();
@@ -188,6 +178,20 @@
     color: #000000;
     font-size: 14px;
   }
+}
+
+// Добавляем логотип в меню навигации для планшетов и ПК
+.header__item--tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+// Убираем у него отступы
+.header-item--no-padding {
+  padding: 0;
 }
 
 //в мобильном разрешении добавляем возможность закрывать/прятать меню за пределы экрана и сохраняем функционал меню на случай отказа JS
@@ -220,12 +224,10 @@
 
 // стилизуем меню для планшетов и ПК
 @media (min-width: @tablet-width) {
-  .header__item--left {
-    text-align: left;
-  }
 
-  .header__item--right {
-    text-align: right;
+  //убираем логотип для мобильных
+  .header-logo--mobile {
+    display: none;
   }
 
   .header__item:hover,

@@ -10,31 +10,37 @@
 
 <body class="page__body">
 
-  <!-- Header -->
+  <!-- Хэдер -->
   <header class="header">
-    <a class="header__logo" href="index.html">
+    <a class="header__logo header-logo--mobile" href="index.html">
       <img class="header__logo-image" src="img/header__logo.svg" width="185" height="96"
         alt="Логотип гостиниц Sedona.">
     </a>
 
     <!-- меню навигации -->
     <nav class="header__nav">
-      <div class="header__toggle-button-wrapper">
+      <div class="header__toggle-button-wrapper " tabindex="0">
         <span class="header__toggle-button header__toggle-button--closed header__toggle-button--nojs">
           <span class="visually-hidden">Открыть меню</span>
         </span>
       </div>
       <ul class="header__list header__list--closed header__list--nojs">
-        <li class="header__item header__item--left">
+        <li class="header__item">
           <a class="header__link" href="index.html">Главная</a>
         </li>
-        <li class="header__item header__item--left">
+        <li class="header__item">
           <a class="header__link" href="catalog.html">Фото и видео</a>
         </li>
-        <li class="header__item header__item--right header__item--current">
+        <li class="header__item header__item--tablet header-item--no-padding">
+          <a class="header__logo" href="index.html">
+            <img class="header__logo-image" src="img/header__logo.svg" width="185" height="96"
+              alt="Логотип гостиниц Sedona.">
+          </a>
+        </li>
+        <li class="header__item header__item--current">
           <a class="header__link" href="form.html">Форма отзыва</a>
         </li>
-        <li class="header__item header__item--right header__item--last header__item--disabled">
+        <li class="header__item header__item--last header__item--disabled">
           <a class="header__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
         </li>
       </ul>
@@ -120,14 +126,14 @@
               </li>
               <li class="form__list-item">
                 <label class="form__label">
-                  <input class="form__input visually-hidden" type="radio" name="impression" value="rather-positive" checked>
+                  <input class="form__input visually-hidden" type="radio" name="impression" value="rather-negative">
                   <span class="form__input-radio"></span>
                   <span class="form__label-text form__label-text--impression">Скорее отрицательное</span>
                 </label>
               </li>
               <li class="form__list-item">
                 <label class="form__label">
-                  <input class="form__input visually-hidden" type="radio" name="impression" value="rather-positive" checked>
+                  <input class="form__input visually-hidden" type="radio" name="impression" value="hard-to-answer">
                   <span class="form__input-radio"></span>
                   <span class="form__label-text form__label-text--impression">Затрудняюсь ответить</span>
                 </label>
@@ -141,21 +147,21 @@
             <ul class="form__list">
               <li class="form__list-item">
                 <label class="form__label">
-                  <input class="form__input visually-hidden" type="checkbox" name="sights" value="rather-positive" checked>
+                  <input class="form__input visually-hidden" type="checkbox" name="sights" value="sight-devils-bridge" checked>
                   <span class="form__input-checkbox"></span>
                   <span class="form__label-text form__label-text--sights">Мост дьявола</span>
                 </label>
               </li>
               <li class="form__list-item">
                 <label class="form__label">
-                  <input class="form__input visually-hidden" type="checkbox" name="sights" value="rather-positive" checked>
+                  <input class="form__input visually-hidden" type="checkbox" name="sights" value="sight-rock-bell" checked>
                   <span class="form__input-checkbox"></span>
                   <span class="form__label-text form__label-text--sights">Гора-Колокол</span>
                 </label>
               </li>
               <li class="form__list-item">
                 <label class="form__label">
-                  <input class="form__input visually-hidden" type="checkbox" name="sights" value="rather-positive" checked>
+                  <input class="form__input visually-hidden" type="checkbox" name="sights" value="sight-red-rocks" checked>
                   <span class="form__input-checkbox"></span>
                   <span class="form__label-text form__label-text--sights">Слайд-парк</span>
                 </label>

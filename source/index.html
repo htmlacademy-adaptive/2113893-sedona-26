@@ -12,7 +12,7 @@
 
   <!-- Хэдер -->
   <header class="header">
-    <a class="header__logo" href="index.html">
+    <a class="header__logo header-logo--mobile" href="index.html">
       <img class="header__logo-image" src="img/header__logo.svg" width="185" height="96"
         alt="Логотип гостиниц Sedona.">
     </a>
@@ -25,16 +25,22 @@
         </span>
       </div>
       <ul class="header__list header__list--closed header__list--nojs">
-        <li class="header__item header__item--left header__item--current">
+        <li class="header__item header__item--current">
           <a class="header__link" href="index.html">Главная</a>
         </li>
-        <li class="header__item header__item--left">
+        <li class="header__item">
           <a class="header__link" href="catalog.html">Фото и видео</a>
         </li>
-        <li class="header__item header__item--right">
+        <li class="header__item header__item--tablet header-item--no-padding">
+          <a class="header__logo" href="index.html">
+            <img class="header__logo-image" src="img/header__logo.svg" width="185" height="96"
+              alt="Логотип гостиниц Sedona.">
+          </a>
+        </li>
+        <li class="header__item">
           <a class="header__link" href="form.html">Форма отзыва</a>
         </li>
-        <li class="header__item header__item--right header__item--last header__item--disabled">
+        <li class="header__item header__item--last header__item--disabled">
           <a class="header__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
         </li>
       </ul>
@@ -197,8 +203,7 @@
         <li class="footer__social-item">
           <a class="footer__social-link" href="https://vk.com/htmlacademy" target="_blank">
             <span class="visually-hidden">Мы в Вконтакте.</span>
-            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48"
-               xmlns="http://www.w3.org/2000/svg">
+            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
               <path xmlns="http://www.w3.org/2000/svg" d="M0 0h48v48H0z" />
               <g xmlns="http://www.w3.org/2000/svg" clip-path="url(#a)">
                 <path fill-rule="evenodd" clip-rule="evenodd"
