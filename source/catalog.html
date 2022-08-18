@@ -10,31 +10,37 @@
 
 <body class="page__body">
 
-  <!-- Header -->
+  <!-- Хэдер -->
   <header class="header">
-    <a class="header__logo" href="index.html">
+    <a class="header__logo header-logo--mobile" href="index.html">
       <img class="header__logo-image" src="img/header__logo.svg" width="185" height="96"
         alt="Логотип гостиниц Sedona.">
     </a>
 
     <!-- меню навигации -->
     <nav class="header__nav">
-      <div class="header__toggle-button-wrapper">
-        <span class="header__toggle-button">
+      <div class="header__toggle-button-wrapper " tabindex="0">
+        <span class="header__toggle-button header__toggle-button--closed header__toggle-button--nojs">
           <span class="visually-hidden">Открыть меню</span>
         </span>
       </div>
-      <ul class="header__list">
-        <li class="header__item header__item--left header__item--current">
+      <ul class="header__list header__list--closed header__list--nojs">
+        <li class="header__item">
           <a class="header__link" href="index.html">Главная</a>
         </li>
-        <li class="header__item header__item--left">
+        <li class="header__item header__item--current">
           <a class="header__link" href="catalog.html">Фото и видео</a>
         </li>
-        <li class="header__item header__item--right">
+        <li class="header__item header__item--tablet header-item--no-padding">
+          <a class="header__logo" href="index.html">
+            <img class="header__logo-image" src="img/header__logo.svg" width="185" height="96"
+              alt="Логотип гостиниц Sedona.">
+          </a>
+        </li>
+        <li class="header__item">
           <a class="header__link" href="form.html">Форма отзыва</a>
         </li>
-        <li class="header__item header__item--right header__item--last">
+        <li class="header__item header__item--last header__item--disabled">
           <a class="header__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
         </li>
       </ul>
@@ -58,8 +64,12 @@
     <section class="gallery">
       <div class="gallery__wrapper">
         <h2 class="gallery__title">Фото и видео</h2>
-        <p class="gallery__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике
-          и экономике.</p>
+        <p class="gallery__text">
+          Не можете решиться на путешествие<br class="br-mobile">
+          из-за курса?<br class="br-tablet"><br class="br-desktop">
+          Фотографии помогут вам<br class="br-mobile">
+          забыть о политике и экономике.
+        </p>
         <ul class="gallery__list">
 
           <li class="gallery__item gallery__item--wide content">
@@ -110,7 +120,7 @@
             </div>
           </li>
 
-          <li class="gallery__item">
+          <li class="gallery__item ">
             <a class="gallery__item-link" href="#">
               <div class="gallery__content-wrapper wrapper">
                 <img class="content__file" src="img/gallery__serpentine-road.jpg" width="280" height="280"
@@ -134,7 +144,7 @@
             </div>
           </li>
 
-          <li class="gallery__item">
+          <li class="gallery__item gallery__item--last">
             <a class="gallery__item-link" href="#">
               <div class="gallery__content-wrapper wrapper">
                 <img class="content__file" src="img/gallery__devil's-bridge.jpg" width="280" height="280"
@@ -164,8 +174,12 @@
     <!-- Блок с презентацией Седоны -->
     <section class="presentation wrapper">
       <h2 class="presentation__title">Все еще сомневаетесь?</h2>
-      <p class="presentation__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
-        очередной раз!</p>
+      <p class="presentation__text">
+        Смотрите видеопрезентацию и<br class="br-mobile">
+        скорее за билетами, пока они<br class="br-tablet"><br class="br-desktop">
+        не<br class="br-mobile">
+        подорожали в очередной раз!
+      </p>
       <div class="wrapper">
         <img class="presentation__video-box" src="img/presentation__video.jpg" width="280" height="177"
           alt="Видео с презентацией Sedona.">
@@ -232,19 +246,23 @@
 
     <!-- Copyright -->
     <section class="footer__copyright">
-      <h2 class="footer__copyright-title">Разработано</h2>
-      <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-        <span class="visually-hidden">HTML Academy.</span>
-        <svg class="footer__copyright-icon" aria-hidden="true" focusable="false" width="27" height="35" viewBox="0 0 27 35"
+      <div class="footer__copyright-wrapper">
+        <h2 class="visually-hidden">Разработчики сайта.</h2>
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <span class="footer__copyright-title">Разработано</span>
+          <span class="visually-hidden">HTML Academy.</span>
+          <svg class="footer__copyright-icon" aria-hidden="true" focusable="false" width="27" height="35" viewBox="0 0 27 35"
           fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" />
+          <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none"/>
           <path xmlns="http://www.w3.org/2000/svg"
             d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"
-            fill="black" />
-        </svg>
-      </a>
+            />
+          </svg>
+        </a>
+      </div>
     </section>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

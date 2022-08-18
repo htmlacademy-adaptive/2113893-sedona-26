@@ -6,6 +6,7 @@
   position: relative;
 }
 
+// позиционируем контейнер логотипа
 .header__logo {
   position: relative;
   display: block;
@@ -13,6 +14,22 @@
   width: 185px;
   height: 96px;
   margin-bottom: -40px;
+  transition-duration: 0, 01s;
+  transition-timing-function: unset;
+
+  //состояния логотипа
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    opacity: 70%;
+  }
+
+  &--disabled {
+    pointer-events: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -22,19 +39,38 @@
   }
 }
 
+// контейнер кнопки бутерброда
 .header__toggle-button-wrapper {
   width: 50px;
   height: 50px;
   position: absolute;
   top: 5px;
-  left: 270px;
+  right: 20px;
   z-index: 1;
   cursor: pointer;
 
+  //состояния бутерброда в закрытом состоянии
+  &:hover .header__toggle-button--closed,
+  &:focus .header__toggle-button--closed,
+  &:hover .header__toggle-button--closed::before,
+  &:focus .header__toggle-button--closed::before,
+  &:hover .header__toggle-button--closed::after,
+  &:focus .header__toggle-button--closed::after {
+    background-color: @blue--hover;
+  }
+
+  &:active .header__toggle-button--closed,
+  &:active .header__toggle-button--closed::before,
+  &:active .header__toggle-button--closed::after {
+    background-color: @blue;
+  }
+
+  //показываем кнопку только для мобильных
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
+
 
 .header__toggle-button::before,
 .header__toggle-button::after {
@@ -44,10 +80,9 @@
   height: 4px;
   background-color: #ffffff;
   content: "";
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.7s;
 }
 
+// состояние кнопки крест
 .header__toggle-button::before {
   transform: translate(10px, 20px) rotate(45deg);
 }
@@ -56,6 +91,29 @@
   transform: translate(10px, 20px) rotate(-45deg);
 }
 
+// состояние кнопки бутерброд
+.header__toggle-button--closed,
+.header__toggle-button--closed::before,
+.header__toggle-button--closed::after {
+  background-color: @blue--active;
+  transform: translate(0, 20px) rotate(0deg);
+}
+
+.header__toggle-button--closed {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: @blue--active;
+  content: "";
+  transform: translate(10px, 10px);
+}
+
+.header__toggle-button--closed::before {
+  transform: translate(0, 10px);
+}
+
+// меню навигации
 .header__list {
   background-color: @blue;
   position: absolute;
@@ -63,23 +121,24 @@
   min-width: @mobile-width;
   display: grid;
   grid-template-columns: 1fr;
+  width: 100%;
+  max-width: 1200px;
 
   @media (min-width: @tablet-width) {
+    position: static;
     background-color: transparent;
     color: #000000;
-    width: @tablet-width;
     padding-left: 25px;
-    grid-template-columns: 2fr 3fr 3fr 2fr;
-    z-index: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 
   @media (min-width: @desktop-width) {
-    width: @desktop-width;
     padding-left: 65px;
     padding-right: 45px;
   }
 }
 
+// элемент навигации
 .header__item {
   padding: 15px;
   text-align: center;
@@ -90,19 +149,24 @@
     box-shadow: inset 0 -7px 5px 0 rgba(1, 1, 1, 20%);
   }
 
+  //выделяем текущую страницу
+  &--current .header__link {
+    color: #766357;
+  }
+
+  // стилизуем выключенный элемент меню
+  &--disabled {
+    pointer-events: none;
+  }
+
+  &--disabled .header__link {
+    color: rgba(1, 1, 1, 20%);
+  }
+
+  // стилизуем меню для планшетов и ПК
   @media (min-width: @tablet-width) {
     box-shadow: none;
     padding: 18px 25px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .header__item--left {
-    text-align: left;
-  }
-
-  .header__item--right {
-    text-align: right;
   }
 }
 
@@ -113,5 +177,71 @@
   @media (min-width: @tablet-width) {
     color: #000000;
     font-size: 14px;
+  }
+}
+
+// Добавляем логотип в меню навигации для планшетов и ПК
+.header__item--tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+// Убираем у него отступы
+.header-item--no-padding {
+  padding: 0;
+}
+
+//в мобильном разрешении добавляем возможность закрывать/прятать меню за пределы экрана и сохраняем функционал меню на случай отказа JS
+@media (max-width: @mobile-width-only) {
+  .header__list--closed {
+    top: -@header__menu-height;
+  }
+
+  .header__toggle-button--nojs {
+    display: none;
+  }
+
+  .header__list--nojs {
+    top: 0;
+  }
+
+  //стилизуем состояния меню для мобильных
+  .header__item:hover,
+  .header__item:focus {
+    background-color: @blue--hover;
+    transform: scale(1.1);
+  }
+
+  .header__item:active,
+  .header__item:active .header__link {
+    background-color: @blue--active;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+// стилизуем меню для планшетов и ПК
+@media (min-width: @tablet-width) {
+
+  //убираем логотип для мобильных
+  .header-logo--mobile {
+    display: none;
+  }
+
+  .header__item:hover,
+  .header__item:focus {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .header__item:hover .header__link,
+  .header__item:focus .header__link {
+    color: @blue;
+  }
+
+  .header__item:active .header__link {
+    opacity: 30%;
   }
 }

@@ -12,29 +12,35 @@
 
   <!-- Хэдер -->
   <header class="header">
-    <a class="header__logo" href="index.html">
+    <a class="header__logo header-logo--mobile" href="index.html">
       <img class="header__logo-image" src="img/header__logo.svg" width="185" height="96"
         alt="Логотип гостиниц Sedona.">
     </a>
 
     <!-- меню навигации -->
     <nav class="header__nav">
-      <div class="header__toggle-button-wrapper">
-        <span class="header__toggle-button">
+      <div class="header__toggle-button-wrapper " tabindex="0">
+        <span class="header__toggle-button header__toggle-button--closed header__toggle-button--nojs">
           <span class="visually-hidden">Открыть меню</span>
         </span>
       </div>
-      <ul class="header__list">
-        <li class="header__item header__item--left header__item--current">
+      <ul class="header__list header__list--closed header__list--nojs">
+        <li class="header__item header__item--current">
           <a class="header__link" href="index.html">Главная</a>
         </li>
-        <li class="header__item header__item--left">
+        <li class="header__item">
           <a class="header__link" href="catalog.html">Фото и видео</a>
         </li>
-        <li class="header__item header__item--right">
+        <li class="header__item header__item--tablet header-item--no-padding">
+          <a class="header__logo" href="index.html">
+            <img class="header__logo-image" src="img/header__logo.svg" width="185" height="96"
+              alt="Логотип гостиниц Sedona.">
+          </a>
+        </li>
+        <li class="header__item">
           <a class="header__link" href="form.html">Форма отзыва</a>
         </li>
-        <li class="header__item header__item--right header__item--last">
+        <li class="header__item header__item--last header__item--disabled">
           <a class="header__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
         </li>
       </ul>
@@ -53,8 +59,8 @@
           alt="Добро пожаловать в прекрасную Седону. Ведь Большой Каньон отстой.">
       </div>
       <p class="hero__slogan">
-          Седона — небольшой<br>
-          городок в Аризоне,<br>
+          Седона — небольшой<br class="br-mobile">
+          городок в Аризоне,<br class="br-mobile"><br class="br-tablet"><br class="br-desktop">
           заслуживающий большего!
       </p>
     </section>
@@ -62,16 +68,18 @@
     <!-- Блок преимуществ -->
     <section class="features wrapper">
       <h2 class="features__intro">
-        Рассмотрим 5 причин, по которым<br>
+        Рассмотрим 5 причин, по которым<br class="br-mobile">
         Седона круче, чем гранд каньон!
       </h2>
       <ul class="features__list">
         <li class="features__card features__card--true-town">
-          <h3 class="features__title">Настоящий городок</h3>
+          <h3 class="features__title">Настоящий <br class="br-tablet"><br class="br-desktop">городок</h3>
           <p class="features__counter">— №1 —</p>
           <p class="features__description">
-            Седона — не аттракцион для туристов,<br>
-            там течёт своя жизнь
+            Седона — не аттракцион для<br class="br-tablet">
+            туристов,<br class="br-mobile"><br class="br-desktop">
+            там течёт своя<br class="br-tablet">
+            жизнь
           </p>
         </li>
         <li class="features__card features__card--photo">
@@ -84,9 +92,11 @@
           </div>
           <h3 class="features__title">Жильё</h3>
           <p class="features__description">
-            Рекомендуем пожить<br>
-            в настоящем мотеле,<br>
-            всё как в кино!
+            Рекомендуем пожить в<br class="br-mobile"><br class="br-tablet">
+            настоящем<br class="br-desktop">
+            мотеле, всё<br class="br-tablet">
+            как в<br class="br-mobile">
+            кино!
           </p>
         </li>
         <li class="features__card features__card--food">
@@ -96,8 +106,9 @@
           </div>
           <h3 class="features__title">Еда</h3>
           <p class="features__description">
-            Всегда заказывайте<br>
-            фирменный бургер,<br>
+            Всегда заказывайте<br class="br-tablet">
+            фирменный<br class="br-mobile">
+            бургер,<br class="br-tablet"><br class="br-desktop">
             вы не разочаруетесь!
           </p>
         </li>
@@ -108,41 +119,51 @@
           </div>
           <h3 class="features__title">Сувениры</h3>
           <p class="features__description">
-            Не только китайского,<br>
-            но и настоящего местного производства!
+            Не только китайского,<br class="br-desktop"> но<br class="br-tablet"> и<br class="br-mobile">
+            местного производства!
           </p>
         </li>
         <li class="features__card features__card--bridge">
-          <h3 class="features__title">Там есть Мост дьявола</h3>
+          <h3 class="features__title">Там есть<br class="br-tablet"><br class="br-desktop"> Мост дьявола</h3>
           <p class="features__counter">— №2 —</p>
           <p class="features__description">
-            Да, по нему можно пройти! Если вы осмелитесь, конечно
+            Да, по нему можно<br class="br-tablet">
+            пройти!<br class="br-desktop">
+            Если вы<br class="br-mobile"><br class="br-tablet">
+            осмелитесь, конечно
           </p>
         </li>
         <li class="features__card features__card--photo features__card--reverse-position">
           <img class="features__photo" src="img/features__card--bridge.jpg" width="320" height="260" alt="Фото узкой горной тропы на фоне каньона.">
         </li>
         <li class="features__card features__card--small-area">
-          <h3 class="features__title">Небольшая площадь</h3>
+          <h3 class="features__title">Небольшая<br class="br-tablet"><br class="br-desktop"> площадь</h3>
           <p class="features__counter">— №3 —</p>
           <p class="features__description">
-            Все интересные места находятся очень близко
+            Все интересные места<br class="br-tablet">
+            находятся<br class="br-mobile">
+            очень<br class="br-desktop">
+            близко
           </p>
         </li>
         <li class="features__card features__card--road">
-          <h3 class="features__title">Красивая дорога</h3>
+          <h3 class="features__title">Красивая<br class="br-tablet"><br class="br-desktop"> дорога</h3>
           <p class="features__counter">— №4 —</p>
           <p class="features__description">
-            Ехать в седону из лас-вегаса<br>
-            cовсем не скучно!
+            Ехать в седону из<br class="br-tablet">
+            лас-вегаса<br class="br-mobile">
+            cовсем<br class="br-tablet"><br class="br-desktop">
+            не скучно!
           </p>
         </li>
         <li class="features__card features__card--few-tourists">
-          <h3 class="features__title">Мало туристов</h3>
+          <h3 class="features__title">Мало<br class="br-tablet"><br class="br-desktop"> туристов</h3>
           <p class="features__counter">— №5 —</p>
           <p class="features__description">
-            Большинство едет в гранд каньон<br>
-            и толпится там
+            Большинство едет в<br class="br-tablet">
+            гранд каньон<br class="br-mobile">
+            и<br class="br-tablet"><br class="br-desktop">
+            толпится там
           </p>
         </li>
       </ul>
@@ -152,8 +173,8 @@
     <section class="search-hotels wrapper">
       <h2 class="search-hotels__title">Заинтересовались?</h2>
       <p class="search-hotels__text">
-        Укажите предполагаемые даты<br>
-        поездки, и мы покажем вам лучшие<br>
+        Укажите предполагаемые даты<br class="br-mobile">
+        поездки,<br class="br-tablet"><br class="br-desktop"> и мы покажем вам лучшие<br class="br-mobile">
         предложения гостиниц в седоне
       </p>
       <a class="search-hotels__button button" href="#">Найти Гостиницу</a>
@@ -163,7 +184,7 @@
     <section class="map__section ">
       <div class="map__wrapper">
         <h2 class="visually-hidden">Мы здесь, на карте.</h2>
-        <img class="map__image" src="img/map--index.jpg" width="320" height="350" alt="Логотип гостиниц Sedona.">
+        <iframe class="map__gmaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8224465617375!2d30.315214851990863!3d59.96826866658086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2snl!4v1660628133466!5m2!1sru!2snl" width="320" height="350" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Офис htmlacademy по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
       </div>
     </section>
   </main>
@@ -182,9 +203,8 @@
         <li class="footer__social-item">
           <a class="footer__social-link" href="https://vk.com/htmlacademy" target="_blank">
             <span class="visually-hidden">Мы в Вконтакте.</span>
-            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48"
-              fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path xmlns="http://www.w3.org/2000/svg" fill="#81B3D2" d="M0 0h48v48H0z" />
+            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path xmlns="http://www.w3.org/2000/svg" d="M0 0h48v48H0z" />
               <g xmlns="http://www.w3.org/2000/svg" clip-path="url(#a)">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M35.45 17.95c.17-.55 0-.95-.8-.95h-2.62c-.67 0-.98.35-1.14.73 0 0-1.34 3.2-3.23 5.27-.61.6-.89.8-1.22.8-.17 0-.42-.2-.42-.74v-5.11c0-.66-.18-.95-.74-.95h-4.13c-.42 0-.67.3-.67.6 0 .61.95.76 1.05 2.5v3.8c0 .84-.16.99-.5.99-.88 0-3.05-3.21-4.33-6.89-.25-.71-.5-1-1.17-1H12.9c-.75 0-.9.35-.9.73 0 .68.89 4.07 4.14 8.55 2.18 3.06 5.23 4.72 8.01 4.72 1.67 0 1.88-.37 1.88-1v-2.32c0-.73.16-.88.68-.88.4 0 1.06.2 2.62 1.67C31.11 30.22 31.4 31 32.41 31h2.62c.75 0 1.13-.37.91-1.1-.24-.72-1.09-1.77-2.21-3.02-.62-.7-1.53-1.47-1.81-1.86-.4-.49-.28-.7 0-1.14 0 0 3.2-4.43 3.53-5.93Z"
@@ -202,8 +222,8 @@
           <a class="footer__social-link" href="https://t.me/htmlacademy" target="_blank">
             <span class="visually-hidden">Мы в Телеграме.</span>
             <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48"
-              fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#81B3D2" />
+              xmlns="http://www.w3.org/2000/svg">
+              <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48"/>
               <path xmlns="http://www.w3.org/2000/svg"
                 d="M34.4393 16.6223L31.2705 31.566C31.0313 32.6205 30.408 32.883 29.5223 32.3865L24.6938 28.8285L22.3643 31.0695C22.1063 31.3275 21.891 31.5428 21.3938 31.5428L21.741 26.6258L30.6893 18.54C31.0785 18.1935 30.6045 18.0008 30.0848 18.348L19.0223 25.314L14.2598 23.823C13.224 23.4998 13.2053 22.7873 14.4758 22.29L33.1035 15.1133C33.966 14.79 34.7205 15.3053 34.4393 16.623V16.6223Z"
                 fill="white" />
@@ -214,8 +234,8 @@
           <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
             <span class="visually-hidden">Мы в Ютубе.</span>
             <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48"
-              fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#81B3D2" />
+            xmlns="http://www.w3.org/2000/svg">
+              <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48"/>
               <path xmlns="http://www.w3.org/2000/svg"
                 d="M31.1813 17H16.8133C15.3062 17 14 18.3 14 19.8V28.1C14 29.7 15.3062 31 16.8133 31H31.1813C32.7889 31 33.9946 29.7 33.9946 28.2V19.8C34.095 18.3 32.7889 17 31.1813 17ZM21.0333 27.4V20.6L27.8656 24L21.0333 27.4Z"
                 fill="white" />
@@ -227,19 +247,23 @@
 
     <!-- Copyright -->
     <section class="footer__copyright">
-      <h2 class="footer__copyright-title">Разработано</h2>
-      <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-        <span class="visually-hidden">HTML Academy.</span>
-        <svg class="footer__copyright-icon" aria-hidden="true" focusable="false" width="27" height="35" viewBox="0 0 27 35"
+      <div class="footer__copyright-wrapper">
+        <h2 class="visually-hidden">Разработчики сайта.</h2>
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <span class="footer__copyright-title">Разработано</span>
+          <span class="visually-hidden">HTML Academy.</span>
+          <svg class="footer__copyright-icon" aria-hidden="true" focusable="false" width="27" height="35" viewBox="0 0 27 35"
           fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" />
+          <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none"/>
           <path xmlns="http://www.w3.org/2000/svg"
             d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"
-            fill="black" />
-        </svg>
-      </a>
+            />
+          </svg>
+        </a>
+      </div>
     </section>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

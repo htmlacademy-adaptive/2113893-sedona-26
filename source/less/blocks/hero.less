@@ -37,15 +37,21 @@
   }
 }
 
+.hero__slogan {
+  .title();
+  text-align: center;
+  padding-top: 32px;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: 520px;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .hero__logo--short {
     height: 78px;
   }
 }
-
-.hero__slogan {
-  .title();
-  text-align: center;
-  padding-top: 32px;
-}
-

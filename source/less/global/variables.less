@@ -3,22 +3,25 @@
 // VARIABLES
 
 // Colors
-
-@blue: #81B3D2;
+@blue: #81B3D2; //переименовать в color1
+@blue--hover: #669EC0;
+@blue--active: #5496BD;
+@blue--disabled: #E5E5E5;
 @font: "PT sans", sans-serif;
 @text: #333333;
 
 // Viewports
-
 @mobile-width: 320px;
 @tablet-width: 768px;
 @desktop-width: 1200px;
 @mobile-width-only: 767px;
 
-// Mixin
+//высота меню в мобильной версии
+@header__menu-height: 224px;
+
+// Mixins
 
 // Заголовок
-
 .title() {
   font-size: 18px;
   line-height: 26px;
@@ -27,10 +30,22 @@
 }
 
 // Текст
-
 .text () {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+
+// visually-hidden
+.visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

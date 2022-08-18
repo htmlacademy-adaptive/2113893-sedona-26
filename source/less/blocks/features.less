@@ -11,9 +11,13 @@
   color: @text;
   text-align: center;
   padding-bottom: 32px;
+  width: 100%;
+  max-width: 282px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 56px;
+    max-width: 520px;
   }
 
   @media (min-width: @desktop-width) {
@@ -52,15 +56,8 @@
 }
 
 .features__photo {
-  min-height: 260px;
-
-  @media (min-width: @tablet-width) {
-    width: 512px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 800px;
-  }
+  width: 100%;
+  max-width: 800px;
 }
 
 .features__icon-wrapper {
@@ -89,14 +86,17 @@
 
   &--house {
     padding: 30px 18px 0 65px;
+    margin: 0 auto;
   }
 
   &--food {
     padding: 30px 18px 0 70px;
+    margin: 0 auto;
   }
 
   &--souvenir {
     padding: 30px 18px 52px 62px;
+    margin: 0 auto;
   }
 
   &--bridge {
