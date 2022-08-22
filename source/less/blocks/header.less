@@ -6,7 +6,7 @@
   position: relative;
 }
 
-// позиционируем контейнер логотипа
+// Позиционируем и определяем размеры под контейнер логотипа
 .header__logo {
   position: relative;
   display: block;
@@ -17,7 +17,7 @@
   transition-duration: 0, 01s;
   transition-timing-function: unset;
 
-  //состояния логотипа
+  // Состояния логотипа
   &:hover,
   &:focus {
     transform: scale(1.05);
@@ -32,14 +32,7 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .header__logo-image {
-    position: absolute;
-    z-index: 1;
-  }
-}
-
-// контейнер кнопки бутерброда
+// Контейнер кнопки бутерброда
 .header__toggle-button-wrapper {
   width: 50px;
   height: 50px;
@@ -49,7 +42,7 @@
   z-index: 1;
   cursor: pointer;
 
-  //состояния бутерброда в закрытом состоянии
+  // Состояния бутерброда в закрытом состоянии
   &:hover .header__toggle-button--closed,
   &:focus .header__toggle-button--closed,
   &:hover .header__toggle-button--closed::before,
@@ -65,7 +58,7 @@
     background-color: @blue;
   }
 
-  //показываем кнопку только для мобильных
+  // Показываем кнопку только для мобильных
   @media (min-width: @tablet-width) {
     display: none;
   }
@@ -82,7 +75,7 @@
   content: "";
 }
 
-// состояние кнопки крест
+// Состояние кнопки крест
 .header__toggle-button::before {
   transform: translate(10px, 20px) rotate(45deg);
 }
@@ -91,7 +84,7 @@
   transform: translate(10px, 20px) rotate(-45deg);
 }
 
-// состояние кнопки бутерброд
+// Состояние кнопки бутерброд
 .header__toggle-button--closed,
 .header__toggle-button--closed::before,
 .header__toggle-button--closed::after {
@@ -113,7 +106,7 @@
   transform: translate(0, 10px);
 }
 
-// меню навигации
+// Меню навигации
 .header__list {
   background-color: @blue;
   position: absolute;
@@ -138,7 +131,7 @@
   }
 }
 
-// элемент навигации
+// Элемент меню навигации
 .header__item {
   padding: 15px;
   text-align: center;
@@ -149,12 +142,12 @@
     box-shadow: inset 0 -7px 5px 0 rgba(1, 1, 1, 20%);
   }
 
-  //выделяем текущую страницу
+  // Выделяем текущую страницу
   &--current .header__link {
     color: #766357;
   }
 
-  // стилизуем выключенный элемент меню
+  // Выключенный элемент меню
   &--disabled {
     pointer-events: none;
   }
@@ -163,13 +156,14 @@
     color: rgba(1, 1, 1, 20%);
   }
 
-  // стилизуем меню для планшетов и ПК
+  // В меню для планшетов и ПК убираем тень
   @media (min-width: @tablet-width) {
     box-shadow: none;
-    padding: 18px 25px;
+    padding: 18px;
   }
 }
 
+// Ссылки внутри меню
 .header__link {
   color: #ffffff;
   .title();
@@ -195,7 +189,7 @@
 }
 
 //в мобильном разрешении добавляем возможность закрывать/прятать меню за пределы экрана и сохраняем функционал меню на случай отказа JS
-@media (max-width: @mobile-width-only) {
+@media (max-width: (@tablet-width - 1)) {
   .header__list--closed {
     top: -@header__menu-height;
   }
@@ -208,7 +202,7 @@
     top: 0;
   }
 
-  //стилизуем состояния меню для мобильных
+  // Состояния меню для мобильных
   .header__item:hover,
   .header__item:focus {
     background-color: @blue--hover;
@@ -222,14 +216,15 @@
   }
 }
 
-// стилизуем меню для планшетов и ПК
+// Меню для планшетов и ПК
 @media (min-width: @tablet-width) {
 
-  //убираем логотип для мобильных
+  // Убираем логотип для мобильных
   .header-logo--mobile {
     display: none;
   }
 
+  // Состояния элементов меню
   .header__item:hover,
   .header__item:focus {
     transform: scale(1.1);

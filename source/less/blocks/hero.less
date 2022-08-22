@@ -2,41 +2,97 @@
 
 // HERO
 
+// Ставим фоном картинку с маской (маску смещаем по вертикали на 1пкс вниз, для маскировки бага браузера), подкладываем цветную подложку
 .hero__image {
-  height: 390px;
-  background-image: url("../../img/hero__image.jpg");
+  height: 388px;
+  background-image:
+    url("../img/hero__image-mask.svg"),
+    url("../img/hero__image-tablet@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: calc(50%) calc(100% + 1px), bottom;
   background-color: hsl(198, 29%, 27%);
   padding-top: 90px;
 
-  @media (min-width: @tablet-width) {
-    height: 518px;
+  // Показываем качественные изображения для экранов с двойной плотностью пикселей
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../img/hero__image-mask.svg"),
+      url("../img/hero__image-mobile@2x.jpg");
   }
 
+  // Увеличиваем блок для бОльших экранов, подгружаем графику для планшетов
+  @media (min-width: (@mobile-width + 1)) {
+    height: 517px;
+    padding-top: 78px;
+    background-image:
+      url("../img/hero__image-mask.svg"),
+      url("../img/hero__image-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../img/hero__image-mask.svg"),
+        url("../img/hero__image-tablet@2x.jpg");
+    }
+  }
+
+  // Подгружаем графику для десктопов
+  @media (min-width: (@tablet-width + 1)) {
+    background-image:
+      url("../img/hero__image-mask.svg"),
+      url("../img/hero__image-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../img/hero__image-mask.svg"),
+        url("../img/hero__image-desktop@2x.jpg");
+    }
+  }
+
+  // Правки для страниц, отличных от главной
   &--short {
     padding-top: 52px;
     height: 158px;
-    background-position: 0 calc(100% + 0px);
 
-    @media (min-width: @tablet-width) {
+    @media (min-width: (@mobile-width + 1)) {
       padding-top: 100px;
       height: 290px;
     }
 
-    @media (min-width: @desktop-width) {
+    @media (min-width: (@tablet-width + 1)) {
       height: 300px;
     }
   }
 }
 
+// Цетрируем надпись на фоне красот Седоны, запираем контейнером
 .hero__logo {
   margin: 0 auto;
+  object-fit: contain;
 
+  // Увеличиваем надпись и делаем отступы за счёт размеров в 95%
+  @media (min-width: (@mobile-width + 1)) {
+    width: 95%;
+    height: 95%;
+    max-width: 460px;
+    max-height: 350px;
+  }
+
+  // Убираем ненужные отступы, когда окно широкое
   @media (min-width: @tablet-width) {
-    width: 460px;
-    height: 350px;
+    width: 100%;
+    height: 100%;
   }
 }
 
+// Правки надписи для страниц, отличных от главной
+.hero__logo--short {
+  @media (min-width: (@mobile-width + 1)) {
+    max-height: 78px;
+  }
+}
+
+// Текст под Седоной
 .hero__slogan {
   .title();
   text-align: center;
@@ -50,6 +106,7 @@
   }
 }
 
+// Увеличивем надпись SEDONA вне главной страницы для планшетов и бОльших экранов
 @media (min-width: @tablet-width) {
   .hero__logo--short {
     height: 78px;
