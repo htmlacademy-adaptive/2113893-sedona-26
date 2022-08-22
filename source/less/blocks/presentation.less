@@ -2,11 +2,12 @@
 
 // PRESENTATION
 
+// Центрируем и растягиваем блок с презентацией, но не более @desktop-width
 .presentation {
   padding: 20px 20px 0 20px;
   width: 100%;
   max-width: @desktop-width;
-  margin: 0 auto;
+  // margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     padding: 60px 0 40px 0;
@@ -17,6 +18,7 @@
   }
 }
 
+// Заголовок презентации
 .presentation__title {
   .title();
   text-align: center;
@@ -29,6 +31,7 @@
   }
 }
 
+// Текст презентации
 .presentation__text {
   .text();
   color: @text;
@@ -43,7 +46,59 @@
   }
 }
 
+// Задаём отсчёт координат для элементов вмдеопрезентации
+.presentation-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+// Растягиваем кнопку на окно с видео, делаем прозрачной
+.presentation__button {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+
+  &:active {
+    background-color: transparent;
+  }
+}
+
+// Добавляем треугольник поверх видео
+.presentation__button::before {
+  position: absolute;
+  content: "";
+  width: 48px;
+  height: 55px;
+  background-color: rgba(255, 255, 255, 0.7);
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+
+// Его состояния
+.presentation__button:hover::before,
+.presentation__button:focus::before {
+  transform: scale(1.3);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.presentation__button:active::before {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+// Центрируем и растягиваем видео, но не более 800*500
 .presentation__video-box {
+  display: block;
   margin: 0 auto;
   width: 100%;
   height: auto;

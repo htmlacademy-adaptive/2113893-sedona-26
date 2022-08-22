@@ -40,7 +40,7 @@
         <li class="header__item">
           <a class="header__link" href="form.html">Форма отзыва</a>
         </li>
-        <li class="header__item header__item--last header__item--disabled">
+        <li class="header__item header__item--last">
           <a class="header__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
         </li>
       </ul>
@@ -75,8 +75,12 @@
           <li class="gallery__item gallery__item--wide content">
             <a class="content__item-link" href="#">
               <div class="content__wrapper wrapper">
-                <img class="content__file content__file--wide" src="img/gallery__highway.jpg" width="280" height="280"
-                  alt="Шоссе Sedona на закате">
+                <picture>
+                  <source media="(min-width: 769px)" srcset="img/gallery__highway-desktop@1x.jpg 1x, img/gallery__highway-desktop@2x.jpg 2x">
+                  <source media="(min-width: 321px)" srcset="img/gallery__highway-tablet@1x.jpg 1x, img/gallery__highway-tablet@2x.jpg 2x">
+                  <img class="content__file content__file--wide" src="img/gallery__highway-mobile@1x.jpg" srcset="img/gallery__highway-mobile@2x.jpg 2x" width="280" height="280"
+                    alt="Шоссе Sedona на закате">
+                </picture>
               </div>
             </a>
             <div class="content__legend-wrapper">
@@ -99,8 +103,12 @@
           <li class="gallery__item">
             <a class="gallery__item-link" href="#">
               <div class="content__wrapper wrapper">
-                <img class="content__file" src="img/gallery__cactus.jpg" width="280" height="280"
-                  alt="Кактусы Sedona на фоне гор">
+                <picture>
+                  <source media="(min-width: 769px)" srcset="img/gallery__cactus-desktop@1x.jpg 1x, img/gallery__cactus-desktop@2x.jpg 2x">
+                  <source media="(min-width: 321px)" srcset="img/gallery__cactus-tablet@1x.jpg 1x, img/gallery__cactus-tablet@2x.jpg 2x">
+                  <img class="content__file" src="img/gallery__cactus-mobile@1x.jpg" srcset="img/gallery__cactus-mobile@2x.jpg 2x" width="280" height="280"
+                    alt="Кактусы Sedona на фоне гор">
+                </picture>
               </div>
             </a>
             <div class="content__legend-wrapper">
@@ -123,8 +131,12 @@
           <li class="gallery__item ">
             <a class="gallery__item-link" href="#">
               <div class="gallery__content-wrapper wrapper">
-                <img class="content__file" src="img/gallery__serpentine-road.jpg" width="280" height="280"
-                  alt="Горный серпантин в лесу">
+                <picture>
+                  <source media="(min-width: 769px)" srcset="img/gallery__serpentine-road-desktop@1x.jpg 1x, img/gallery__serpentine-road-desktop@2x.jpg 2x">
+                  <source media="(min-width: 321px)" srcset="img/gallery__serpentine-road-tablet@1x.jpg 1x, img/gallery__serpentine-road-tablet@2x.jpg 2x">
+                  <img class="content__file" src="img/gallery__serpentine-road-mobile@1x.jpg" srcset="img/gallery__serpentine-road-mobile@2x.jpg 2x" width="280" height="280"
+                    alt="Горный серпантин в лесу">
+                </picture>
               </div>
             </a>
             <div class="content__legend-wrapper">
@@ -147,8 +159,12 @@
           <li class="gallery__item gallery__item--last">
             <a class="gallery__item-link" href="#">
               <div class="gallery__content-wrapper wrapper">
-                <img class="content__file" src="img/gallery__devil's-bridge.jpg" width="280" height="280"
-                  alt="Небольшая тропа в горах">
+                <picture>
+                  <source media="(min-width: 769px)" srcset="img/gallery__devil's-bridge-desktop@1x.jpg 1x, img/gallery__devil's-bridge-desktop@2x.jpg 2x">
+                  <source media="(min-width: 321px)" srcset="img/gallery__devil's-bridge-tablet@1x.jpg 1x, img/gallery__devil's-bridge-tablet@2x.jpg 2x">
+                  <img class="content__file" src="img/gallery__devil's-bridge-mobile@1x.jpg" srcset="img/gallery__devil's-bridge-mobile@2x.jpg 2x" width="280" height="280"
+                    alt="Небольшая тропа в горах">
+                </picture>
               </div>
             </a>
             <div class="content__legend-wrapper">
@@ -180,11 +196,17 @@
         не<br class="br-mobile">
         подорожали в очередной раз!
       </p>
-      <div class="wrapper">
-        <img class="presentation__video-box" src="img/presentation__video.jpg" width="280" height="177"
-          alt="Видео с презентацией Sedona.">
+      <div class="presentation-wrapper">
+        <button class="presentation__button button">
+          <span class="visually-hidden">Воспроизвести</span>
+        </button>
+        <video class="presentation__video-box" width="560" controls poster="img/presentation__video-desktop@1x.jpg">
+          <source src="#" type="video/webm">
+          Ваш браузер не поддерживает встроенные видео
+        </video>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
