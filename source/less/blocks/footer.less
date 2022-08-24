@@ -3,8 +3,7 @@
 // FOOTER
 
 .footer {
-  padding-top: 38px;
-  padding-bottom: 22px;
+  padding: 30px 4px 23px 6px;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -16,14 +15,22 @@
 }
 
 .footer__hashtag-button {
+  font-size: 21px;
   color: #000000;
   background-color: #ffffff;
   width: 166px;
   margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 
   &:hover,
   &:focus {
     background-color: #ffffff;
+    color: @blue;
     transform: scale(1.1);
   }
 
@@ -74,6 +81,12 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding-top: 36px;
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .footer__copyright-link {

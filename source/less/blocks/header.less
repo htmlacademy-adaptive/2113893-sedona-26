@@ -38,7 +38,7 @@
   height: 50px;
   position: absolute;
   top: 5px;
-  right: 20px;
+  right: 3px;
   z-index: 1;
   cursor: pointer;
 
@@ -69,7 +69,7 @@
 .header__toggle-button::after {
   position: absolute;
   display: block;
-  width: 30px;
+  width: 23px;
   height: 4px;
   background-color: #ffffff;
   content: "";
@@ -95,7 +95,7 @@
 .header__toggle-button--closed {
   position: absolute;
   display: block;
-  width: 30px;
+  width: 23px;
   height: 4px;
   background-color: @blue--active;
   content: "";
@@ -121,7 +121,6 @@
     position: static;
     background-color: transparent;
     color: #000000;
-    padding-left: 25px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 
@@ -159,7 +158,7 @@
   // В меню для планшетов и ПК убираем тень
   @media (min-width: @tablet-width) {
     box-shadow: none;
-    padding: 18px;
+    padding: 17px 0 13px;
   }
 }
 
@@ -186,6 +185,7 @@
 // Убираем у него отступы
 .header-item--no-padding {
   padding: 0;
+  margin: 0 -20px;
 }
 
 //в мобильном разрешении добавляем возможность закрывать/прятать меню за пределы экрана и сохраняем функционал меню на случай отказа JS
