@@ -33,5 +33,3 @@ for (let i of contentLikeIcon) {
     }
   });
 };
-
-
