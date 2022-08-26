@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/style.css">
+  <base href="https://htmlacademy-adaptive.github.io/2113893-sedona-26/7/">
+</head>
+
+<body class="page__body">
+
+  <!-- Хэдер -->
+  <header class="header">
+    <a class="header__logo header-logo--mobile" href="index.html">
+      <img class="header__logo-image" src="img/header__logo.svg" width="185" height="96"
+        alt="Логотип гостиниц Sedona.">
+    </a>
+
+    <!-- меню навигации -->
+    <nav class="header__nav">
+      <div class="header__toggle-button-wrapper " tabindex="0">
+        <span class="header__toggle-button header__toggle-button--closed header__toggle-button--nojs">
+          <span class="visually-hidden">Открыть меню</span>
+        </span>
+      </div>
+      <ul class="header__list header__list--closed header__list--nojs">
+        <li class="header__item">
+          <a class="header__link" href="index.html">Главная</a>
+        </li>
+        <li class="header__item header__item--current">
+          <a class="header__link" href="catalog.html">Фото и видео</a>
+        </li>
+        <li class="header__item header__item--tablet header-item--no-padding">
+          <a class="header__logo" href="index.html">
+            <img class="header__logo-image" src="img/header__logo.svg" width="185" height="96"
+              alt="Логотип гостиниц Sedona.">
+          </a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="form.html">Форма отзыва</a>
+        </li>
+        <li class="header__item header__item--last">
+          <a class="header__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="main main__wrapper">
+    <h1 class="visually-hidden">Фото и видео Sedona.</h1>
+
+    <!-- Блок hero -->
+    <section class="hero">
+      <h2 class="visually-hidden">Добро пожаловать в Sedona.</h2>
+      <div class="hero__image hero__image--short wrapper">
+        <img class="hero__logo hero__logo--short" src="img/hero__sedona-title.svg" width="229" height="39"
+          alt="Добро пожаловать в прекрасную Седону.">
+      </div>
+    </section>
+
+    <!-- Блок галереи -->
+    <section class="gallery">
+      <div class="gallery__wrapper">
+        <h2 class="gallery__title">Фото и видео</h2>
+        <p class="gallery__text">
+          Не можете решиться на путешествие<br class="br-mobile">
+          из-за курса?<br class="br-tablet"><br class="br-desktop">
+          Фотографии помогут вам<br class="br-mobile">
+          забыть о политике и экономике.
+        </p>
+        <ul class="gallery__list">
+
+          <li class="gallery__item gallery__item--wide content">
+            <div class="gallery__item-wrapper">
+            <a class="content__item-link" href="img/gallery__highway-desktop@2x.jpg">
+              <div class="content__wrapper wrapper">
+                <picture>
+                  <source media="(min-width: 769px)" srcset="img/gallery__highway-desktop@1x.jpg 1x, img/gallery__highway-desktop@2x.jpg 2x">
+                  <source media="(min-width: 321px)" srcset="img/gallery__highway-tablet@1x.jpg 1x, img/gallery__highway-tablet@2x.jpg 2x">
+                  <img class="content__file content__file--wide" src="img/gallery__highway-mobile@1x.jpg" srcset="img/gallery__highway-mobile@2x.jpg 2x" width="280" height="280"
+                    alt="Шоссе Sedona на закате">
+                </picture>
+              </div>
+            </a>
+            <div class="content__legend-wrapper">
+              <div class="content__author&title-wrapper">
+                <p class="content__title">Неродные просторы</p>
+                <span class="content__author-prefix">Автор фото:</span>
+                <span class="content__author">Борис</span>
+              </div>
+              <div class="content__like-wrapper">
+                <svg class="content__like-icon" width="23" height="21">
+                  <use href="img/sprite.svg#icon-like"></use>
+                </svg>
+                <span class="content__like-counter">1350</span>
+              </div>
+            </div>
+            </div>
+          </li>
+
+          <li class="gallery__item gallery__item--beautiful-project">
+            <div class="gallery__item-wrapper">
+            <a class="gallery__item-link" href="img/gallery__cactus-desktop@2x.jpg">
+              <div class="content__wrapper wrapper">
+                <picture>
+                  <source media="(min-width: 769px)" srcset="img/gallery__cactus-desktop@1x.jpg 1x, img/gallery__cactus-desktop@2x.jpg 2x">
+                  <source media="(min-width: 321px)" srcset="img/gallery__cactus-tablet@1x.jpg 1x, img/gallery__cactus-tablet@2x.jpg 2x">
+                  <img class="content__file" src="img/gallery__cactus-mobile@1x.jpg" srcset="img/gallery__cactus-mobile@2x.jpg 2x" width="280" height="280"
+                    alt="Кактусы Sedona на фоне гор">
+                </picture>
+              </div>
+            </a>
+            <div class="content__legend-wrapper">
+              <div class="content__author&title-wrapper">
+                <p class="content__title">Местная растительность</p>
+                <span class="content__author-prefix">Автор фото:</span>
+                <span class="content__author">Сергей</span>
+              </div>
+              <div class="content__like-wrapper">
+                <svg class="content__like-icon" width="23" height="21">
+                  <use href="img/sprite.svg#icon-like"></use>
+                </svg>
+                <span class="content__like-counter">143</span>
+              </div>
+            </div>
+            </div>
+          </li>
+
+          <li class="gallery__item ">
+            <div class="gallery__item-wrapper">
+            <a class="gallery__item-link" href="img/gallery__serpentine-road-desktop@2x.jpg">
+              <div class="content__wrapper wrapper">
+                <picture>
+                  <source media="(min-width: 769px)" srcset="img/gallery__serpentine-road-desktop@1x.jpg 1x, img/gallery__serpentine-road-desktop@2x.jpg 2x">
+                  <source media="(min-width: 321px)" srcset="img/gallery__serpentine-road-tablet@1x.jpg 1x, img/gallery__serpentine-road-tablet@2x.jpg 2x">
+                  <img class="content__file" src="img/gallery__serpentine-road-mobile@1x.jpg" srcset="img/gallery__serpentine-road-mobile@2x.jpg 2x" width="280" height="280"
+                    alt="Горный серпантин в лесу">
+                </picture>
+              </div>
+            </a>
+            <div class="content__legend-wrapper">
+              <div class="content__author&title-wrapper">
+                <p class="content__title">Дорога на север</p>
+                <span class="content__author-prefix">Автор фото:</span>
+                <span class="content__author">Петр</span>
+              </div>
+              <div class="content__like-wrapper">
+                <svg class="content__like-icon" width="23" height="21">
+                  <use href="img/sprite.svg#icon-like"></use>
+                </svg>
+                <span class="content__like-counter">96</span>
+              </div>
+            </div>
+            </div>
+          </li>
+
+          <li class="gallery__item gallery__item--last">
+            <div class="gallery__item-wrapper">
+            <a class="gallery__item-link" href="img/gallery__devil's-bridge-desktop@2x.jpg">
+              <div class="content__wrapper wrapper">
+                <picture>
+                  <source media="(min-width: 769px)" srcset="img/gallery__devil's-bridge-desktop@1x.jpg 1x, img/gallery__devil's-bridge-desktop@2x.jpg 2x">
+                  <source media="(min-width: 321px)" srcset="img/gallery__devil's-bridge-tablet@1x.jpg 1x, img/gallery__devil's-bridge-tablet@2x.jpg 2x">
+                  <img class="content__file" src="img/gallery__devil's-bridge-mobile@1x.jpg" srcset="img/gallery__devil's-bridge-mobile@2x.jpg 2x" width="280" height="280"
+                    alt="Небольшая тропа в горах">
+                </picture>
+              </div>
+            </a>
+            <div class="content__legend-wrapper">
+              <div class="content__author&title-wrapper">
+                <p class="content__title">Мост дьявола</p>
+                <span class="content__author-prefix">Автор фото:</span>
+                <span class="content__author">Антон</span>
+              </div>
+              <div class="content__like-wrapper">
+                <svg class="content__like-icon" width="23" height="21">
+                  <use href="img/sprite.svg#icon-like"></use>
+                </svg>
+                <span class="content__like-counter">254</span>
+              </div>
+            </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Блок с презентацией Седоны -->
+    <section class="presentation wrapper">
+      <h2 class="presentation__title">Все еще сомневаетесь?</h2>
+      <p class="presentation__text">
+        Смотрите видеопрезентацию и<br class="br-mobile">
+        скорее за билетами, пока они<br class="br-tablet"><br class="br-desktop">
+        не<br class="br-mobile">
+        подорожали в очередной раз!
+      </p>
+      <div class="presentation-wrapper">
+        <button class="presentation__button button">
+          <span class="visually-hidden">Воспроизвести</span>
+        </button>
+        <video class="presentation__video-box" width="560" controls poster="img/presentation__video-desktop@1x.jpg">
+          <source src="#" type="video/webm">
+          Ваш браузер не поддерживает встроенные видео
+        </video>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <section class="footer__hashtag">
+      <h2 class="visually-hidden">Больше информации по хэштегу.</h2>
+      <a class="footer__hashtag-button button" href="https://twitter.com/hashtag/visitsedona">#visitSEDONA</a>
+    </section>
+
+    <!-- Socials -->
+    <section class="footer__social">
+      <h2 class="visually-hidden">Мы в соцсетях.</h2>
+      <ul class="footer__social-list">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://vk.com/htmlacademy" target="_blank">
+            <span class="visually-hidden">Мы в Вконтакте.</span>
+            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48">
+              <use href="img/sprite.svg#icon-vkontakte"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://t.me/htmlacademy" target="_blank">
+            <span class="visually-hidden">Мы в Телеграме.</span>
+            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48">
+              <use href="img/sprite.svg#icon-telegram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+            <span class="visually-hidden">Мы в Ютубе.</span>
+            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48">
+              <use href="img/sprite.svg#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Copyright -->
+    <section class="footer__copyright">
+      <div class="footer__copyright-wrapper">
+        <h2 class="visually-hidden">Разработчики сайта - HTML Academy.</h2>
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <span class="footer__copyright-title">Разработано</span>
+          <span class="visually-hidden">Сайт HTML Academy.</span>
+          <svg class="footer__copyright-icon" aria-hidden="true" focusable="false" width="27" height="35">
+            <use href="img/sprite.svg#icon-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
