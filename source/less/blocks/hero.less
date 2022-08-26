@@ -2,6 +2,10 @@
 
 // HERO
 
+.hero {
+  background-color: #ffffff;
+}
+
 // Ставим фоном картинку с маской (маску смещаем по вертикали на 1пкс вниз, для маскировки бага браузера), подкладываем цветную подложку
 .hero__image {
   height: 388px;
@@ -24,7 +28,7 @@
   // Увеличиваем блок для бОльших экранов, подгружаем графику для планшетов
   @media (min-width: (@mobile-width + 1)) {
     height: 517px;
-    padding-top: 78px;
+    padding-top: 76px;
     background-image:
       url("../img/hero__image-mask.svg"),
       url("../img/hero__image-tablet@1x.jpg");
@@ -55,11 +59,13 @@
     height: 158px;
 
     @media (min-width: (@mobile-width + 1)) {
-      padding-top: 100px;
+      padding-top: 94px;
       height: 290px;
+      width: 100%;
     }
 
     @media (min-width: (@tablet-width + 1)) {
+      padding-top: 102px;
       height: 300px;
     }
   }
@@ -96,13 +102,19 @@
 .hero__slogan {
   .title();
   text-align: center;
-  padding-top: 32px;
+  padding-top: 34px;
   width: 100%;
   max-width: 280px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
+    padding-top: 48px;
+    font-size: 21px;
     max-width: 520px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 62px;
   }
 }
 

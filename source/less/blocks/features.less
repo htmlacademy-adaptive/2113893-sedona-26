@@ -4,6 +4,15 @@
 
 .features {
   padding-top: 35px;
+  background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 28px;
+  }
 }
 
 .features__intro {
@@ -38,14 +47,21 @@
 .features__title {
   .title();
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .features__counter {
   .text();
   color: @text;
-  font-weight: 700;
   text-align: center;
   padding-top: 11px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 15px;
+  }
 }
 
 .features__description {
@@ -53,6 +69,10 @@
   color: @text;
   text-align: center;
   padding-top: 17px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 22px;
+  }
 }
 
 .features__photo {
@@ -73,49 +93,51 @@
 .features__card {
   min-width: 320px;
   position: relative;
+  padding: 30px 20px 20px 20px;
 
   @media (min-width: @tablet-width) {
     min-width: 256px;
   }
 
   &--true-town {
-    padding: 54px 22px 40px 16px;
+    padding: 54px 20px 40px 20px;
     background-color: @blue;
     color: #ffffff;
+    clip-path: polygon(0 100%, 100% 100%, 100% 3%, 50% 11%, 0 3%);
   }
 
-  &--house {
-    padding: 30px 18px 0 65px;
+  &--house,
+  &--food,
+  &--souvenir {
     margin: 0 auto;
-  }
-
-  &--food {
-    padding: 30px 18px 0 70px;
-    margin: 0 auto;
+    padding: 30px 20px 0 65px;
   }
 
   &--souvenir {
-    padding: 30px 18px 52px 62px;
-    margin: 0 auto;
+    padding-bottom: 50px;
   }
 
   &--bridge {
-    padding: 40px 18px 34px 18px;
+    padding: 40px 20px 36px 20px;
     background-color: @blue;
     color: #ffffff;
   }
 
   &--small-area {
     background-color: hsl(0, 0%, 93%);
-    padding: 26px 18px 24px 18px;
+    padding: 26px 20px 23px 20px;
   }
 
   &--road,
   &--few-tourists {
     background-color: hsl(0, 0%, 93%);
-    padding: 24px 18px 24px 18px;
+    padding: 26px 20px 25px 20px;
     box-shadow: 0 1px 0 hsl(0, 0%, 84%) inset;
   }
+}
+
+.features__card--photo {
+  padding: 0;
 }
 
 .features__card--true-town p,
@@ -137,6 +159,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .features__card--true-town {
+    padding-top: 38px;
+    clip-path: none;
+  }
+
   .features__card--photo {
     grid-column: 2 / span 2;
   }
@@ -145,7 +172,8 @@
   .features__card--food,
   .features__card--souvenir {
     min-height: 330px;
-    padding: 60px 35px 0 35px;
+    padding-top: 60px;
+    padding-left: 20px;
   }
 
   .features__card--house .features__title,
@@ -158,7 +186,7 @@
   .features__card--road,
   .features__card--few-tourists {
     min-height: 256px;
-    padding: 42px 34px 0 34px;
+    padding-top: 42px;
   }
 
   .features__card--house img {
@@ -182,5 +210,15 @@
   .features__card--reverse-position {
     grid-column-start: 1;
     grid-row-start: 3;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features__card--true-town {
+    padding-top: 47px;
+  }
+
+  .features__card--bridge {
+    padding-top: 50px;
   }
 }

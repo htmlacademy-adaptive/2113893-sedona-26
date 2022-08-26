@@ -80,7 +80,7 @@
           <h3 class="features__title">Настоящий <br class="br-tablet"><br class="br-desktop">городок</h3>
           <p class="features__counter">— №1 —</p>
           <p class="features__description">
-            Седона — не аттракцион для<br class="br-tablet">
+            Седона не аттракцион для<br class="br-tablet">
             туристов,<br class="br-mobile"><br class="br-desktop">
             там течёт своя<br class="br-tablet">
             жизнь
@@ -88,6 +88,9 @@
         </li>
         <li class="features__card features__card--photo">
           <picture>
+            <source type="image/webp" media="(min-width: 769px)" srcset="img/features__card--true-town-desktop@1x.webp 1x, img/features__card--true-town-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 321px)" srcset="img/features__card--true-town-tablet@1x.webp 1x, img/features__card--true-town-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/features__card--true-town-mobile@1x.webp 1x, img/features__card--true-town-mobile@2x.webp 2x">
             <source media="(min-width: 769px)" srcset="img/features__card--true-town-desktop@1x.jpg 1x, img/features__card--true-town-desktop@2x.jpg 2x">
             <source media="(min-width: 321px)" srcset="img/features__card--true-town-tablet@1x.jpg 1x, img/features__card--true-town-tablet@2x.jpg 2x">
             <img class="features__photo" src="img/features__card--true-town-mobile@1x.jpg" srcset="img/features__card--true-town-mobile@2x.jpg 2x" width="320" height="260" alt="Вид города Sedona.">
@@ -215,42 +218,24 @@
         <li class="footer__social-item">
           <a class="footer__social-link" href="https://vk.com/htmlacademy" target="_blank">
             <span class="visually-hidden">Мы в Вконтакте.</span>
-            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-              <path xmlns="http://www.w3.org/2000/svg" d="M0 0h48v48H0z" />
-              <g xmlns="http://www.w3.org/2000/svg" clip-path="url(#a)">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M35.45 17.95c.17-.55 0-.95-.8-.95h-2.62c-.67 0-.98.35-1.14.73 0 0-1.34 3.2-3.23 5.27-.61.6-.89.8-1.22.8-.17 0-.42-.2-.42-.74v-5.11c0-.66-.18-.95-.74-.95h-4.13c-.42 0-.67.3-.67.6 0 .61.95.76 1.05 2.5v3.8c0 .84-.16.99-.5.99-.88 0-3.05-3.21-4.33-6.89-.25-.71-.5-1-1.17-1H12.9c-.75 0-.9.35-.9.73 0 .68.89 4.07 4.14 8.55 2.18 3.06 5.23 4.72 8.01 4.72 1.67 0 1.88-.37 1.88-1v-2.32c0-.73.16-.88.68-.88.4 0 1.06.2 2.62 1.67C31.11 30.22 31.4 31 32.41 31h2.62c.75 0 1.13-.37.91-1.1-.24-.72-1.09-1.77-2.21-3.02-.62-.7-1.53-1.47-1.81-1.86-.4-.49-.28-.7 0-1.14 0 0 3.2-4.43 3.53-5.93Z"
-                  fill="#fff" />
-              </g>
-              <defs xmlns="http://www.w3.org/2000/svg">
-                <clipPath id="a">
-                  <path fill="#fff" transform="translate(12 12)" d="M0 0h24v24H0z" />
-                </clipPath>
-              </defs>
+            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48">
+              <use href="img/sprite.svg#icon-vkontakte"></use>
             </svg>
           </a>
         </li>
         <li class="footer__social-item">
           <a class="footer__social-link" href="https://t.me/htmlacademy" target="_blank">
             <span class="visually-hidden">Мы в Телеграме.</span>
-            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg">
-              <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48"/>
-              <path xmlns="http://www.w3.org/2000/svg"
-                d="M34.4393 16.6223L31.2705 31.566C31.0313 32.6205 30.408 32.883 29.5223 32.3865L24.6938 28.8285L22.3643 31.0695C22.1063 31.3275 21.891 31.5428 21.3938 31.5428L21.741 26.6258L30.6893 18.54C31.0785 18.1935 30.6045 18.0008 30.0848 18.348L19.0223 25.314L14.2598 23.823C13.224 23.4998 13.2053 22.7873 14.4758 22.29L33.1035 15.1133C33.966 14.79 34.7205 15.3053 34.4393 16.623V16.6223Z"
-                fill="white" />
+            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48">
+              <use href="img/sprite.svg#icon-telegram"></use>
             </svg>
           </a>
         </li>
         <li class="footer__social-item">
           <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
             <span class="visually-hidden">Мы в Ютубе.</span>
-            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48" viewBox="0 0 48 48"
-            xmlns="http://www.w3.org/2000/svg">
-              <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48"/>
-              <path xmlns="http://www.w3.org/2000/svg"
-                d="M31.1813 17H16.8133C15.3062 17 14 18.3 14 19.8V28.1C14 29.7 15.3062 31 16.8133 31H31.1813C32.7889 31 33.9946 29.7 33.9946 28.2V19.8C34.095 18.3 32.7889 17 31.1813 17ZM21.0333 27.4V20.6L27.8656 24L21.0333 27.4Z"
-                fill="white" />
+            <svg class="footer__social-icon" aria-hidden="true" focusable="false" width="48" height="48">
+              <use href="img/sprite.svg#icon-youtube"></use>
             </svg>
           </a>
         </li>
@@ -260,22 +245,21 @@
     <!-- Copyright -->
     <section class="footer__copyright">
       <div class="footer__copyright-wrapper">
-        <h2 class="visually-hidden">Разработчики сайта.</h2>
+        <h2 class="visually-hidden">Разработчики сайта - HTML Academy.</h2>
         <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <span class="footer__copyright-title">Разработано</span>
-          <span class="visually-hidden">HTML Academy.</span>
-          <svg class="footer__copyright-icon" aria-hidden="true" focusable="false" width="27" height="35" viewBox="0 0 27 35"
-          fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none"/>
-          <path xmlns="http://www.w3.org/2000/svg"
-            d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"
-            />
+          <span class="visually-hidden">Сайт HTML Academy.</span>
+          <svg class="footer__copyright-icon" aria-hidden="true" focusable="false" width="27" height="35">
+            <use href="img/sprite.svg#icon-htmlacademy"></use>
           </svg>
         </a>
       </div>
     </section>
+
   </footer>
+
   <script src="js/script.js"></script>
+
 </body>
 
 </html>

@@ -4,10 +4,12 @@
 
 .search-hotels {
   padding: 0 20px;
+  background-color: #ffffff;
 }
 
 .search-hotels__title {
   .title();
+  font-size: 21px;
   text-align: center;
   padding-top: 38px;
   width: 100%;
@@ -25,19 +27,26 @@
   .text();
   color: @text;
   text-align: center;
-  padding-top: 38px;
+  padding-top: 22px;
   padding-bottom: 32px;
   width: 100%;
   max-width: 280px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
+    padding-top: 32px;
+    padding-bottom: 42px;
     max-width: 435px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 48px;
   }
 }
 
 .search-hotels__button {
-  padding: 16px 49px;
+  font-size: 21px;
+  padding: 16px;
   max-width: 458px;
   margin: 0 auto;
 }
