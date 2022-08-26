@@ -66,9 +66,9 @@
         <h2 class="form__intro-title">Оставьте свой отзыв</h2>
         <p class="form__intro-text">
           Помогите нашим отелям стать лучше!<br class="br-mobile">
-          оставьте отзыв о<br class="br-mobile">
-          них,<br class="br-tablet"><br class="br-desktop">
-          а также о посещенных вами<br class="br-mobile">
+          оставьте отзыв о них,<br class="br-tablet"><br class="br-desktop">
+          а также о<br class="br-mobile">
+          посещенных вами<br class="br-mobile">
           достопримечательностях
         </p>
       </div>
@@ -82,7 +82,8 @@
 
           <!-- ФИО -->
           <fieldset class="form__fieldset form__fieldset--name">
-            <legend class="form__legend">Представьтесь:</legend>
+            <legend class="form__legend form__legend--name">Представьтесь:</legend>
+            <div class="form__fieldset-wrapper">
             <label class="form__label">
               <span class="form__label-text">Имя*:</span>
               <input class="form__input" type="text" name="first-name" placeholder="Введите Ваше имя" value="Пётр"
@@ -98,11 +99,13 @@
               <input class="form__input" type="text" name="middle-name" placeholder="Введите Ваше Отчество"
                 value="Викторович">
             </label>
+            </div>
           </fieldset>
 
           <!-- Контактная информация -->
           <fieldset class="form__fieldset form__fieldset--contacts">
-            <legend class="form__legend">Контактная информация:</legend>
+            <legend class="form__legend form__legend--contacts">Контактная информация:</legend>
+            <div class="form__fieldset-wrapper">
             <label class="form__label">
               <span class="form__label-text">Контактный телефон*:</span>
               <input class="form__input" type="tel" name="telephone" placeholder="Введите телефон" required>
@@ -111,11 +114,12 @@
               <span class="form__label-text">Электронная почта*:</span>
               <input class="form__input" type="email" name="e-mail" placeholder="Введите e-mail" required>
             </label>
+            </div>
           </fieldset>
 
           <!-- Впечатление -->
           <fieldset class="form__fieldset form__fieldset--impression">
-              <legend class="form__legend">Ваше общее впечатление:</legend>
+            <legend class="form__legend">Ваше общее впечатление:</legend>
             <ul class="form__list">
               <li class="form__list-item">
                 <label class="form__label">
@@ -144,12 +148,12 @@
           <!-- Достопримечательности -->
           <fieldset class="form__fieldset form__fieldset--sights">
             <legend class="form__legend">Посещенные<br>достопримечательности:</legend>
-            <ul class="form__list">
+            <ul class="form__list form__list--sights">
               <li class="form__list-item">
                 <label class="form__label">
                   <input class="form__input visually-hidden" type="checkbox" name="sights" value="sight-devils-bridge" checked>
                   <span class="form__input-checkbox"></span>
-                  <span class="form__label-text form__label-text--sights">Мост дьявола</span>
+                  <span class="form__label-text form__label-text--sights">Мост Дьявола</span>
                 </label>
               </li>
               <li class="form__list-item">
@@ -181,7 +185,7 @@
             <legend class="form__legend">Опишите свои эмоции:</legend>
             <div class="form__wrapper">
               <label class="form__label">
-              <textarea class="form__textarea" name="feedback-text" cols="27" rows="4"
+              <textarea class="form__textarea" name="feedback-text" cols="27" rows="5"
                 placeholder="Опишите подробно все свои восторги"></textarea>
               </label>
             </div>
@@ -238,10 +242,10 @@
     <!-- Copyright -->
     <section class="footer__copyright">
       <div class="footer__copyright-wrapper">
-        <h2 class="visually-hidden">Разработчики сайта.</h2>
+        <h2 class="visually-hidden">Разработчики сайта - HTML Academy.</h2>
         <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <span class="footer__copyright-title">Разработано</span>
-          <span class="visually-hidden">HTML Academy.</span>
+          <span class="visually-hidden">Сайт HTML Academy.</span>
           <svg class="footer__copyright-icon" aria-hidden="true" focusable="false" width="27" height="35">
             <use href="img/sprite.svg#icon-htmlacademy"></use>
           </svg>
@@ -252,7 +256,7 @@
   </footer>
 
   <!-- модальное окно -->
-    <section class="modal modal-close">
+    <section class="modal modal-close visually-hidden">
       <div class="modal__wrapper">
         <h2 class="modal__title">Ваш отзыв отправлен!</h2>
         <p class="modal__text">
@@ -270,7 +274,7 @@
     </section>
 
     <!-- модальное окно с ошибкой -->
-    <section class="modal modal-error modal-close">
+    <section class="modal modal-error modal-close visually-hidden">
       <h2 class="modal__title">Что-то пошло не так!</h2>
       <p class="modal__text">
         Проверьте поля, выделенные<br class="br-mobile">
