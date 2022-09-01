@@ -4,12 +4,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Седона — небольшой настоящий городок в Аризоне, заслуживающий Вашего внимания!">
   <title>HTML Academy: Седона</title>
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="js/nav__menu.js" as="script">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
@@ -63,8 +67,7 @@
           alt="Добро пожаловать в прекрасную Седону. Ведь Большой Каньон отстой.">
       </div>
       <p class="hero__slogan">
-          Седона — небольшой<br class="br-mobile">
-          городок в Аризоне,<br class="br-mobile"><br class="br-tablet"><br class="br-desktop">
+          Седона — небольшой <br class="br-mobile"> городок в Аризоне,<br class="br-mobile"><br class="br-tablet"><br class="br-desktop">
           заслуживающий большего!
       </p>
     </section>
@@ -93,7 +96,7 @@
             <source type="image/webp" srcset="img/features__card--true-town-mobile@1x.webp 1x, img/features__card--true-town-mobile@2x.webp 2x">
             <source media="(min-width: 769px)" srcset="img/features__card--true-town-desktop@1x.jpg 1x, img/features__card--true-town-desktop@2x.jpg 2x">
             <source media="(min-width: 321px)" srcset="img/features__card--true-town-tablet@1x.jpg 1x, img/features__card--true-town-tablet@2x.jpg 2x">
-            <img class="features__photo" src="img/features__card--true-town-mobile@1x.jpg" srcset="img/features__card--true-town-mobile@2x.jpg 2x" width="320" height="260" alt="Вид города Sedona.">
+            <img class="features__photo" src="img/features__card--true-town-mobile@1x.jpg" srcset="img/features__card--true-town-mobile@2x.jpg 2x" loading="lazy" width="320" height="260" alt="Вид города Sedona.">
           </picture>
         </li>
         <li class="features__card features__card--house">
@@ -146,9 +149,12 @@
         </li>
         <li class="features__card features__card--photo features__card--reverse-position">
           <picture>
+            <source type="image/webp" media="(min-width: 769px)" srcset="img/features__card--bridge-desktop@1x.webp 1x, img/features__card--bridge-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 321px)" srcset="img/features__card--bridge-tablet@1x.webp 1x, img/features__card--bridge-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/features__card--bridge-mobile@1x.webp 1x, img/features__card--bridge-mobile@2x.webp 2x">
             <source media="(min-width: 769px)" srcset="img/features__card--bridge-desktop@1x.jpg 1x, img/features__card--bridge-desktop@2x.jpg 2x">
             <source media="(min-width: 321px)" srcset="img/features__card--bridge-tablet@1x.jpg 1x, img/features__card--bridge-tablet@2x.jpg 2x">
-            <img class="features__photo" src="img/features__card--bridge-mobile@1x.jpg" srcset="img/features__card--bridge-mobile@2x.jpg 2x" width="320" height="260" alt="Фото узкой горной тропы на фоне каньона.">
+            <img class="features__photo" src="img/features__card--bridge-mobile@1x.jpg" srcset="img/features__card--bridge-mobile@2x.jpg 2x" loading="lazy" width="320" height="260" alt="Фото узкой горной тропы на фоне каньона.">
           </picture>
         </li>
         <li class="features__card features__card--small-area">
@@ -258,7 +264,7 @@
 
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/nav__menu.js"></script>
 
 </body>
 

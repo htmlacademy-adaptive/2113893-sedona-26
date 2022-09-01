@@ -23,7 +23,7 @@ export const styles = () => {
       autoprefixer(),
       csso()        //минифицируем стили
     ]))
-    .pipe(rename('style.min.css'))
+    .pipe(rename('style.min.css')) // переименовываем сжатый файл
     .pipe(gulp.dest('build/css', { sourcemaps: '.' })) // карта кода, доступ к less файлам из devtools
     .pipe(browser.stream());
 }
