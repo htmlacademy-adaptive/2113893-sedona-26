@@ -1,0 +1,1 @@
+let contentLikeWrapper=document.querySelectorAll(".content__like-wrapper"),contentLikeIcon=document.querySelectorAll(".content__like-icon");for(let e of contentLikeIcon)e.addEventListener("click",(function(){e.classList.contains("content__like-icon--activated")?e.classList.remove("content__like-icon--activated"):e.classList.add("content__like-icon--activated")}));
