@@ -38,10 +38,16 @@
   display: grid;
   grid-template-columns: 1fr;
   padding: 0;
+  counter-set: feature-counter;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.feature__counter::after {
+  counter-increment: feature-counter;
+  content: "-" counter(feature-counter) "-";
 }
 
 .features__title {
