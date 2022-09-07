@@ -4,7 +4,7 @@
 
 // Центрируем и растягиваем блок с презентацией, но не более @desktop-width
 .presentation {
-  padding: 20px 20px 0 20px;
+  padding: 16px 20px 0;
   width: 100%;
   max-width: @desktop-width;
   background-color: #ffffff;
@@ -36,7 +36,7 @@
   .text();
   color: @text;
   text-align: center;
-  padding: 28px 0 40px 0;
+  padding: 28px 0 38px;
   margin: 0 auto;
   width: 100%;
   max-width: 500px;
@@ -105,10 +105,36 @@
   display: block;
   margin: 0 auto;
   width: 100%;
-  height: auto;
-  max-width: 800px;
+  // height: auto;
+  height: 100%;
+  min-height: 177px;
+  background-image: url("../img/presentation__video-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  @media (min-width: @tablet-width) {
+  // Показываем качественные изображения для экранов с двойной плотностью пикселей
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/presentation__video-mobile@2x.jpg");
+  }
+
+  // Увеличиваем блок для бОльших экранов, подгружаем графику для планшетов
+  @media (min-width: (@mobile-width + 100)) {
+    background-image: url("../img/presentation__video-tablet@1x.jpg");
     min-height: 500px;
+    max-width: 648px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/presentation__video-tablet@2x.jpg");
+    }
+  }
+
+  // Подгружаем графику для десктопов
+  @media (min-width: (@tablet-width + 1)) {
+    background-image: url("../img/presentation__video-desktop@1x.jpg");
+    max-width: 800px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/presentation__video-desktop@2x.jpg");
+    }
   }
 }
