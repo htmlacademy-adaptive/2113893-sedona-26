@@ -2,7 +2,7 @@
 
 // GALLERY
 
-// растягиваем блок до ширины окна, но не более @desktop-width, и центрируем
+// Растягиваем блок до ширины окна, но не более @desktop-width, центрируем
 .gallery {
   width: 100%;
   max-width: @desktop-width;
@@ -19,7 +19,7 @@
   }
 }
 
-//стилизуем и центрируем заголовок, ограничиваем по ширине
+// Заголовок галереи
 .gallery__title {
   .title();
   text-align: center;
@@ -31,7 +31,7 @@
   }
 }
 
-//стилизуем и центрируем заголовок, ограничиваем по ширине
+// Текст галереи
 .gallery__text {
   .text();
   line-height: 21px;
@@ -52,6 +52,7 @@
   }
 }
 
+// Грид сетка для карточек галереи
 .gallery__list {
   display: grid;
   grid-template-columns: 1fr;
@@ -65,17 +66,20 @@
   }
 }
 
+// Карточка галереи
 .gallery__item {
   padding: 24px 0 24px;
   box-shadow: 0 1px 0 hsl(0, 0%, 84%) inset;
   position: relative;
 
+  // Убираем полоску сверху для планшетов
   @media (min-width: @tablet-width) {
     box-shadow: none;
     padding: 0;
   }
 }
 
+// Корректируем карточку под макет
 .gallery__item--beautiful-project {
   padding-bottom: 30px;
 
@@ -84,15 +88,18 @@
   }
 }
 
+// У последней карточки добавляем полоски снизу и сверху
 .gallery__item--last {
   box-shadow: 0 1px 0 hsl(0, 0%, 84%) inset,
     0 -1px 0 hsl(0, 0%, 84%) inset;
 
+  // и убираем их для планшетов
   @media (min-width: @tablet-width) {
     box-shadow: none;
   }
 }
 
+// Отступы для краточек по макету
 .gallery__item-wrapper {
   padding-left: 20px;
   padding-right: 20px;
@@ -142,9 +149,11 @@
   }
 }
 
+// Подпись под карточкой сдвигаем вниз
 .content__legend-wrapper {
   padding-top: 15px;
 
+  // Выстраиваем элементы подписи в линию, красим фон
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
@@ -152,6 +161,7 @@
     background-color: hsl(0, 0%, 95%);
   }
 
+  // Меняем фон на полупрозрачный и перемещаем подпись поверх фото карточки
   @media (min-width: @desktop-width) {
     background-color: rgba(0, 0, 0, 0.3);
     position: absolute;
@@ -160,16 +170,19 @@
   }
 }
 
+// Красим иконку лайка
 .content__like-icon {
   opacity: 0.3;
   fill: #000000;
 
+  // Меняем цвет лайка для ПК
   @media (min-width: @desktop-width) {
     fill: #ffffff;
     opacity: 1;
   }
 }
 
+// Заголовок карточки
 .content__title {
   .text();
   font-weight: 700;
@@ -179,6 +192,7 @@
   }
 }
 
+// Автор и текст перед ним
 .content__author-prefix,
 .content__author {
   .text();
@@ -191,7 +205,7 @@
   }
 }
 
-
+// Оборачиваем лайк и счётчик, ограничиваем по ширине (фиксим баг для мобильных при наведении), добавляем курсор по наведению
 .content__like-wrapper {
   padding-top: 11px;
   cursor: pointer;
@@ -202,6 +216,7 @@
   }
 }
 
+// Состояние наведения
 .content__like-wrapper:hover {
   transform: scale(1.1);
 }
@@ -211,6 +226,7 @@
   fill: @blue;
 }
 
+// Счётчик лайков
 .content__like-counter {
   .text();
   font-weight: 700;
@@ -221,26 +237,34 @@
   }
 }
 
+// Планшетные стили
 @media (min-width: @tablet-width) {
+
+  // Растягиваем первый элемент галереи на 2 колонки
   .gallery__item--wide {
     grid-column: 1 / span 2;
   }
 
+  // Красим подпись карточки в тёмно-серый цвет во 2 колонке
   .gallery__list li:nth-child(2n+3) .content__legend-wrapper {
     background-color: hsl(0, 0%, 92%);
   }
 
+  // Увеличивем высоту первого элемента под макет
   .content__file--wide {
     height: 400px;
   }
 }
 
+// ПК стили
 @media (min-width: @desktop-width) {
+  // Растягиваем первый элемент галереи на 3 колонки
   .gallery__item--wide {
     grid-column: 1 / span 3;
   }
 
-  .gallery__list li:nth-child(2n+1) .content__legend-wrapper {
+  // Убираём тёмно-серый фон подписи карточек из 2 колонки планшетной версии
+  .gallery__list li:nth-child(2n+3) .content__legend-wrapper {
     background-color: rgba(0, 0, 0, 0.3);
   }
 }

@@ -2,11 +2,12 @@
 
 // FORM
 
+// Красим фон блока в белый цвет
 .form__section {
   background-color: #ffffff;
 }
 
-// Бокс-вступление перед формой
+// Бокс-вступление с текстом перед формой
 .form__intro {
   padding: 36px 20px 0 20px;
   background-color: #ffffff;
@@ -56,7 +57,7 @@
   }
 }
 
-// Форма отзыва, сетка блоков
+// Сетка крупных элементов формы
 .form {
   display: grid;
   grid-template-columns: 1fr;
@@ -72,7 +73,7 @@
   }
 }
 
-// Блок формы
+// Общие стили для крупных элементов формы
 .form__fieldset {
   border: none;
   padding: 0 0 38px;
@@ -85,7 +86,7 @@
   padding: 0 0 34px 0;
 }
 
-// Обёртка блоков формы изнутри, для разделителей в мобильной версии
+// Обёртка блоков формы изнутри, разделители в мобильной версии будут во всю ширину экрана
 .form__fieldset-wrapper {
   padding: 0 20px;
 
@@ -94,7 +95,7 @@
   }
 }
 
-// Заголовок блока
+// Заголовок элемента формы
 .form__legend {
   .title();
   text-align: center;
@@ -285,7 +286,7 @@
   background-color: hsl(0, 0%, 95%);
 }
 
-/* Добавляем галочки отмеченным чекбоксам */
+// Добавляем галочки отмеченным чекбоксам
 .form__input[type="checkbox"]:checked + .form__input-checkbox::before {
   position: absolute;
   top: 15px;
@@ -436,6 +437,7 @@
     padding-bottom: 12px;
   }
 
+  // Якорим полосы-разделители, ставим элементы формы выше полосок
   .form__fieldset--impression,
   .form__fieldset--sights,
   .form__fieldset--feedback {
@@ -453,7 +455,7 @@
     border-right: 1px solid hsl(0, 0%, 86%);
   }
 
-  // Полосы-разделители блоков формы
+  // Полосы-разделители, выдёргиваем из потока, позиционируем и "подкладываем" под элементы формы
   .form__fieldset--impression::before,
   .form__fieldset--sights::before,
   .form__fieldset--feedback::before {
@@ -471,7 +473,7 @@
     top: -31px;
   }
 
-  // Подгоняем отступы под макет планшетной версии
+  // Подгоняем отступы под макет
   .form__fieldset--impression {
     padding-bottom: 38px;
   }
@@ -504,26 +506,31 @@
     padding-bottom: 14px;
   }
 
+  // Убираем лишние отступы у полей ввода
   .form__input[type="text"],
   .form__input[type="tel"],
   .form__input[type="email"] {
     margin: 0;
   }
 
+  // Полоса-разделитесь между ФИО и контактами, сдвигаем по макету
   .form__fieldset--name::after {
     right: -15px;
   }
 
+  // Выстраиваем радиокнопки впечатления в 3 колонки
   .form__fieldset--impression .form__list {
     grid-template-columns: 1fr 1fr 1fr;
     padding: 41px 4px 0 47px;
   }
 
+  // Выстраиваем чекбоксы достопримечательностей в 4 колонки
   .form__fieldset--sights .form__list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 56px 30px 0 28px;
   }
 
+  // Подгоняем отступы под макет
   .form__fieldset--impression {
     padding-bottom: 60px;
   }

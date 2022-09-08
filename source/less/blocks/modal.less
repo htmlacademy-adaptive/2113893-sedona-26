@@ -2,6 +2,7 @@
 
 /* MODAL */
 
+// Модальное окно во всю ширину, но не менее 320px и не более 450px, центрируем
 .modal {
   min-width: 320px;
   width: 100%;
@@ -9,21 +10,25 @@
   margin: 0 auto;
   background-color: #ffffff;
 
+  // Увеличиваем максимальную ширину для планшетов
   @media (min-width: @tablet-width) {
     max-width: 640px;
   }
 }
 
+// Блок с текстом модального окна, отступы (отдельно, иначе кнопка уедет)
 .modal__wrapper {
   padding: 38px 38px 0 38px;
 }
 
+// Заголовок модального окна
 .modal__title {
   .title();
   text-align: center;
   margin: 0;
 }
 
+// Текст модального окна
 .modal__text {
   .text();
   color: @text;
@@ -33,6 +38,7 @@
   padding: 36px 0 50px;
 }
 
+// Фон для кнопки
 .modal__wrapper-button {
   padding: 44px;
   background-color: hsl(0, 0%, 95%);
@@ -42,6 +48,7 @@
   }
 }
 
+// Кнопка закрыть модальное окно
 .modal__button {
   width: 280px;
   margin: 0 auto;
@@ -51,6 +58,7 @@
   }
 }
 
+// Корректируем модальное окно ошибки под макет
 .modal-error {
   padding: 45px 40px 35px;
 
@@ -59,6 +67,7 @@
   }
 }
 
+// Уменьшаем кнопку под окно с ошибкой
 .modal-error .modal__button {
   width: 180px;
 
