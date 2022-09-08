@@ -2,10 +2,13 @@
 
 // FOOTER
 
+
+// Добавляем отступы блоку под макет
 .footer {
   padding: 30px 4px 23px 6px;
   background-color: #ffffff;
 
+  // Для планшетов расставляем элементы по 3 колонкам грида
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -20,6 +23,8 @@
   }
 }
 
+
+// Кнопка в виде хэштэга, слева
 .footer__hashtag-button {
   font-size: 21px;
   color: #000000;
@@ -33,6 +38,7 @@
     padding: 0;
   }
 
+  // Её состояния
   &:hover,
   &:focus {
     background-color: #ffffff;
@@ -51,6 +57,7 @@
   }
 }
 
+// Выстраиваем иконки соц сетей в линию, по центру
 .footer__social-list {
   display: flex;
   flex-wrap: wrap;
@@ -58,12 +65,14 @@
   gap: 6px;
 }
 
+// Красим иконки
 .footer__social-icon {
   fill: @blue;
   transition-duration: 0, 01s;
   transition-timing-function: unset;
 }
 
+// Состояния иконок соц сетей
 .footer__social-link .footer__social-icon {
   &:hover,
   &:focus {
@@ -82,7 +91,8 @@
   }
 }
 
-.footer__copyright-wrapper {
+// Центрируем элемент, отступы под макет
+.footer__copyright {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -95,12 +105,14 @@
   }
 }
 
-.footer__copyright-link {
+// Ссылка на разработчика сайта, уменьшает таргет-бокс
+.footer__copyright-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 15px;
+
 
   &:hover .footer__copyright-title,
   &:focus .footer__copyright-title,
