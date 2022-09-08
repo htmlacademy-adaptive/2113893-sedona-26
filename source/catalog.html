@@ -19,7 +19,7 @@
     </a>
 
     <!-- меню навигации -->
-    <nav class="header__nav">
+    <nav>
       <div class="header__toggle-button-wrapper " tabindex="0">
         <span class="header__toggle-button header__toggle-button--closed header__toggle-button--nojs">
           <span class="visually-hidden">Открыть меню</span>
@@ -49,13 +49,13 @@
   </header>
 
   <!-- Main -->
-  <main class="main main__wrapper">
+  <main class="main">
     <h1 class="visually-hidden">Фото и видео Sedona.</h1>
 
     <!-- Блок hero -->
     <section class="hero">
       <h2 class="visually-hidden">Добро пожаловать в Sedona.</h2>
-      <div class="hero__image hero__image--short wrapper">
+      <div class="hero__image hero__image--short">
         <img class="hero__logo hero__logo--short" src="img/hero__sedona-title.svg" width="229" height="39"
           alt="Добро пожаловать в прекрасную Седону.">
       </div>
@@ -63,7 +63,6 @@
 
     <!-- Блок галереи -->
     <section class="gallery">
-      <div class="gallery__wrapper">
         <h2 class="gallery__title">Фото и видео</h2>
         <p class="gallery__text">
           Не можете решиться на путешествие&nbsp;<br class="br-mobile">
@@ -75,7 +74,7 @@
 
           <li class="gallery__item gallery__item--wide content">
             <div class="gallery__item-wrapper">
-            <a class="content__item-link" href="img/gallery__highway-desktop@2x.jpg">
+            <a href="img/gallery__highway-desktop@2x.jpg">
               <div class="content__wrapper">
                 <picture>
                   <source media="(min-width: 769px)" srcset="img/gallery__highway-desktop@1x.jpg 1x, img/gallery__highway-desktop@2x.jpg 2x">
@@ -86,7 +85,7 @@
               </div>
             </a>
             <div class="content__legend-wrapper">
-              <div class="content__author&title-wrapper">
+              <div>
                 <p class="content__title">Неродные просторы</p>
                 <span class="content__author-prefix">Автор фото:</span>
                 <span class="content__author">Борис</span>
@@ -104,7 +103,7 @@
           <li class="gallery__item gallery__item--beautiful-project">
             <div class="gallery__item-wrapper">
             <a class="gallery__item-link" href="img/gallery__cactus-desktop@2x.jpg">
-              <div class="content__wrapper wrapper">
+              <div class="content__wrapper">
                 <picture>
                   <source media="(min-width: 769px)" srcset="img/gallery__cactus-desktop@1x.jpg 1x, img/gallery__cactus-desktop@2x.jpg 2x">
                   <source media="(min-width: 321px)" srcset="img/gallery__cactus-tablet@1x.jpg 1x, img/gallery__cactus-tablet@2x.jpg 2x">
@@ -114,7 +113,7 @@
               </div>
             </a>
             <div class="content__legend-wrapper">
-              <div class="content__author&title-wrapper">
+              <div>
                 <p class="content__title">Местная растительность</p>
                 <span class="content__author-prefix">Автор фото:</span>
                 <span class="content__author">Сергей</span>
@@ -132,7 +131,7 @@
           <li class="gallery__item ">
             <div class="gallery__item-wrapper">
             <a class="gallery__item-link" href="img/gallery__serpentine-road-desktop@2x.jpg">
-              <div class="content__wrapper wrapper">
+              <div class="content__wrapper">
                 <picture>
                   <source media="(min-width: 769px)" srcset="img/gallery__serpentine-road-desktop@1x.jpg 1x, img/gallery__serpentine-road-desktop@2x.jpg 2x">
                   <source media="(min-width: 321px)" srcset="img/gallery__serpentine-road-tablet@1x.jpg 1x, img/gallery__serpentine-road-tablet@2x.jpg 2x">
@@ -142,7 +141,7 @@
               </div>
             </a>
             <div class="content__legend-wrapper">
-              <div class="content__author&title-wrapper">
+              <div>
                 <p class="content__title">Дорога на север</p>
                 <span class="content__author-prefix">Автор фото:</span>
                 <span class="content__author">Петр</span>
@@ -160,7 +159,7 @@
           <li class="gallery__item gallery__item--last">
             <div class="gallery__item-wrapper">
             <a class="gallery__item-link" href="img/gallery__devil's-bridge-desktop@2x.jpg">
-              <div class="content__wrapper wrapper">
+              <div class="content__wrapper">
                 <picture>
                   <source media="(min-width: 769px)" srcset="img/gallery__devil's-bridge-desktop@1x.jpg 1x, img/gallery__devil's-bridge-desktop@2x.jpg 2x">
                   <source media="(min-width: 321px)" srcset="img/gallery__devil's-bridge-tablet@1x.jpg 1x, img/gallery__devil's-bridge-tablet@2x.jpg 2x">
@@ -170,7 +169,7 @@
               </div>
             </a>
             <div class="content__legend-wrapper">
-              <div class="content__author&title-wrapper">
+              <div>
                 <p class="content__title">Мост дьявола</p>
                 <span class="content__author-prefix">Автор фото:</span>
                 <span class="content__author">Антон</span>
@@ -185,11 +184,10 @@
             </div>
           </li>
         </ul>
-      </div>
     </section>
 
     <!-- Блок с презентацией Седоны -->
-    <section class="presentation wrapper">
+    <section class="presentation">
       <h2 class="presentation__title">Все еще сомневаетесь?</h2>
       <p class="presentation__text">
         Смотрите видеопрезентацию и&nbsp;<br class="br-mobile">
@@ -198,15 +196,10 @@
         подорожали в очередной раз!
       </p>
       <div class="presentation-wrapper">
-        <button class="presentation__button button">
+        <button class="button presentation__button">
           <span class="visually-hidden">Воспроизвести</span>
         </button>
         <div class="presentation__video-box"></div>
-        <!-- <video class="presentation__video-box" width="560" controls>
-          <source src="#" type="video/webm">
-          Ваш браузер не поддерживает встроенные видео
-        </video> -->
-        <!-- poster="img/presentation__video-desktop@1x.jpg" -->
       </div>
     </section>
 
@@ -252,16 +245,13 @@
 
     <!-- Copyright -->
     <section class="footer__copyright">
-      <div class="footer__copyright-wrapper">
+      <a class="footer__copyright-wrapper" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         <h2 class="visually-hidden">Разработчики сайта - HTML Academy.</h2>
-        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-          <span class="footer__copyright-title">Разработано</span>
-          <span class="visually-hidden">Сайт HTML Academy.</span>
-          <svg class="footer__copyright-icon" aria-hidden="true" focusable="false" width="27" height="35">
-            <use href="img/sprite.svg#icon-htmlacademy"></use>
-          </svg>
-        </a>
-      </div>
+        <span class="footer__copyright-title">Разработано</span>
+        <svg class="footer__copyright-icon" aria-hidden="true" focusable="false" width="27" height="35">
+          <use href="img/sprite.svg#icon-htmlacademy"></use>
+        </svg>
+      </a>
     </section>
 
   </footer>
