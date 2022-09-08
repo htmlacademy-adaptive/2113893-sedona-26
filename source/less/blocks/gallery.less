@@ -110,14 +110,14 @@
 }
 
 // Обрезаем лишнее от увеличения миниатюр
-.content__wrapper {
+.gallery__content-wrapper {
   position: relative;
   overflow: hidden;
   max-width: 100%;
 }
 
 // Фон для подсветки миниатюры
-.content__wrapper::after {
+.gallery__content-wrapper::after {
   content: "";
   position: absolute;
   left: 0;
@@ -130,17 +130,17 @@
 }
 
 // Увеличиваем миниатюру при наведении
-.content__wrapper:hover .content__file {
+.gallery__content-wrapper:hover .gallery__content-file {
   transform: scale(1.1);
 }
 
 // Подсвечиваем миниатюру при наведении
-.content__wrapper:hover::after {
+.gallery__content-wrapper:hover::after {
   opacity: 0.1;
 }
 
 // Добавляем анимацию при увеличении миниатюры
-.content__file {
+.gallery__content-file {
   width: 100%;
   transition: 0.5s ease all;
 
@@ -150,7 +150,7 @@
 }
 
 // Подпись под карточкой сдвигаем вниз
-.content__legend-wrapper {
+.gallery__content-legend-wrapper {
   padding-top: 15px;
 
   // Выстраиваем элементы подписи в линию, красим фон
@@ -171,7 +171,7 @@
 }
 
 // Красим иконку лайка
-.content__like-icon {
+.gallery__content-like-icon {
   opacity: 0.3;
   fill: #000000;
 
@@ -183,7 +183,7 @@
 }
 
 // Заголовок карточки
-.content__title {
+.gallery__content-title {
   .text();
   font-weight: 700;
 
@@ -193,8 +193,8 @@
 }
 
 // Автор и текст перед ним
-.content__author-prefix,
-.content__author {
+.gallery__content-author-prefix,
+.gallery__content-author {
   .text();
   text-transform: none;
   color: @text;
@@ -206,7 +206,7 @@
 }
 
 // Оборачиваем лайк и счётчик, ограничиваем по ширине (фиксим баг для мобильных при наведении), добавляем курсор по наведению
-.content__like-wrapper {
+.gallery__content-like-wrapper {
   padding-top: 11px;
   cursor: pointer;
   width: max-content;
@@ -217,18 +217,18 @@
 }
 
 // Состояние наведения
-.content__like-wrapper:hover {
+.gallery__content-like-wrapper:hover {
   transform: scale(1.1);
 }
 
 // Красим лайк по нажатию
-.content__like-icon--activated {
+.gallery__content-like-icon--activated {
   fill: @blue;
   opacity: 1;
 }
 
 // Счётчик лайков
-.content__like-counter {
+.gallery__content-like-counter {
   .text();
   font-weight: 700;
   padding-left: 5px;
@@ -247,12 +247,12 @@
   }
 
   // Красим подпись карточки в тёмно-серый цвет во 2 колонке
-  .gallery__list li:nth-child(2n+3) .content__legend-wrapper {
+  .gallery__list li:nth-child(2n+3) .gallery__content-legend-wrapper {
     background-color: hsl(0, 0%, 92%);
   }
 
   // Увеличивем высоту первого элемента под макет
-  .content__file--wide {
+  .gallery__content-file--wide {
     height: 400px;
   }
 }
@@ -265,7 +265,7 @@
   }
 
   // Убираём тёмно-серый фон подписи карточек из 2 колонки планшетной версии
-  .gallery__list li:nth-child(2n+3) .content__legend-wrapper {
+  .gallery__list li:nth-child(2n+3) .gallery__content-legend-wrapper {
     background-color: rgba(0, 0, 0, 0.3);
   }
 }

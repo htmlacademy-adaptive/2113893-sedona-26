@@ -19,11 +19,6 @@
   transition-timing-function: unset;
 
   // Состояния логотипа
-  &:hover,
-  &:focus {
-    scale: 1;
-  }
-
   &:active {
     opacity: 70%;
   }
@@ -235,6 +230,12 @@
   .header__item:focus {
     transform: scale(1.1);
     cursor: pointer;
+  }
+
+  // Убираем увеличение у лого
+  .header-item--no-padding:hover,
+  .header-item--no-padding:focus {
+    transform: scale(1.02);
   }
 
   .header__item:hover .header__link,
