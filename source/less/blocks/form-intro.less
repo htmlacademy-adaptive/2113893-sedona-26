@@ -1,0 +1,53 @@
+// Начните писать стили здесь
+
+// FORM-INTRO
+
+// Бокс-вступление с текстом перед формой
+.form-intro {
+  padding: 36px 20px 0 20px;
+  background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    padding: 62px 60px 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 115px 120px 0 120px;
+  }
+}
+
+// его заголовок
+.form-intro__title {
+  .title();
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
+}
+
+// и текст
+.form-intro__text {
+  .text();
+  color: @text;
+  text-align: center;
+  padding-top: 24px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: 440px;
+    margin: 0 auto;
+    padding-top: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 32px;
+    line-height: 21px;
+  }
+}

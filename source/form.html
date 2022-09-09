@@ -19,7 +19,7 @@
     </a>
 
     <!-- меню навигации -->
-    <nav class="header__nav">
+    <nav>
       <div class="header__toggle-button-wrapper " tabindex="0">
         <span class="header__toggle-button header__toggle-button--closed header__toggle-button--nojs">
           <span class="visually-hidden">Открыть меню</span>
@@ -49,36 +49,33 @@
   </header>
 
   <!-- Main -->
-  <main class="main main__wrapper">
+  <main class="main">
     <h1 class="visually-hidden">Форма отзыва о Sedona.</h1>
 
     <!-- Блок hero -->
     <section class="hero">
       <h2 class="visually-hidden">Добро пожаловать в Sedona.</h2>
-      <div class="hero__image hero__image--short wrapper">
+      <div class="hero__image hero__image--short">
         <img class="hero__logo hero__logo--short" src="img/hero__sedona-title.svg" width="229" height="39"
           alt="Добро пожаловать в прекрасную Седону.">
       </div>
     </section>
 
     <!-- Вступление перед формой отзыва -->
-    <section class="form__intro">
-      <div class="from__intro-wrapper">
-        <h2 class="form__intro-title">Оставьте свой отзыв</h2>
-        <p class="form__intro-text">
+    <section class="form-intro">
+        <h2 class="form-intro__title">Оставьте свой отзыв</h2>
+        <p class="form-intro__text">
           Помогите нашим отелям стать лучше!&nbsp<br class="br-mobile">
           оставьте отзыв о них,&nbsp<br class="br-tablet"><br class="br-desktop">
           а также о&nbsp<br class="br-mobile">
           посещенных вами&nbsp<br class="br-mobile">
           достопримечательностях
         </p>
-      </div>
     </section>
 
     <!-- Форма для отзыва -->
     <section class="form__section">
       <h2 class="visually-hidden">Форма отзыва</h2>
-      <div class="form__section-wrapper">
         <form class="form" action="https://echo.htmlacademy.ru/" method="post">
 
           <!-- ФИО -->
@@ -124,21 +121,21 @@
             <ul class="form__list">
               <li class="form__list-item">
                 <label class="form__label">
-                  <input class="form__input visually-hidden" type="radio" name="impression" value="rather-positive" checked>
+                  <input class="form__input" type="radio" name="impression" value="rather-positive" checked>
                   <span class="form__input-radio"></span>
                   <span class="form__label-text form__label-text--impression">Скорее положительное</span>
                 </label>
               </li>
               <li class="form__list-item">
                 <label class="form__label">
-                  <input class="form__input visually-hidden" type="radio" name="impression" value="rather-negative">
+                  <input class="form__input" type="radio" name="impression" value="rather-negative">
                   <span class="form__input-radio"></span>
                   <span class="form__label-text form__label-text--impression">Скорее отрицательное</span>
                 </label>
               </li>
               <li class="form__list-item">
                 <label class="form__label">
-                  <input class="form__input visually-hidden" type="radio" name="impression" value="hard-to-answer">
+                  <input class="form__input" type="radio" name="impression" value="hard-to-answer">
                   <span class="form__input-radio"></span>
                   <span class="form__label-text form__label-text--impression">Затрудняюсь ответить</span>
                 </label>
@@ -184,7 +181,7 @@
           <!-- Текст отзыва -->
           <fieldset class="form__fieldset form__fieldset--feedback">
             <legend class="form__legend">Опишите свои эмоции:</legend>
-            <div class="form__wrapper">
+            <div class="form__feedback-wrapper">
               <label class="form__label">
               <textarea class="form__textarea" name="feedback-text" cols="27" rows="5"
                 placeholder="Опишите подробно все свои восторги"></textarea>
@@ -198,7 +195,6 @@
             <p class="form__required-span" >* — обязательные поля</p>
           </div>
         </form>
-      </div>
     </section>
   </main>
 
@@ -242,16 +238,13 @@
 
     <!-- Copyright -->
     <section class="footer__copyright">
-      <div class="footer__copyright-wrapper">
+      <a class="footer__copyright-wrapper" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         <h2 class="visually-hidden">Разработчики сайта - HTML Academy.</h2>
-        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-          <span class="footer__copyright-title">Разработано</span>
-          <span class="visually-hidden">Сайт HTML Academy.</span>
-          <svg class="footer__copyright-icon" aria-hidden="true" focusable="false" width="27" height="35">
-            <use href="img/sprite.svg#icon-htmlacademy"></use>
-          </svg>
-        </a>
-      </div>
+        <span class="footer__copyright-title">Разработано</span>
+        <svg class="footer__copyright-icon" aria-hidden="true" focusable="false" width="27" height="35">
+          <use href="img/sprite.svg#icon-htmlacademy"></use>
+        </svg>
+      </a>
     </section>
 
   </footer>
@@ -268,7 +261,7 @@
         </p>
       </div>
       <div class="modal__wrapper-button">
-        <button class="modal__button button">
+        <button class="button modal__button">
           <span class="">Закрыть окно</span>
         </button>
       </div>
@@ -283,7 +276,7 @@
         скорее всего вы&nbsp<br class="br-mobile">
         забыли их заполнить
       </p>
-      <button class="modal__button button">
+      <button class="button modal__button">
         <span class="">Ок</span>
       </button>
     </section>

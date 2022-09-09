@@ -19,11 +19,6 @@
   transition-timing-function: unset;
 
   // Состояния логотипа
-  &:hover,
-  &:focus {
-    transform: scale(1.05);
-  }
-
   &:active {
     opacity: 70%;
   }
@@ -105,7 +100,7 @@
   transform: translate(0, 20px);
 }
 
-// Меню навигации
+// Меню навигации для мобильных
 .header__list {
   background-color: @blue;
   position: absolute;
@@ -116,15 +111,14 @@
   width: 100%;
   max-width: 1200px;
 
+
+  // В планшетной версии возвращаем меню в поток и раскидываем по 5 колонкам
   @media (min-width: @tablet-width) {
     position: static;
     background-color: transparent;
     color: #000000;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0;
+    row-gap: 20px;
   }
 }
 
@@ -200,7 +194,7 @@
     top: 0;
   }
 
-  // Обёртка для элемента меню
+  // Обёртка для элемента меню, избегаем полос прокрутки при увеличении по наведению
   // .header__item-wrapper {
   //   position: relative;
   //   overflow: hidden;
@@ -236,6 +230,12 @@
   .header__item:focus {
     transform: scale(1.1);
     cursor: pointer;
+  }
+
+  // Убираем увеличение у лого
+  .header-item--no-padding:hover,
+  .header-item--no-padding:focus {
+    transform: scale(1.02);
   }
 
   .header__item:hover .header__link,

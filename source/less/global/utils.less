@@ -23,7 +23,7 @@
   overflow: hidden;
 }
 
-// sticky-footer +  базовый шрифт
+// Sticky-footer +  базовый шрифт
 .page {
   height: 100%;
   font-family: @font;
@@ -40,7 +40,7 @@
   box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
 
-.main__wrapper {
+.main {
   flex-grow: 1;
 }
 
@@ -48,7 +48,6 @@
 img {
   max-width: 100%;
   object-fit: cover;
-  //contain cover
   display: block;
   height: auto;
 }
@@ -78,13 +77,13 @@ fieldset {
   margin: 0;
 }
 
-//убираем для мобильных переносы строк планшетов/ПК
+// Убираем для мобильных переносы строк планшетов и ПК
 .br-tablet,
 .br-desktop {
   display: none;
 }
 
-//включаем перенос строк для планшетов
+// Включаем перенос строк для планшетов, отключаем переносы для мобильных
 @media (min-width: @tablet-width) {
   .br-mobile {
     display: none;
@@ -95,7 +94,7 @@ fieldset {
   }
 }
 
-//включаем перенос строк для ПК
+// Включаем перенос строк для ПК, отключаем для планшетов
 @media (min-width: @desktop-width) {
   .br-tablet {
     display: none;

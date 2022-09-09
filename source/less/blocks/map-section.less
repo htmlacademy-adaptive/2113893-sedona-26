@@ -2,9 +2,9 @@
 
 // MAP__SECTION
 
-// центрируем блок + отступы по макету
+// Центрируем блок + отступы по макету
 .map__section {
-  padding-top: 50px;
+  padding: 50px 0 6px;
   margin: 0 auto;
   background-color: #ffffff;
 
@@ -17,7 +17,7 @@
   }
 }
 
-//
+// Подложка, если не загрузится интерактивная карта, фиксируем высоту карты 350px
 .map__wrapper {
   background-image: url("../img/map__iframe-background.jpg");
   background-repeat: no-repeat;
@@ -28,7 +28,7 @@
   max-height: 350px;
 }
 
-//карта занимает всю ширину окна, но не более 1200; высота 350
+// Карта занимает всю ширину окна, но не более 1200
 .map__gmaps {
   width: 100%;
   max-width: @desktop-width;

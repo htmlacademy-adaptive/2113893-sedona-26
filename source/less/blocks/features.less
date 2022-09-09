@@ -2,6 +2,7 @@
 
 // FEATURES
 
+// Задаём фон и отступы для блока целиком
 .features {
   padding-top: 35px;
   background-color: #ffffff;
@@ -15,6 +16,7 @@
   }
 }
 
+// Вступительный текст перед карточками
 .features__intro {
   .text();
   color: @text;
@@ -34,22 +36,82 @@
   }
 }
 
+// Выстраиваем карточки с помощью grid в 1 колонку
 .features__list {
   display: grid;
   grid-template-columns: 1fr;
   padding: 0;
   counter-set: feature-counter;
 
+  // Перестраиваем в 3 колонки для планшета
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-.feature__counter::after {
-  counter-increment: feature-counter;
-  content: "-" counter(feature-counter) "-";
+// Общие стили карточек преимуществ
+.features__card {
+  min-width: 320px;
+  position: relative;
+  padding: 30px 20px 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 256px;
+  }
+
+  // Карточка 1
+  &--true-town {
+    padding: 56px 20px 38px 20px;
+    background-color: @blue;
+    color: #ffffff;
+    clip-path: polygon(0 100%, 100% 100%, 100% 3%, 50% 11%, 0 3%);
+  }
+
+  // Подстраиваем под макет карточки жилья, еды и сувениров
+  &--house,
+  &--food,
+  &--souvenir {
+    margin: 0 auto;
+    padding: 32px 11px 0 65px;
+
+    @media (min-width: @tablet-width) {
+      padding: 30px 20px 0 65px;
+    }
+  }
+
+  // Делаем отступ под макет мобильной версии
+  &--souvenir {
+    padding: 26px 11px 50px 65px;
+
+    // и убираем его для планшетов
+    @media (min-width: @tablet-width) {
+      padding-bottom: 0;
+    }
+  }
+
+  // Карточка 2
+  &--bridge {
+    padding: 40px 20px 36px 20px;
+    background-color: @blue;
+    color: #ffffff;
+  }
+
+  // Карточка 3
+  &--small-area {
+    background-color: hsl(0, 0%, 93%);
+    padding: 26px 20px 23px 20px;
+  }
+
+  // Карточки 3 и 4
+  &--road,
+  &--few-tourists {
+    background-color: hsl(0, 0%, 93%);
+    padding: 26px 20px 25px 20px;
+    box-shadow: 0 1px 0 hsl(0, 0%, 84%) inset;
+  }
 }
 
+// Заголовок карточек
 .features__title {
   .title();
   text-align: center;
@@ -59,17 +121,7 @@
   }
 }
 
-.features__counter {
-  .text();
-  color: @text;
-  text-align: center;
-  padding-top: 11px;
-
-  @media (min-width: @tablet-width) {
-    padding-top: 15px;
-  }
-}
-
+// Описание карточек
 .features__description {
   .text();
   color: @text;
@@ -81,76 +133,54 @@
   }
 }
 
+// Занимаем фотографией весь контейнер
 .features__photo {
   width: 100%;
   height: 100%;
+  background-color: #314d59;
 }
 
+// Выдёргиваем из потока иконки жилья, еды и сувениров для мобильных
 .features__icon-wrapper {
   position: absolute;
   top: 25px;
   left: 18px;
 
+  // и возвращаем в поток для планшетов
   @media (min-width: @tablet-width) {
     position: static;
   }
 }
 
-.features__card {
-  min-width: 320px;
-  position: relative;
-  padding: 30px 20px 20px 20px;
-
-  @media (min-width: @tablet-width) {
-    min-width: 256px;
-  }
-
-  &--true-town {
-    padding: 54px 20px 40px 20px;
-    background-color: @blue;
-    color: #ffffff;
-    clip-path: polygon(0 100%, 100% 100%, 100% 3%, 50% 11%, 0 3%);
-  }
-
-  &--house,
-  &--food,
-  &--souvenir {
-    margin: 0 auto;
-    padding: 30px 20px 0 65px;
-  }
-
-  &--souvenir {
-    padding-bottom: 50px;
-  }
-
-  &--bridge {
-    padding: 40px 20px 36px 20px;
-    background-color: @blue;
-    color: #ffffff;
-  }
-
-  &--small-area {
-    background-color: hsl(0, 0%, 93%);
-    padding: 26px 20px 23px 20px;
-  }
-
-  &--road,
-  &--few-tourists {
-    background-color: hsl(0, 0%, 93%);
-    padding: 26px 20px 25px 20px;
-    box-shadow: 0 1px 0 hsl(0, 0%, 84%) inset;
-  }
-}
-
+// Убираем стандартные отсупы для карточек с фото
 .features__card--photo {
   padding: 0;
 }
 
+// Применяем белый цвет к тексту преимуществ карточек 1 и 2
 .features__card--true-town p,
 .features__card--bridge p {
   color: inherit;
 }
 
+// Порядковый номер карточки
+.features__counter {
+  .text();
+  color: @text;
+  text-align: center;
+  padding-top: 11px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 15px;
+  }
+}
+
+.features__counter::before {
+  counter-increment: feature-counter;
+  content: "— №"counter(feature-counter) " —";
+}
+
+// Прижимаем счётчик и описание карточек жилья, еды и сувениров к левому краю для мобильных
 .features__card--house .features__title,
 .features__card--house .features__description,
 .features__card--food .features__title,
@@ -159,21 +189,28 @@
 .features__card--souvenir .features__description {
   text-align: left;
 
+  // и центрируем для планшетов
   @media (min-width: @tablet-width) {
     text-align: center;
   }
 }
 
+
+// Планшетны стили
 @media (min-width: @tablet-width) {
+
+  // Убираем вырез для карточки 1
   .features__card--true-town {
     padding-top: 38px;
     clip-path: none;
   }
 
+  // Расстягиваем карточки с фото на 2 колонки
   .features__card--photo {
     grid-column: 2 / span 2;
   }
 
+  // Корректируем карточки жилья, еды и сувениров под макет для планшетов
   .features__card--house,
   .features__card--food,
   .features__card--souvenir {
@@ -182,12 +219,26 @@
     padding-left: 20px;
   }
 
+  // Корректируем карточку еды под макет для планшетов
+  .features__card--food {
+    padding-top: 64px;
+    padding-left: 17px;
+  }
+
+  // Корректируем карточку сувениров под макет для планшетов
+  .features__card--souvenir {
+    padding-top: 57px;
+    padding-left: 13px;
+  }
+
+  // Увеличиваем отступы после иконок жилья, еды и сувениров под макет
   .features__card--house .features__title,
   .features__card--food .features__title,
   .features__card--souvenir .features__title {
     padding-top: 26px;
   }
 
+  //Корректируем карточки 3, 4 и 5 под макет для планшетов
   .features__card--small-area,
   .features__card--road,
   .features__card--few-tourists {
@@ -195,30 +246,35 @@
     padding-top: 42px;
   }
 
+  // Позиционируем иконку жилья по макету
   .features__card--house img {
     width: 75px;
     height: 72px;
     margin: 0 auto;
   }
 
+  // Позиционируем иконку еды по макету
   .features__card--food img {
     width: 76px;
     height: 68px;
     margin: 0 auto;
   }
 
+  // Позиционируем иконку сувениров по макету
   .features__card--souvenir img {
     width: 64px;
     height: 75px;
     margin: 0 auto;
   }
 
+  // Меняем местами карточку 2 и иллюстрацию
   .features__card--reverse-position {
     grid-column-start: 1;
     grid-row-start: 3;
   }
 }
 
+// Корректировки под макет для ПК
 @media (min-width: @desktop-width) {
   .features__card--true-town {
     padding-top: 47px;
