@@ -6,39 +6,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Помогите отелям Седоны стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях.">
   <title>HTML Academy: Седона</title>
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="js/nav__menu.js" as="script">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
 
   <!-- Хэдер -->
   <header class="header">
-    <a class="header__logo header-logo--mobile" href="index.html">
-      <img class="header__logo-image" src="img/header__logo.svg" width="185" height="96"
+    <a class="header__logo header__logo--mobile" href="index.html">
+      <img src="img/header__logo.svg" width="185" height="96"
         alt="Логотип гостиниц Sedona.">
     </a>
 
-    <!-- меню навигации -->
+    <!-- Меню навигации -->
     <nav>
-      <div class="header__toggle-button-wrapper " tabindex="0">
+      <div class="header__toggle-button-wrapper" tabindex="0">
         <span class="header__toggle-button header__toggle-button--closed header__toggle-button--nojs">
           <span class="visually-hidden">Открыть меню</span>
         </span>
       </div>
       <ul class="header__list header__list--closed header__list--nojs">
-        <li class="header__item">
+        <li class="header__item header__item--current">
           <a class="header__link" href="index.html">Главная</a>
         </li>
         <li class="header__item">
           <a class="header__link" href="catalog.html">Фото и видео</a>
         </li>
-        <li class="header__item header__item--tablet header-item--no-padding">
+        <li class="header__item header__item--tablet header__item--no-padding">
           <a class="header__logo" href="index.html">
-            <img class="header__logo-image" src="img/header__logo.svg" width="185" height="96"
+            <img src="img/header__logo.svg" width="185" height="96"
               alt="Логотип гостиниц Sedona.">
           </a>
         </li>
-        <li class="header__item header__item--current">
+        <li class="header__item">
           <a class="header__link" href="form.html">Форма отзыва</a>
         </li>
         <li class="header__item header__item--last">
@@ -65,18 +72,18 @@
     <section class="form-intro">
         <h2 class="form-intro__title">Оставьте свой отзыв</h2>
         <p class="form-intro__text">
-          Помогите нашим отелям стать лучше!&nbsp<br class="br-mobile">
-          оставьте отзыв о них,&nbsp<br class="br-tablet"><br class="br-desktop">
-          а также о&nbsp<br class="br-mobile">
-          посещенных вами&nbsp<br class="br-mobile">
+          Помогите нашим отелям стать лучше!&nbsp;<br class="br-mobile">
+          оставьте отзыв о них,&nbsp;<br class="br-tablet"><br class="br-desktop">
+          а также о&nbsp;<br class="br-mobile">
+          посещенных вами&nbsp;<br class="br-mobile">
           достопримечательностях
         </p>
     </section>
 
     <!-- Форма для отзыва -->
-    <section class="form__section">
+    <section class="form">
       <h2 class="visually-hidden">Форма отзыва</h2>
-        <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="form__grid" action="https://echo.htmlacademy.ru/" method="post">
 
           <!-- ФИО -->
           <fieldset class="form__fieldset form__fieldset--name">
@@ -145,7 +152,7 @@
 
           <!-- Достопримечательности -->
           <fieldset class="form__fieldset form__fieldset--sights">
-            <legend class="form__legend">Посещенные&nbsp<br>достопримечательности:</legend>
+            <legend class="form__legend">Посещенные&nbsp;<br>достопримечательности:</legend>
             <ul class="form__list form__list--sights">
               <li class="form__list-item">
                 <label class="form__label">
@@ -254,9 +261,9 @@
       <div class="modal__wrapper">
         <h2 class="modal__title">Ваш отзыв отправлен!</h2>
         <p class="modal__text">
-          Спасибо за ваше участие, ваш&nbsp<br class="br-mobile">
-          отзыв уже поступил к нам.&nbsp<br class="br-mobile"><br class="br-tablet"><br class="br-desktop">
-          В ближайшее время мы&nbsp<br class="br-mobile">
+          Спасибо за ваше участие, ваш&nbsp;<br class="br-mobile">
+          отзыв уже поступил к нам.&nbsp;<br class="br-mobile"><br class="br-tablet"><br class="br-desktop">
+          В ближайшее время мы&nbsp;<br class="br-mobile">
           опубликуем его на сайте.
         </p>
       </div>
@@ -268,12 +275,12 @@
     </section>
 
     <!-- модальное окно с ошибкой -->
-    <section class="modal modal-error modal-close visually-hidden">
-      <h2 class="modal__title">Что-то пошло&nbsp<br class="br-tablet">не так!</h2>
+    <section class="modal modal__error modal-close visually-hidden">
+      <h2 class="modal__title">Что-то пошло&nbsp;<br class="br-tablet">не так!</h2>
       <p class="modal__text">
-        Проверьте поля, выделенные&nbsp<br class="br-mobile">
-        красным,&nbsp<br class="br-tablet"><br class="br-desktop">
-        скорее всего вы&nbsp<br class="br-mobile">
+        Проверьте поля, выделенные&nbsp;<br class="br-mobile">
+        красным,&nbsp;<br class="br-tablet"><br class="br-desktop">
+        скорее всего вы&nbsp;<br class="br-mobile">
         забыли их заполнить
       </p>
       <button class="button modal__button">
