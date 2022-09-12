@@ -99,113 +99,6 @@
   }
 }
 
-// Отступы для краточек по макету
-.gallery__item-wrapper {
-  padding-left: 20px;
-  padding-right: 20px;
-
-  @media (min-width: @tablet-width) {
-    padding: 0;
-  }
-}
-
-// Обрезаем лишнее от увеличения миниатюр
-.gallery__content-wrapper {
-  position: relative;
-  overflow: hidden;
-  max-width: 100%;
-}
-
-// Фон для подсветки миниатюры
-.gallery__content-wrapper::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: #e5e5e5;
-  opacity: 0;
-  transition: 0.5s ease all;
-}
-
-// Увеличиваем миниатюру при наведении
-.gallery__content-wrapper:hover .gallery__content-file {
-  transform: scale(1.1);
-}
-
-// Подсвечиваем миниатюру при наведении
-.gallery__content-wrapper:hover::after {
-  opacity: 0.1;
-}
-
-// Добавляем анимацию при увеличении миниатюры
-.gallery__content-file {
-  width: 100%;
-  transition: 0.5s ease all;
-  background-color: #314d59;
-
-  @media (min-width: @tablet-width) {
-    min-height: 267px;
-  }
-}
-
-// Подпись под карточкой сдвигаем вниз
-.gallery__content-legend-wrapper {
-  padding-top: 15px;
-
-  // Выстраиваем элементы подписи в линию, красим фон
-  @media (min-width: @tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    padding: 22px 20px 15px 20px;
-    background-color: hsl(0, 0%, 95%);
-  }
-
-  // Меняем фон на полупрозрачный и перемещаем подпись поверх фото карточки
-  @media (min-width: @desktop-width) {
-    background-color: rgba(0, 0, 0, 0.3);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-}
-
-// Красим иконку лайка
-.gallery__content-like-icon {
-  opacity: 0.3;
-  fill: #000000;
-
-  // Меняем цвет лайка для ПК
-  @media (min-width: @desktop-width) {
-    fill: #ffffff;
-    opacity: 1;
-  }
-}
-
-// Заголовок карточки
-.gallery__content-title {
-  .text();
-  font-weight: 700;
-
-  @media (min-width: @desktop-width) {
-    color: #ffffff;
-  }
-}
-
-// Автор и текст перед ним
-.gallery__content-author-prefix,
-.gallery__content-author {
-  .text();
-  text-transform: none;
-  color: @text;
-  padding-top: 15px;
-
-  @media (min-width: @desktop-width) {
-    color: #ffffff;
-  }
-}
-
 // Оборачиваем лайк и счётчик, ограничиваем по ширине (фиксим баг для мобильных при наведении), добавляем курсор по наведению
 .gallery__content-like-wrapper {
   padding-top: 11px;
@@ -246,16 +139,6 @@
   .gallery__item--wide {
     grid-column: 1 / span 2;
   }
-
-  // Красим подпись карточки в тёмно-серый цвет во 2 колонке
-  .gallery__list li:nth-child(2n+3) .gallery__content-legend-wrapper {
-    background-color: hsl(0, 0%, 92%);
-  }
-
-  // Увеличивем высоту первого элемента под макет
-  .gallery__content-file--wide {
-    height: 400px;
-  }
 }
 
 // ПК стили
@@ -263,10 +146,5 @@
   // Растягиваем первый элемент галереи на 3 колонки
   .gallery__item--wide {
     grid-column: 1 / span 3;
-  }
-
-  // Убираём тёмно-серый фон подписи карточек из 2 колонки планшетной версии
-  .gallery__list li:nth-child(2n+3) .gallery__content-legend-wrapper {
-    background-color: rgba(0, 0, 0, 0.3);
   }
 }
