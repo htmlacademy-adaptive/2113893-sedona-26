@@ -90,6 +90,7 @@
 .gallery-card__title {
   .text();
   font-weight: 700;
+  margin: 0;
 
   @media (min-width: @desktop-width) {
     color: #ffffff;
@@ -102,12 +103,15 @@
   .text();
   text-transform: none;
   color: @text;
-  padding-top: 5px;
   display: inline-block;
 
   @media (min-width: @desktop-width) {
     color: #ffffff;
   }
+}
+
+.gallery-card__author {
+  text-decoration: none;
 }
 
 // Состояния автора
@@ -146,7 +150,11 @@
 .gallery-card__like-counter {
   .text();
   font-weight: 700;
-  padding-left: 5px;
+  padding-left: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 5px;
+  }
 
   @media (min-width: @desktop-width) {
     color: #ffffff;

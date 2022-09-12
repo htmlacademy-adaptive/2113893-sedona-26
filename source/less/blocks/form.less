@@ -28,12 +28,22 @@
   border: none;
   padding: 0 0 38px;
   position: relative;
+  margin: 0;
 }
 
 // Корректируем блоки впечатления и достопримечательности под макет
 .form__fieldset--impression,
 .form__fieldset--sights {
   padding: 0 0 34px 0;
+}
+
+// Корректируем отступ в мобильной версии под макет
+.form__fieldset--feedback {
+  padding-bottom: 50px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 38px;
+  }
 }
 
 // Обёртка блоков формы изнутри, разделители в мобильной версии будут во всю ширину экрана
@@ -180,6 +190,8 @@
 
 // Стилизуем блоки с радиокнопками и чекбоксами
 .form__list {
+  list-style-type: none;
+  margin: 0;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: left;
@@ -342,6 +354,7 @@
 
 // Подпись под кнопкой отправить отзыв
 .form__required-span {
+  margin: 0;
   padding-top: 3px;
   font-size: 12px;
   line-height: 21px;
@@ -435,7 +448,7 @@
   }
 
   .form__list--sights {
-    padding: 24px 98px 0 54px;
+    padding: 24px 70px 0 84px;
   }
 }
 
@@ -471,16 +484,26 @@
   }
 
   // Выстраиваем радиокнопки впечатления в 3 колонки
-  .form__fieldset--impression .form__list {
+  .form__list--impression {
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 41px 4px 0 47px;
+    padding: 41px 4px 0 53px;
+    column-gap: 20px;
   }
 
   // Выстраиваем чекбоксы достопримечательностей в 4 колонки
-  .form__fieldset--sights .form__list {
+  .form__list--sights {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 56px 30px 0 28px;
+    padding: 56px 26px 0 44px;
   }
+
+  .form__list--sights .form__list-item:nth-child(4n+1) {
+    padding-right: 40px;
+  }
+
+  .form__list--sights .form__list-item:nth-child(4n+2) {
+    padding-right: 40px;
+  }
+
 
   // Подгоняем отступы под макет
   .form__fieldset--impression {
