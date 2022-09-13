@@ -33,7 +33,7 @@
         </span>
       </div>
       <ul class="header__list header__list--closed header__list--nojs">
-        <li class="header__item header__item--current">
+        <li class="header__item">
           <a class="header__link" href="index.html">Главная</a>
         </li>
         <li class="header__item">
@@ -45,7 +45,7 @@
               alt="Логотип гостиниц Sedona.">
           </a>
         </li>
-        <li class="header__item">
+        <li class="header__item header__item--current">
           <a class="header__link" href="form.html">Форма отзыва</a>
         </li>
         <li class="header__item header__item--last">
@@ -198,7 +198,7 @@
 
           <!-- Отправить отзыв -->
           <div class="form__button-wrapper">
-            <button class="form__button button" type="submit">Отправить отзыв</button>
+            <button class="form__button animation-shiny button" type="submit">Отправить отзыв</button>
             <p class="form__required-span" >* — обязательные поля</p>
           </div>
         </form>
@@ -209,7 +209,7 @@
   <footer class="footer">
     <section class="footer__hashtag">
       <h2 class="visually-hidden">Больше информации по хэштегу.</h2>
-      <a class="footer__hashtag-button button" href="https://twitter.com/hashtag/visitsedona">#visitSEDONA</a>
+      <a class="footer__hashtag-button animation-shiny button" href="https://twitter.com/hashtag/visitsedona">#visitSEDONA</a>
     </section>
 
     <!-- Socials -->
@@ -257,7 +257,8 @@
   </footer>
 
   <!-- модальное окно -->
-    <section class="modal modal-close visually-hidden">
+    <div class="modal-container visually-hidden">
+    <section class="modal modal-close modal-success">
       <div class="modal__wrapper">
         <h2 class="modal__title">Ваш отзыв отправлен!</h2>
         <p class="modal__text">
@@ -273,9 +274,10 @@
         </button>
       </div>
     </section>
+    </div>
 
     <!-- модальное окно с ошибкой -->
-    <section class="modal modal__error modal-close visually-hidden">
+    <section class="modal modal-error modal-close visually-hidden">
       <h2 class="modal__title">Что-то пошло&nbsp;<br class="br-tablet">не так!</h2>
       <p class="modal__text">
         Проверьте поля, выделенные&nbsp;<br class="br-mobile">
@@ -289,6 +291,7 @@
     </section>
 
   <script src="js/nav__menu.js"></script>
+  <script src="js/modal.js"></script>
 
 </body>
 
