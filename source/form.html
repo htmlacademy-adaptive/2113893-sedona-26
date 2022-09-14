@@ -11,9 +11,8 @@
   <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="css/style.min.css" as="style">
-  <link rel="preload" href="js/nav__menu.js" as="script">
   <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
@@ -33,7 +32,7 @@
         </span>
       </div>
       <ul class="header__list header__list--closed header__list--nojs">
-        <li class="header__item header__item--current">
+        <li class="header__item">
           <a class="header__link" href="index.html">Главная</a>
         </li>
         <li class="header__item">
@@ -45,7 +44,7 @@
               alt="Логотип гостиниц Sedona.">
           </a>
         </li>
-        <li class="header__item">
+        <li class="header__item header__item--current">
           <a class="header__link" href="form.html">Форма отзыва</a>
         </li>
         <li class="header__item header__item--last">
@@ -125,7 +124,7 @@
           <!-- Впечатление -->
           <fieldset class="form__fieldset form__fieldset--impression">
             <legend class="form__legend">Ваше общее впечатление:</legend>
-            <ul class="form__list">
+            <ul class="form__list form__list--impression">
               <li class="form__list-item">
                 <label class="form__label">
                   <input class="form__input" type="radio" name="impression" value="rather-positive" checked>
@@ -198,7 +197,7 @@
 
           <!-- Отправить отзыв -->
           <div class="form__button-wrapper">
-            <button class="form__button button" type="submit">Отправить отзыв</button>
+            <button class="form__button animation-shiny button" type="submit">Отправить отзыв</button>
             <p class="form__required-span" >* — обязательные поля</p>
           </div>
         </form>
@@ -209,7 +208,7 @@
   <footer class="footer">
     <section class="footer__hashtag">
       <h2 class="visually-hidden">Больше информации по хэштегу.</h2>
-      <a class="footer__hashtag-button button" href="https://twitter.com/hashtag/visitsedona">#visitSEDONA</a>
+      <a class="footer__hashtag-button animation-shiny button" href="https://twitter.com/hashtag/visitsedona">#visitSEDONA</a>
     </section>
 
     <!-- Socials -->
@@ -257,8 +256,9 @@
   </footer>
 
   <!-- модальное окно -->
-    <section class="modal modal-close visually-hidden">
-      <div class="modal__wrapper">
+  <section class="modal modal--success visually-hidden">
+    <div class="modal__wrapper">
+      <div class="modal__part-text">
         <h2 class="modal__title">Ваш отзыв отправлен!</h2>
         <p class="modal__text">
           Спасибо за ваше участие, ваш&nbsp;<br class="br-mobile">
@@ -267,28 +267,29 @@
           опубликуем его на сайте.
         </p>
       </div>
-      <div class="modal__wrapper-button">
-        <button class="button modal__button">
-          <span class="">Закрыть окно</span>
-        </button>
+      <div class="modal__part-button">
+        <button class="button modal__button">Закрыть окно</button>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- модальное окно с ошибкой -->
+    <section class="modal modal--error visually-hidden">
+      <div class="modal__wrapper modal__wrapper--error">
+        <h2 class="modal__title">Что-то пошло&nbsp;<br class="br-tablet"><br class="br-desktop">не так!</h2>
+        <p class="modal__text">
+          Проверьте поля, выделенные&nbsp;<br class="br-mobile">
+          красным,&nbsp;<br class="br-tablet"><br class="br-desktop">
+          скорее всего вы&nbsp;<br class="br-mobile">
+          забыли их заполнить
+        </p>
+        <button class="button modal__button">Ок</button>
       </div>
     </section>
 
-    <!-- модальное окно с ошибкой -->
-    <section class="modal modal__error modal-close visually-hidden">
-      <h2 class="modal__title">Что-то пошло&nbsp;<br class="br-tablet">не так!</h2>
-      <p class="modal__text">
-        Проверьте поля, выделенные&nbsp;<br class="br-mobile">
-        красным,&nbsp;<br class="br-tablet"><br class="br-desktop">
-        скорее всего вы&nbsp;<br class="br-mobile">
-        забыли их заполнить
-      </p>
-      <button class="button modal__button">
-        <span class="">Ок</span>
-      </button>
-    </section>
-
   <script src="js/nav__menu.js"></script>
+  <script src="js/modal.js"></script>
 
 </body>
 

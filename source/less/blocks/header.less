@@ -102,6 +102,9 @@
 
 // Меню навигации для мобильных
 .header__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   background-color: @blue;
   position: absolute;
   top: 0;
@@ -156,6 +159,7 @@
 
 // Ссылки внутри меню
 .header__link {
+  text-decoration: none;
   color: #ffffff;
   .title();
 
@@ -166,7 +170,7 @@
 }
 
 // Добавляем логотип в меню навигации для планшетов и ПК
-.header__item--tablet {
+.header__item--tablet-logo {
   display: none;
 
   @media (min-width: @tablet-width) {
