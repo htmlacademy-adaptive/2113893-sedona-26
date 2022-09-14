@@ -1,5 +1,5 @@
 let form = document.querySelector(".form__grid");
-let modalSuccess = document.querySelector(".modal-container");
+let modalSuccess = document.querySelector(".modal--success");
 let modalButton = document.querySelector(".modal__button");
 
 form.onsubmit = function (evt) {
